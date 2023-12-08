@@ -1,0 +1,4 @@
+1695617673676:testOnly SingleCycle.DAtaPAthTester -- -DwriteVcd=1
+1695618191578:sbt
+1695618198293:exit
+1695618392382:testOnly SingleCycle.DataPathTester

@@ -1,0 +1,277 @@
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/ClassTask/controlTester.scala:10:14: not found: type control[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new control) { b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/ClassTask/controllertester.scala:10:14: not found: type controller[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new controller) { b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/ClassTask/counterTester.scala:10:14: not found: type counter[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new counter) { b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/ClassTask/task22Tester.scala:9:14: not found: type TxRxStateMachine[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new TxRxStateMachine) { dut =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab1/Ex1Tester.scala:11:14: not found: type Counter1[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Counter1(3.S)) { b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab1/Ex2Tester.scala:9:14: not found: type Counter[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Counter) { a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab1/Ex3Tester.scala:10:14: not found: type Counter3[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Counter3(3,4)) { b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab1/Task2Tester.scala:11:14: not found: type Task2[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Task2){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab2/Ex1Tester.scala:10:18: not found: type Mux_2to1[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new Mux_2to1){  a =>[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab2/Ex2Tester.scala:10:18: not found: type MuxLookup[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new MuxLookup){  a =>[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab2/Ex3Tester.scala:10:18: not found: type mux_onehot_4to1[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new mux_onehot_4to1 ){  a =>[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab2/Task1Tester.scala:10:18: not found: type Mux_5to1[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new Mux_5to1){ a =>[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab2/Task2Tester.scala:10:18: not found: type barrel_shift[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new barrel_shift){ a =>[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab3/Ex1Tester.scala:11:14: not found: type Encoder4to2[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Encoder4to2){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab3/Ex2Tester.scala:11:14: not found: type ALU[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new ALU){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab3/Task1Tester.scala:11:14: not found: type BranchControl[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new BranchControl){b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab3/Task2Tester.scala:11:14: not found: type ImmdValGen[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new ImmdValGen){b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab3/Task3Tester.scala:11:14: not found: type Task3[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Task3){b =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:8:8: not found: object ALUOP[0m
+[0m[[0m[31merror[0m] [0m[0mimport ALUOP._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:11:12: not found: type ALU3[0m
+[0m[[0m[31merror[0m] [0m[0mtest ( new ALU3 ) { c =>[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:13:24: not found: value ALU_ADD[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:13:34: not found: value ALU_SUB[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:13:44: not found: value ALU_AND[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:13:54: not found: value ALU_OR[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:13:63: not found: value ALU_XOR[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:13:73: not found: value ALU_SLT[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:1: not found: value ALU_SLL[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:11: not found: value ALU_SLTU[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:22: not found: value ALU_SRL[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:32: not found: value ALU_SRA[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:42: not found: value ALU_COPY_A[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:55: not found: value ALU_COPY_B[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:68: not found: value ALU_div[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:77: not found: value ALU_mul[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:86: not found: value ALU_Rem[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:14:95: not found: value ALU_XXX[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_div, ALU_mul, ALU_Rem, ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:31:6: not found: value ALU_ADD[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_ADD => src_a + src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:32:6: not found: value ALU_SUB[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SUB => src_a - src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:33:6: not found: value ALU_AND[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_AND => src_a & src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:34:6: not found: value ALU_OR[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_OR => src_a | src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:35:6: not found: value ALU_XOR[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_XOR => src_a ^ src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:36:6: not found: value ALU_SLT[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SLT => if ( src_a.toInt < src_b.toInt ) 1 else 0[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:37:6: not found: value ALU_SLL[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SLL => src_a << ( src_b & 0x1F )[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:38:6: not found: value ALU_SLTU[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SLTU => if( src_a < src_b ) 1 else 0[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:39:6: not found: value ALU_SRL[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SRL => src_a >> ( src_b & 0x1F )[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:40:6: not found: value ALU_SRA[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SRA => src_a >> ( src_b & 0x1F )[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:41:6: not found: value ALU_COPY_A[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_COPY_A => src_a[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:42:6: not found: value ALU_COPY_B[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_COPY_B => src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:43:6: not found: value ALU_div[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_div => src_a / src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:44:6: not found: value ALU_mul[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_mul => src_a * src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Exer1Tester.scala:45:6: not found: value ALU_Rem[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_Rem => src_a % src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task2Tester.scala:12:16: not found: type ImmdValGen4[0m
+[0m[[0m[31merror[0m] [0m[0m    test ( new ImmdValGen4 ) { c =>[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:8:8: not found: object ALUOP1[0m
+[0m[[0m[31merror[0m] [0m[0mimport ALUOP1._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:11:12: not found: type ALU[0m
+[0m[[0m[31merror[0m] [0m[0mtest ( new ALU ) { c =>[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:13:24: not found: value ALU_ADD[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:13:34: not found: value ALU_SUB[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:13:44: not found: value ALU_AND[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:13:54: not found: value ALU_OR[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:13:63: not found: value ALU_XOR[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:13:73: not found: value ALU_SLT[0m
+[0m[[0m[31merror[0m] [0m[0mval array_op = Array ( ALU_ADD , ALU_SUB , ALU_AND , ALU_OR , ALU_XOR , ALU_SLT ,[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:1: not found: value ALU_SLL[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:11: not found: value ALU_SLTU[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:22: not found: value ALU_SRL[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:32: not found: value ALU_SRA[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:42: not found: value ALU_COPY_A[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:55: not found: value ALU_COPY_B[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:14:68: not found: value ALU_XXX[0m
+[0m[[0m[31merror[0m] [0m[0mALU_SLL , ALU_SLTU , ALU_SRL , ALU_SRA , ALU_COPY_A , ALU_COPY_B , ALU_XXX )[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:31:6: not found: value ALU_ADD[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_ADD => src_a + src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:32:6: not found: value ALU_SUB[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SUB => src_a - src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:33:6: not found: value ALU_AND[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_AND => src_a & src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:34:6: not found: value ALU_OR[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_OR => src_a | src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:35:6: not found: value ALU_XOR[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_XOR => src_a ^ src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:36:6: not found: value ALU_SLT[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SLT => if ( src_a.toInt < src_b.toInt ) 1 else 0[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:37:6: not found: value ALU_SLL[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SLL => src_a << ( src_b & 0x1F )[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:38:6: not found: value ALU_SLTU[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SLTU => if( src_a < src_b ) 1 else 0[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:39:6: not found: value ALU_SRL[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SRL => src_a >> ( src_b & 0x1F )[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:40:6: not found: value ALU_SRA[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_SRA => src_a >> ( src_b & 0x1F )[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:41:6: not found: value ALU_COPY_A[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_COPY_A => src_a[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab4/Task3Tester.scala:42:6: not found: value ALU_COPY_B[0m
+[0m[[0m[31merror[0m] [0m[0mcase ALU_COPY_B => src_b[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab5/Ex1Tester.scala:12:14: not found: type ALU5[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new ALU5(4)){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab5/Ex2Tester.scala:12:14: not found: type eMux[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new eMux(UInt(32.W))){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab5/Ex3Tester.scala:9:14: not found: type Operator[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Operator(2 , UInt(16. W ) ) ( _ + _ ) ){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab5/Task1Tester.scala:11:14: not found: type Adder[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Adder(9)){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab5/Task2Tester.scala:9:14: not found: type Router[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new Router(UInt(10.W))){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Ex1Tester.scala:13:14: not found: type shift_register[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new shift_register){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Ex2Tester.scala:11:14: not found: type counter[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new counter(8)){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Ex3Tester.scala:11:14: not found: type oneShotTimer[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new oneShotTimer){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Task1Tester.scala:11:14: not found: type counter1[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new counter1(13)){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Task2Tester.scala:9:14: not found: type counter_with_xor[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new counter_with_xor) { a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Task3Tester.scala:13:14: not found: type shift_reg_with_parallel_load[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new shift_reg_with_parallel_load){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab6/Task4Tester.scala:13:14: not found: type up_down_counter[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new up_down_counter){a =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/Lab8/Task1Tester.scala:12:14: not found: type memory_assignment[0m
+[0m[[0m[31merror[0m] [0m[0m    test(new memory_assignment) { c =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m92 errors found[0m

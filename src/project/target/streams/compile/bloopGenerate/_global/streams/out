@@ -1,0 +1,4 @@
+[debug] [src-build] Classpath dependencies List()
+[debug] [src-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'src-build' to '/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/project/.bloop/src-build.json'
+[success] Generated .bloop/src-build.json

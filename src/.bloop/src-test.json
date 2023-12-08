@@ -1,0 +1,167 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "src-test",
+        "directory": "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src",
+        "workspaceDir": "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src",
+        "sources": [
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/src/test/scala",
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/src/test/scala-2.12",
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/src/test/scala-2",
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/src/test/java",
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/target/scala-2.12/src_managed/test"
+        ],
+        "dependencies": [
+            "src"
+        ],
+        "classpath": [
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/.bloop/src/scala-2.12/classes",
+            "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-library.jar"
+        ],
+        "out": "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/.bloop/src",
+        "classesDir": "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/.bloop/src/scala-2.12/test-classes",
+        "resources": [
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/src/test/resources",
+            "/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/target/scala-2.12/resource_managed/test"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.12.18",
+            "options": [
+                
+            ],
+            "jars": [
+                "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-library.jar",
+                "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-compiler.jar",
+                "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-xml_2.12-2.1.0.jar",
+                "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-reflect.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                },
+                {
+                    "names": [
+                        "zio.test.sbt.ZTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "weaver.framework.CatsEffect"
+                    ]
+                },
+                {
+                    "names": [
+                        "hedgehog.sbt.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/usr/lib/jvm/java-11-openjdk-amd64",
+                "options": [
+                    "-Duser.dir=/home/saad/Desktop/Scala-Chisel-Learning-Journey/src"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.18",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/home/saad/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.18/scala-library-2.12.18-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.18",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/saad/.sbt/boot/scala-2.12.18/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/home/saad/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.18/scala-library-2.12.18-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "test"
+        ]
+    }
+}

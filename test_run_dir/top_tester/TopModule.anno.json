@@ -1,0 +1,21 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir/top_tester/TopModule.lo.fir"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.annotations.LoadMemoryAnnotation",
+    "target":"TopModule.InstMem.ime",
+    "fileName":"/home/saad/Desktop/Scala-Chisel-Learning-Journey/src/main/scala/gcd/SingleCycle/imem.txt",
+    "hexOrBinary":"h",
+    "originalMemoryNameOpt":"ime"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/top_tester"
+  }
+]

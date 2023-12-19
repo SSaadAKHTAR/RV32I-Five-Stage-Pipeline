@@ -1,1 +1,2 @@
 1702048122432:testOnly SingleCycle.topModuletester
+1702633214868:testOnly SingleCycle.topModuletester -- -DwriteVcd=1

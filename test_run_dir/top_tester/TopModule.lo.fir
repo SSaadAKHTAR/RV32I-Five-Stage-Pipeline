@@ -35,9 +35,11 @@ circuit TopModule :
     node _pc_T_1 = add(pc, UInt<3>("h4")) @[Fetch.scala 18:44]
     node _pc_T_2 = tail(_pc_T_1, 1) @[Fetch.scala 18:44]
     node _pc_T_3 = mux(io_pcsel, _pc_T, _pc_T_2) @[Fetch.scala 18:12]
+    node _io_pc4_out_T = add(pc, UInt<3>("h4")) @[Fetch.scala 19:21]
+    node _io_pc4_out_T_1 = tail(_io_pc4_out_T, 1) @[Fetch.scala 19:21]
     io_instruction <= insMem.io_inst @[Fetch.scala 21:19]
     io_pc_out <= pc @[Fetch.scala 16:14]
-    io_pc4_out <= pc @[Fetch.scala 19:15]
+    io_pc4_out <= _io_pc4_out_T_1 @[Fetch.scala 19:15]
     pc <= mux(reset, UInt<32>("h0"), _pc_T_3) @[Fetch.scala 14:20 Fetch.scala 14:20 Fetch.scala 18:7]
     insMem.clock <= clock
     insMem.reset <= reset
@@ -313,51 +315,241 @@ circuit TopModule :
     input io_wr : UInt<1>
     input io_Rd : SInt<32>
 
-    mem Reg : @[RegFile.scala 19:16]
-      data-type => SInt<32>
-      depth => 32
-      read-latency => 0
-      write-latency => 1
-      reader => io_Rs1_MPORT
-      reader => io_Rs2_MPORT
-      reader => io_Rs1_MPORT_1
-      reader => io_Rs2_MPORT_1
-      writer => MPORT
-      read-under-write => undefined
-    node _T = neq(io_rd, UInt<1>("h0")) @[RegFile.scala 24:20]
-    node _T_1 = and(io_wr, _T) @[RegFile.scala 24:12]
-    node _GEN_0 = validif(_T_1, io_rd) @[RegFile.scala 24:27 RegFile.scala 26:4]
-    node _GEN_1 = validif(_T_1, clock) @[RegFile.scala 24:27 RegFile.scala 26:4]
-    node _GEN_2 = mux(_T_1, UInt<1>("h1"), UInt<1>("h0")) @[RegFile.scala 24:27 RegFile.scala 26:4 RegFile.scala 19:16]
-    node _GEN_3 = validif(_T_1, UInt<1>("h1")) @[RegFile.scala 24:27 RegFile.scala 26:11]
-    node _GEN_4 = validif(_T_1, io_Rd) @[RegFile.scala 24:27 RegFile.scala 26:11]
-    node _GEN_5 = validif(_T_1, io_rs1) @[RegFile.scala 24:27 RegFile.scala 27:14]
-    node _GEN_6 = mux(_T_1, Reg.io_Rs1_MPORT.data, Reg.io_Rs1_MPORT_1.data) @[RegFile.scala 24:27 RegFile.scala 27:8 RegFile.scala 32:12]
-    node _GEN_7 = validif(_T_1, io_rs2) @[RegFile.scala 24:27 RegFile.scala 28:14]
-    node _GEN_8 = mux(_T_1, Reg.io_Rs2_MPORT.data, Reg.io_Rs2_MPORT_1.data) @[RegFile.scala 24:27 RegFile.scala 28:8 RegFile.scala 33:12]
-    node _GEN_9 = validif(eq(_T_1, UInt<1>("h0")), io_rs1) @[RegFile.scala 24:27 RegFile.scala 32:18]
-    node _GEN_10 = validif(eq(_T_1, UInt<1>("h0")), clock) @[RegFile.scala 24:27 RegFile.scala 32:18]
-    node _GEN_11 = mux(_T_1, UInt<1>("h0"), UInt<1>("h1")) @[RegFile.scala 24:27 RegFile.scala 19:16 RegFile.scala 32:18]
-    node _GEN_12 = validif(eq(_T_1, UInt<1>("h0")), io_rs2) @[RegFile.scala 24:27 RegFile.scala 33:18]
-    io_Rs1 <= _GEN_6
-    io_Rs2 <= _GEN_8
-    Reg.io_Rs1_MPORT.addr <= _GEN_5
-    Reg.io_Rs1_MPORT.en <= _GEN_2
-    Reg.io_Rs1_MPORT.clk <= _GEN_1
-    Reg.io_Rs2_MPORT.addr <= _GEN_7
-    Reg.io_Rs2_MPORT.en <= _GEN_2
-    Reg.io_Rs2_MPORT.clk <= _GEN_1
-    Reg.io_Rs1_MPORT_1.addr <= _GEN_9
-    Reg.io_Rs1_MPORT_1.en <= _GEN_11
-    Reg.io_Rs1_MPORT_1.clk <= _GEN_10
-    Reg.io_Rs2_MPORT_1.addr <= _GEN_12
-    Reg.io_Rs2_MPORT_1.en <= _GEN_11
-    Reg.io_Rs2_MPORT_1.clk <= _GEN_10
-    Reg.MPORT.addr <= _GEN_0
-    Reg.MPORT.en <= _GEN_2
-    Reg.MPORT.clk <= _GEN_1
-    Reg.MPORT.data <= _GEN_4
-    Reg.MPORT.mask <= _GEN_3
+    reg Reg2_0 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_0) @[RegFile.scala 19:16]
+    reg Reg2_1 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_1) @[RegFile.scala 19:16]
+    reg Reg2_2 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_2) @[RegFile.scala 19:16]
+    reg Reg2_3 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_3) @[RegFile.scala 19:16]
+    reg Reg2_4 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_4) @[RegFile.scala 19:16]
+    reg Reg2_5 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_5) @[RegFile.scala 19:16]
+    reg Reg2_6 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_6) @[RegFile.scala 19:16]
+    reg Reg2_7 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_7) @[RegFile.scala 19:16]
+    reg Reg2_8 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_8) @[RegFile.scala 19:16]
+    reg Reg2_9 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_9) @[RegFile.scala 19:16]
+    reg Reg2_10 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_10) @[RegFile.scala 19:16]
+    reg Reg2_11 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_11) @[RegFile.scala 19:16]
+    reg Reg2_12 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_12) @[RegFile.scala 19:16]
+    reg Reg2_13 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_13) @[RegFile.scala 19:16]
+    reg Reg2_14 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_14) @[RegFile.scala 19:16]
+    reg Reg2_15 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_15) @[RegFile.scala 19:16]
+    reg Reg2_16 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_16) @[RegFile.scala 19:16]
+    reg Reg2_17 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_17) @[RegFile.scala 19:16]
+    reg Reg2_18 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_18) @[RegFile.scala 19:16]
+    reg Reg2_19 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_19) @[RegFile.scala 19:16]
+    reg Reg2_20 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_20) @[RegFile.scala 19:16]
+    reg Reg2_21 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_21) @[RegFile.scala 19:16]
+    reg Reg2_22 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_22) @[RegFile.scala 19:16]
+    reg Reg2_23 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_23) @[RegFile.scala 19:16]
+    reg Reg2_24 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_24) @[RegFile.scala 19:16]
+    reg Reg2_25 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_25) @[RegFile.scala 19:16]
+    reg Reg2_26 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_26) @[RegFile.scala 19:16]
+    reg Reg2_27 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_27) @[RegFile.scala 19:16]
+    reg Reg2_28 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_28) @[RegFile.scala 19:16]
+    reg Reg2_29 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_29) @[RegFile.scala 19:16]
+    reg Reg2_30 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_30) @[RegFile.scala 19:16]
+    reg Reg2_31 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), Reg2_31) @[RegFile.scala 19:16]
+    node _T = neq(io_rd, UInt<1>("h0")) @[RegFile.scala 26:20]
+    node _T_1 = and(io_wr, _T) @[RegFile.scala 26:12]
+    node _Reg2_io_rd = io_Rd @[RegFile.scala 28:12 RegFile.scala 28:12]
+    node _GEN_0 = mux(eq(UInt<1>("h0"), io_rd), _Reg2_io_rd, asSInt(UInt<1>("h0"))) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 23:9]
+    node _GEN_1 = mux(eq(UInt<1>("h1"), io_rd), _Reg2_io_rd, Reg2_1) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_2 = mux(eq(UInt<2>("h2"), io_rd), _Reg2_io_rd, Reg2_2) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_3 = mux(eq(UInt<2>("h3"), io_rd), _Reg2_io_rd, Reg2_3) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_4 = mux(eq(UInt<3>("h4"), io_rd), _Reg2_io_rd, Reg2_4) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_5 = mux(eq(UInt<3>("h5"), io_rd), _Reg2_io_rd, Reg2_5) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_6 = mux(eq(UInt<3>("h6"), io_rd), _Reg2_io_rd, Reg2_6) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_7 = mux(eq(UInt<3>("h7"), io_rd), _Reg2_io_rd, Reg2_7) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_8 = mux(eq(UInt<4>("h8"), io_rd), _Reg2_io_rd, Reg2_8) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_9 = mux(eq(UInt<4>("h9"), io_rd), _Reg2_io_rd, Reg2_9) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_10 = mux(eq(UInt<4>("ha"), io_rd), _Reg2_io_rd, Reg2_10) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_11 = mux(eq(UInt<4>("hb"), io_rd), _Reg2_io_rd, Reg2_11) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_12 = mux(eq(UInt<4>("hc"), io_rd), _Reg2_io_rd, Reg2_12) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_13 = mux(eq(UInt<4>("hd"), io_rd), _Reg2_io_rd, Reg2_13) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_14 = mux(eq(UInt<4>("he"), io_rd), _Reg2_io_rd, Reg2_14) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_15 = mux(eq(UInt<4>("hf"), io_rd), _Reg2_io_rd, Reg2_15) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_16 = mux(eq(UInt<5>("h10"), io_rd), _Reg2_io_rd, Reg2_16) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_17 = mux(eq(UInt<5>("h11"), io_rd), _Reg2_io_rd, Reg2_17) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_18 = mux(eq(UInt<5>("h12"), io_rd), _Reg2_io_rd, Reg2_18) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_19 = mux(eq(UInt<5>("h13"), io_rd), _Reg2_io_rd, Reg2_19) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_20 = mux(eq(UInt<5>("h14"), io_rd), _Reg2_io_rd, Reg2_20) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_21 = mux(eq(UInt<5>("h15"), io_rd), _Reg2_io_rd, Reg2_21) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_22 = mux(eq(UInt<5>("h16"), io_rd), _Reg2_io_rd, Reg2_22) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_23 = mux(eq(UInt<5>("h17"), io_rd), _Reg2_io_rd, Reg2_23) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_24 = mux(eq(UInt<5>("h18"), io_rd), _Reg2_io_rd, Reg2_24) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_25 = mux(eq(UInt<5>("h19"), io_rd), _Reg2_io_rd, Reg2_25) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_26 = mux(eq(UInt<5>("h1a"), io_rd), _Reg2_io_rd, Reg2_26) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_27 = mux(eq(UInt<5>("h1b"), io_rd), _Reg2_io_rd, Reg2_27) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_28 = mux(eq(UInt<5>("h1c"), io_rd), _Reg2_io_rd, Reg2_28) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_29 = mux(eq(UInt<5>("h1d"), io_rd), _Reg2_io_rd, Reg2_29) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_30 = mux(eq(UInt<5>("h1e"), io_rd), _Reg2_io_rd, Reg2_30) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_31 = mux(eq(UInt<5>("h1f"), io_rd), _Reg2_io_rd, Reg2_31) @[RegFile.scala 28:12 RegFile.scala 28:12 RegFile.scala 19:16]
+    node _GEN_32 = validif(eq(UInt<1>("h0"), io_rs1), Reg2_0) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_33 = mux(eq(UInt<1>("h1"), io_rs1), Reg2_1, _GEN_32) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_34 = mux(eq(UInt<2>("h2"), io_rs1), Reg2_2, _GEN_33) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_35 = mux(eq(UInt<2>("h3"), io_rs1), Reg2_3, _GEN_34) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_36 = mux(eq(UInt<3>("h4"), io_rs1), Reg2_4, _GEN_35) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_37 = mux(eq(UInt<3>("h5"), io_rs1), Reg2_5, _GEN_36) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_38 = mux(eq(UInt<3>("h6"), io_rs1), Reg2_6, _GEN_37) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_39 = mux(eq(UInt<3>("h7"), io_rs1), Reg2_7, _GEN_38) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_40 = mux(eq(UInt<4>("h8"), io_rs1), Reg2_8, _GEN_39) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_41 = mux(eq(UInt<4>("h9"), io_rs1), Reg2_9, _GEN_40) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_42 = mux(eq(UInt<4>("ha"), io_rs1), Reg2_10, _GEN_41) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_43 = mux(eq(UInt<4>("hb"), io_rs1), Reg2_11, _GEN_42) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_44 = mux(eq(UInt<4>("hc"), io_rs1), Reg2_12, _GEN_43) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_45 = mux(eq(UInt<4>("hd"), io_rs1), Reg2_13, _GEN_44) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_46 = mux(eq(UInt<4>("he"), io_rs1), Reg2_14, _GEN_45) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_47 = mux(eq(UInt<4>("hf"), io_rs1), Reg2_15, _GEN_46) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_48 = mux(eq(UInt<5>("h10"), io_rs1), Reg2_16, _GEN_47) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_49 = mux(eq(UInt<5>("h11"), io_rs1), Reg2_17, _GEN_48) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_50 = mux(eq(UInt<5>("h12"), io_rs1), Reg2_18, _GEN_49) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_51 = mux(eq(UInt<5>("h13"), io_rs1), Reg2_19, _GEN_50) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_52 = mux(eq(UInt<5>("h14"), io_rs1), Reg2_20, _GEN_51) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_53 = mux(eq(UInt<5>("h15"), io_rs1), Reg2_21, _GEN_52) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_54 = mux(eq(UInt<5>("h16"), io_rs1), Reg2_22, _GEN_53) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_55 = mux(eq(UInt<5>("h17"), io_rs1), Reg2_23, _GEN_54) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_56 = mux(eq(UInt<5>("h18"), io_rs1), Reg2_24, _GEN_55) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_57 = mux(eq(UInt<5>("h19"), io_rs1), Reg2_25, _GEN_56) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_58 = mux(eq(UInt<5>("h1a"), io_rs1), Reg2_26, _GEN_57) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_59 = mux(eq(UInt<5>("h1b"), io_rs1), Reg2_27, _GEN_58) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_60 = mux(eq(UInt<5>("h1c"), io_rs1), Reg2_28, _GEN_59) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_61 = mux(eq(UInt<5>("h1d"), io_rs1), Reg2_29, _GEN_60) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_62 = mux(eq(UInt<5>("h1e"), io_rs1), Reg2_30, _GEN_61) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_63 = mux(eq(UInt<5>("h1f"), io_rs1), Reg2_31, _GEN_62) @[RegFile.scala 29:8 RegFile.scala 29:8]
+    node _GEN_64 = validif(eq(UInt<1>("h0"), io_rs2), Reg2_0) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_65 = mux(eq(UInt<1>("h1"), io_rs2), Reg2_1, _GEN_64) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_66 = mux(eq(UInt<2>("h2"), io_rs2), Reg2_2, _GEN_65) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_67 = mux(eq(UInt<2>("h3"), io_rs2), Reg2_3, _GEN_66) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_68 = mux(eq(UInt<3>("h4"), io_rs2), Reg2_4, _GEN_67) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_69 = mux(eq(UInt<3>("h5"), io_rs2), Reg2_5, _GEN_68) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_70 = mux(eq(UInt<3>("h6"), io_rs2), Reg2_6, _GEN_69) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_71 = mux(eq(UInt<3>("h7"), io_rs2), Reg2_7, _GEN_70) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_72 = mux(eq(UInt<4>("h8"), io_rs2), Reg2_8, _GEN_71) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_73 = mux(eq(UInt<4>("h9"), io_rs2), Reg2_9, _GEN_72) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_74 = mux(eq(UInt<4>("ha"), io_rs2), Reg2_10, _GEN_73) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_75 = mux(eq(UInt<4>("hb"), io_rs2), Reg2_11, _GEN_74) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_76 = mux(eq(UInt<4>("hc"), io_rs2), Reg2_12, _GEN_75) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_77 = mux(eq(UInt<4>("hd"), io_rs2), Reg2_13, _GEN_76) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_78 = mux(eq(UInt<4>("he"), io_rs2), Reg2_14, _GEN_77) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_79 = mux(eq(UInt<4>("hf"), io_rs2), Reg2_15, _GEN_78) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_80 = mux(eq(UInt<5>("h10"), io_rs2), Reg2_16, _GEN_79) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_81 = mux(eq(UInt<5>("h11"), io_rs2), Reg2_17, _GEN_80) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_82 = mux(eq(UInt<5>("h12"), io_rs2), Reg2_18, _GEN_81) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_83 = mux(eq(UInt<5>("h13"), io_rs2), Reg2_19, _GEN_82) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_84 = mux(eq(UInt<5>("h14"), io_rs2), Reg2_20, _GEN_83) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_85 = mux(eq(UInt<5>("h15"), io_rs2), Reg2_21, _GEN_84) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_86 = mux(eq(UInt<5>("h16"), io_rs2), Reg2_22, _GEN_85) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_87 = mux(eq(UInt<5>("h17"), io_rs2), Reg2_23, _GEN_86) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_88 = mux(eq(UInt<5>("h18"), io_rs2), Reg2_24, _GEN_87) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_89 = mux(eq(UInt<5>("h19"), io_rs2), Reg2_25, _GEN_88) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_90 = mux(eq(UInt<5>("h1a"), io_rs2), Reg2_26, _GEN_89) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_91 = mux(eq(UInt<5>("h1b"), io_rs2), Reg2_27, _GEN_90) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_92 = mux(eq(UInt<5>("h1c"), io_rs2), Reg2_28, _GEN_91) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_93 = mux(eq(UInt<5>("h1d"), io_rs2), Reg2_29, _GEN_92) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_94 = mux(eq(UInt<5>("h1e"), io_rs2), Reg2_30, _GEN_93) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_95 = mux(eq(UInt<5>("h1f"), io_rs2), Reg2_31, _GEN_94) @[RegFile.scala 30:8 RegFile.scala 30:8]
+    node _GEN_96 = mux(_T_1, _GEN_0, asSInt(UInt<1>("h0"))) @[RegFile.scala 26:27 RegFile.scala 23:9]
+    node _GEN_97 = mux(_T_1, _GEN_1, Reg2_1) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_98 = mux(_T_1, _GEN_2, Reg2_2) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_99 = mux(_T_1, _GEN_3, Reg2_3) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_100 = mux(_T_1, _GEN_4, Reg2_4) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_101 = mux(_T_1, _GEN_5, Reg2_5) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_102 = mux(_T_1, _GEN_6, Reg2_6) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_103 = mux(_T_1, _GEN_7, Reg2_7) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_104 = mux(_T_1, _GEN_8, Reg2_8) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_105 = mux(_T_1, _GEN_9, Reg2_9) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_106 = mux(_T_1, _GEN_10, Reg2_10) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_107 = mux(_T_1, _GEN_11, Reg2_11) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_108 = mux(_T_1, _GEN_12, Reg2_12) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_109 = mux(_T_1, _GEN_13, Reg2_13) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_110 = mux(_T_1, _GEN_14, Reg2_14) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_111 = mux(_T_1, _GEN_15, Reg2_15) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_112 = mux(_T_1, _GEN_16, Reg2_16) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_113 = mux(_T_1, _GEN_17, Reg2_17) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_114 = mux(_T_1, _GEN_18, Reg2_18) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_115 = mux(_T_1, _GEN_19, Reg2_19) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_116 = mux(_T_1, _GEN_20, Reg2_20) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_117 = mux(_T_1, _GEN_21, Reg2_21) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_118 = mux(_T_1, _GEN_22, Reg2_22) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_119 = mux(_T_1, _GEN_23, Reg2_23) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_120 = mux(_T_1, _GEN_24, Reg2_24) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_121 = mux(_T_1, _GEN_25, Reg2_25) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_122 = mux(_T_1, _GEN_26, Reg2_26) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_123 = mux(_T_1, _GEN_27, Reg2_27) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_124 = mux(_T_1, _GEN_28, Reg2_28) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_125 = mux(_T_1, _GEN_29, Reg2_29) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_126 = mux(_T_1, _GEN_30, Reg2_30) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _GEN_127 = mux(_T_1, _GEN_31, Reg2_31) @[RegFile.scala 26:27 RegFile.scala 19:16]
+    node _Reg2_io_rs1 = _GEN_63 @[RegFile.scala 29:8]
+    node _Reg2_io_rs1_0 = _GEN_63 @[RegFile.scala 34:12]
+    node _GEN_128 = mux(_T_1, _Reg2_io_rs1, _Reg2_io_rs1_0) @[RegFile.scala 26:27 RegFile.scala 29:8 RegFile.scala 34:12]
+    node _Reg2_io_rs2 = _GEN_95 @[RegFile.scala 30:8]
+    node _Reg2_io_rs2_0 = _GEN_95 @[RegFile.scala 35:12]
+    node _GEN_129 = mux(_T_1, _Reg2_io_rs2, _Reg2_io_rs2_0) @[RegFile.scala 26:27 RegFile.scala 30:8 RegFile.scala 35:12]
+    io_Rs1 <= _GEN_128
+    io_Rs2 <= _GEN_129
+    Reg2_0 <= _GEN_96
+    Reg2_1 <= _GEN_97
+    Reg2_2 <= _GEN_98
+    Reg2_3 <= _GEN_99
+    Reg2_4 <= _GEN_100
+    Reg2_5 <= _GEN_101
+    Reg2_6 <= _GEN_102
+    Reg2_7 <= _GEN_103
+    Reg2_8 <= _GEN_104
+    Reg2_9 <= _GEN_105
+    Reg2_10 <= _GEN_106
+    Reg2_11 <= _GEN_107
+    Reg2_12 <= _GEN_108
+    Reg2_13 <= _GEN_109
+    Reg2_14 <= _GEN_110
+    Reg2_15 <= _GEN_111
+    Reg2_16 <= _GEN_112
+    Reg2_17 <= _GEN_113
+    Reg2_18 <= _GEN_114
+    Reg2_19 <= _GEN_115
+    Reg2_20 <= _GEN_116
+    Reg2_21 <= _GEN_117
+    Reg2_22 <= _GEN_118
+    Reg2_23 <= _GEN_119
+    Reg2_24 <= _GEN_120
+    Reg2_25 <= _GEN_121
+    Reg2_26 <= _GEN_122
+    Reg2_27 <= _GEN_123
+    Reg2_28 <= _GEN_124
+    Reg2_29 <= _GEN_125
+    Reg2_30 <= _GEN_126
+    Reg2_31 <= _GEN_127
 
   module ImmdValGen1 :
     input clock : Clock
@@ -406,50 +598,51 @@ circuit TopModule :
     output io_Rd : UInt<5>
     output io_RegWr_en : UInt<1>
     input io_Wrbrd : UInt<5>
+    input io_RegWr_enWB : UInt<1>
 
-    inst cu of contolUnit @[Decode.scala 44:21]
-    inst regFile of Reg_File @[Decode.scala 45:25]
-    inst imm of ImmdValGen1 @[Decode.scala 46:21]
-    io_imm_out <= imm.io_immd_se @[Decode.scala 62:15]
-    io_iform <= cu.io_iform @[Decode.scala 65:13]
-    io_rform <= cu.io_rform @[Decode.scala 66:13]
-    io_sform <= cu.io_sform @[Decode.scala 68:13]
-    io_bform <= cu.io_bform @[Decode.scala 67:13]
-    io_luiform <= cu.io_luiform @[Decode.scala 69:15]
-    io_Jalform <= cu.io_Jalform @[Decode.scala 70:15]
-    io_jalrform <= cu.io_jalrform @[Decode.scala 71:16]
-    io_lform <= cu.io_lform @[Decode.scala 72:13]
-    io_Auipc <= cu.io_Auipc @[Decode.scala 73:13]
-    io_lui_jal_jalr_auipc_imm <= cu.io_lui_jal_jalr_auipc_imm @[Decode.scala 63:30]
-    io_immBits <= cu.io_immBits @[Decode.scala 60:15]
-    io_mem_wr_en <= cu.io_mem_wr_en @[Decode.scala 75:17]
-    io_wr_back <= cu.io_wr_back @[Decode.scala 76:15]
-    io_br_fun3 <= cu.io_br_fun3 @[Decode.scala 77:15]
-    io_load_storefun <= cu.io_load_storefun @[Decode.scala 78:21]
-    io_pcsel <= cu.io_pcsel @[Decode.scala 79:13]
-    io_mem_r_en <= cu.io_mem_r_en @[Decode.scala 81:16]
-    io_rs1 <= regFile.io_Rs1 @[Decode.scala 90:11]
-    io_rs2 <= regFile.io_Rs2 @[Decode.scala 91:11]
-    io_aluop <= cu.io_aluop @[Decode.scala 82:13]
-    io_pc_out <= io_pcout @[Decode.scala 93:14]
-    io_RS1 <= cu.io_rs1 @[Decode.scala 48:11]
-    io_RS2 <= cu.io_rs2 @[Decode.scala 49:11]
-    io_Rd <= cu.io_rd @[Decode.scala 50:10]
-    io_RegWr_en <= cu.io_wr_en @[Decode.scala 51:16]
+    inst cu of contolUnit @[Decode.scala 45:21]
+    inst regFile of Reg_File @[Decode.scala 46:25]
+    inst imm of ImmdValGen1 @[Decode.scala 47:21]
+    io_imm_out <= imm.io_immd_se @[Decode.scala 64:15]
+    io_iform <= cu.io_iform @[Decode.scala 67:13]
+    io_rform <= cu.io_rform @[Decode.scala 68:13]
+    io_sform <= cu.io_sform @[Decode.scala 70:13]
+    io_bform <= cu.io_bform @[Decode.scala 69:13]
+    io_luiform <= cu.io_luiform @[Decode.scala 71:15]
+    io_Jalform <= cu.io_Jalform @[Decode.scala 72:15]
+    io_jalrform <= cu.io_jalrform @[Decode.scala 73:16]
+    io_lform <= cu.io_lform @[Decode.scala 74:13]
+    io_Auipc <= cu.io_Auipc @[Decode.scala 75:13]
+    io_lui_jal_jalr_auipc_imm <= cu.io_lui_jal_jalr_auipc_imm @[Decode.scala 65:30]
+    io_immBits <= cu.io_immBits @[Decode.scala 62:15]
+    io_mem_wr_en <= cu.io_mem_wr_en @[Decode.scala 77:17]
+    io_wr_back <= cu.io_wr_back @[Decode.scala 78:15]
+    io_br_fun3 <= cu.io_br_fun3 @[Decode.scala 79:15]
+    io_load_storefun <= cu.io_load_storefun @[Decode.scala 80:21]
+    io_pcsel <= cu.io_pcsel @[Decode.scala 81:13]
+    io_mem_r_en <= cu.io_mem_r_en @[Decode.scala 83:16]
+    io_rs1 <= regFile.io_Rs1 @[Decode.scala 92:11]
+    io_rs2 <= regFile.io_Rs2 @[Decode.scala 93:11]
+    io_aluop <= cu.io_aluop @[Decode.scala 84:13]
+    io_pc_out <= io_pcout @[Decode.scala 95:14]
+    io_RS1 <= cu.io_rs1 @[Decode.scala 51:11]
+    io_RS2 <= cu.io_rs2 @[Decode.scala 52:11]
+    io_Rd <= cu.io_rd @[Decode.scala 53:10]
+    io_RegWr_en <= cu.io_wr_en @[Decode.scala 54:16]
     cu.clock <= clock
     cu.reset <= reset
-    cu.io_instruction <= io_ins @[Decode.scala 56:22]
-    cu.io_btaken <= io_btaken @[Decode.scala 58:17]
+    cu.io_instruction <= io_ins @[Decode.scala 49:22]
+    cu.io_btaken <= io_btaken @[Decode.scala 60:17]
     regFile.clock <= clock
     regFile.reset <= reset
-    regFile.io_rd <= io_Wrbrd @[Decode.scala 84:18]
-    regFile.io_rs1 <= cu.io_rs1 @[Decode.scala 85:19]
-    regFile.io_rs2 <= cu.io_rs2 @[Decode.scala 86:19]
-    regFile.io_wr <= cu.io_wr_en @[Decode.scala 87:18]
-    regFile.io_Rd <= io_din @[Decode.scala 88:18]
+    regFile.io_rd <= io_Wrbrd @[Decode.scala 86:18]
+    regFile.io_rs1 <= cu.io_rs1 @[Decode.scala 87:19]
+    regFile.io_rs2 <= cu.io_rs2 @[Decode.scala 88:19]
+    regFile.io_wr <= io_RegWr_enWB @[Decode.scala 89:18]
+    regFile.io_Rd <= io_din @[Decode.scala 90:18]
     imm.clock <= clock
     imm.reset <= reset
-    imm.io_imm <= io_immBits @[Decode.scala 61:15]
+    imm.io_imm <= io_immBits @[Decode.scala 63:15]
 
   module ALUS :
     input clock : Clock
@@ -711,7 +904,7 @@ circuit TopModule :
     io_MemToReg <= io_wr_back @[Execute.scala 95:16]
     io_RDout <= io_Rd @[Execute.scala 62:13]
     io_RS2out <= io_RS2 @[Execute.scala 63:14]
-    io_RegWr_enout <= UInt<1>("h0") @[Execute.scala 61:19]
+    io_RegWr_enout <= io_RegWr_en @[Execute.scala 61:19]
     io_pco <= io_pc_out @[Execute.scala 96:11]
     io_pcselout <= io_pcsel @[Execute.scala 60:16]
     alu.clock <= clock
@@ -1121,21 +1314,23 @@ circuit TopModule :
     output io_RDselout : UInt<5>
     output io_aluout : SInt<32>
     output io_pcselout : UInt<1>
+    output io_RegWr_enout : UInt<1>
 
-    node _T = eq(io_memtoreg, UInt<1>("h0")) @[Write_back.scala 26:21]
-    node _T_1 = eq(io_memtoreg, UInt<1>("h1")) @[Write_back.scala 30:25]
-    node _T_2 = eq(io_memtoreg, UInt<2>("h2")) @[Write_back.scala 33:25]
-    node _io_Rd_T = add(io_pcout, UInt<3>("h4")) @[Write_back.scala 34:22]
-    node _io_Rd_T_1 = tail(_io_Rd_T, 1) @[Write_back.scala 34:22]
-    node _io_Rd_T_2 = asSInt(_io_Rd_T_1) @[Write_back.scala 34:34]
-    node _GEN_0 = mux(_T_2, _io_Rd_T_2, asSInt(UInt<1>("h0"))) @[Write_back.scala 33:32 Write_back.scala 34:10 Write_back.scala 37:10]
-    node _GEN_1 = mux(_T_1, io_alu_out, _GEN_0) @[Write_back.scala 30:32 Write_back.scala 31:10]
-    node _GEN_2 = mux(_T, io_Dout, _GEN_1) @[Write_back.scala 26:28 Write_back.scala 27:10]
+    node _T = eq(io_memtoreg, UInt<1>("h0")) @[Write_back.scala 28:21]
+    node _T_1 = eq(io_memtoreg, UInt<1>("h1")) @[Write_back.scala 32:25]
+    node _T_2 = eq(io_memtoreg, UInt<2>("h2")) @[Write_back.scala 35:25]
+    node _io_Rd_T = add(io_pcout, UInt<3>("h4")) @[Write_back.scala 36:22]
+    node _io_Rd_T_1 = tail(_io_Rd_T, 1) @[Write_back.scala 36:22]
+    node _io_Rd_T_2 = asSInt(_io_Rd_T_1) @[Write_back.scala 36:34]
+    node _GEN_0 = mux(_T_2, _io_Rd_T_2, asSInt(UInt<1>("h0"))) @[Write_back.scala 35:32 Write_back.scala 36:10 Write_back.scala 39:10]
+    node _GEN_1 = mux(_T_1, io_alu_out, _GEN_0) @[Write_back.scala 32:32 Write_back.scala 33:10]
+    node _GEN_2 = mux(_T, io_Dout, _GEN_1) @[Write_back.scala 28:28 Write_back.scala 29:10]
     io_Rd <= _GEN_2
-    io_br_taken <= UInt<1>("h0") @[Write_back.scala 23:16]
-    io_RDselout <= io_RDsel @[Write_back.scala 39:15]
-    io_aluout <= io_alu_out @[Write_back.scala 24:14]
-    io_pcselout <= io_pcsel @[Write_back.scala 25:16]
+    io_br_taken <= UInt<1>("h0") @[Write_back.scala 24:16]
+    io_RDselout <= io_RDsel @[Write_back.scala 41:15]
+    io_aluout <= io_alu_out @[Write_back.scala 25:14]
+    io_pcselout <= io_pcsel @[Write_back.scala 26:16]
+    io_RegWr_enout <= io_RegWr_enOut @[Write_back.scala 27:19]
 
   module TopModule :
     input clock : Clock
@@ -1248,7 +1443,7 @@ circuit TopModule :
       reset => (UInt<1>("h0"), MemWrbbrtaken) @[TopModule.scala 171:26]
     reg MemWrbpcsel : UInt<1>, clock with :
       reset => (UInt<1>("h0"), MemWrbpcsel) @[TopModule.scala 174:26]
-    io_out <= decode.io_din @[TopModule.scala 186:12]
+    io_out <= decode.io_din @[TopModule.scala 187:12]
     fetch.clock <= clock
     fetch.reset <= reset
     fetch.io_pcsel <= WriteBack.io_pcselout @[TopModule.scala 182:19]
@@ -1261,6 +1456,7 @@ circuit TopModule :
     decode.io_pcout <= IF_IDpc @[TopModule.scala 26:20]
     decode.io_pc4out <= IF_IDpc4 @[TopModule.scala 29:21]
     decode.io_Wrbrd <= WriteBack.io_RDselout @[TopModule.scala 179:20]
+    decode.io_RegWr_enWB <= WriteBack.io_RegWr_enout @[TopModule.scala 183:25]
     execute.clock <= clock
     execute.reset <= reset
     execute.io_iform <= ID_Exiform @[TopModule.scala 34:21]

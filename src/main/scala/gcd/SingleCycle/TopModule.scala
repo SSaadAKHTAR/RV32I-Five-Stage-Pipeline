@@ -108,7 +108,7 @@ class TopModule extends Module{
     ID_ExRegWr_en:= decode.io.RegWr_en
     execute.io.RegWr_en:=ID_ExRegWr_en
 
-    //core b\w execute and memory
+    //core b\w execute and memory 
     val ExMemMemWen= Reg(Bool())
     ExMemMemWen:=execute.io.MemWen
     memory.io.Wen:= ExMemMemWen
@@ -180,6 +180,7 @@ class TopModule extends Module{
     decode.io.din:=WriteBack.io.Rd
     fetch.io.aluout:=WriteBack.io.aluout
     fetch.io.pcsel:= WriteBack.io.pcselout
+    decode.io.RegWr_enWB:=WriteBack.io.RegWr_enout
 
 
 

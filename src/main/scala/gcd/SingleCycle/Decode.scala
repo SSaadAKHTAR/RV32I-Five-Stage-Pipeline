@@ -38,12 +38,15 @@ class decode extends Module{
         val Rd = Output(UInt(5.W)) 
         val RegWr_en = Output(Bool())
         val Wrbrd = Input(UInt(5.W))
+        val RegWr_enWB = Input (Bool())
 
 
     })
     val cu  = Module(new contolUnit)
     val regFile = Module(new Reg_File)
     val imm = Module(new ImmdValGen1)
+
+    cu.io.instruction:= io.ins
 
     io.RS1:=cu.io.rs1
     io.RS2:=cu.io.rs2
@@ -53,7 +56,6 @@ class decode extends Module{
     io.wr_back:=cu.io.wr_back
 
 
-    cu.io.instruction:= io.ins
 
     cu.io.btaken:=io.btaken
 
@@ -84,7 +86,7 @@ class decode extends Module{
     regFile.io.rd:=io.Wrbrd
     regFile.io.rs1:=cu.io.rs1
     regFile.io.rs2:=cu.io.rs2
-    regFile.io.wr:=cu.io.wr_en
+    regFile.io.wr:=io.RegWr_enWB
     regFile.io.Rd:=io.din
 
     io.rs1:=regFile.io.Rs1

@@ -19,10 +19,12 @@ class Write_back extends Module{
         val RDselout = Output(UInt(5.W))
         val aluout = Output (SInt(32.W))
         val pcselout = Output(Bool())
+        val RegWr_enout = Output(Bool())
     })
     io.br_taken:=0.B
     io.aluout:=io.alu_out
     io.pcselout:=io.pcsel
+    io.RegWr_enout:=io.RegWr_enOut
     when(io.memtoreg===0.U){
     io.Rd:=io.Dout
 

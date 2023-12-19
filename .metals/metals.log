@@ -1,0 +1,1410 @@
+2023.12.15 14:30:38 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.0.
+2023.12.15 14:31:19 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.15 14:31:29 INFO  Attempting to connect to the build server...
+2023.12.15 14:31:29 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/saad/.bloop/bloop.json
+2023.12.15 14:31:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/saad/Desktop/5stagepipeline/.metals/bsp.trace.json or /home/saad/.cache/metals/bsp.trace.json
+2023.12.15 14:31:29 INFO  time: Connected to build server in 0.41s
+2023.12.15 14:31:29 INFO  Connected to Build server: Bloop v1.5.11
+2023.12.15 14:31:30 INFO  time: Imported build in 0.18s
+2023.12.15 14:31:32 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2023.12.15 14:31:32 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2023.12.15 14:31:32 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2023.12.15 14:31:32 INFO  time: indexed workspace in 2.06s
+2023.12.15 14:31:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 14:31:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 14:31:34 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.15 14:31:35 INFO  time: code lens generation in 3.03s
+2023.12.15 14:31:35 INFO  time: code lens generation in 3.39s
+2023.12.15 14:31:35 INFO  time: code lens generation in 3.39s
+2023.12.15 14:31:35 INFO  time: code lens generation in 3.39s
+2023.12.15 14:49:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 14:57:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 15:04:09 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2023.12.15 15:05:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+Dec 15, 2023 3:06:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 76
+2023.12.15 15:07:00 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 15:08:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/IMM.scala
+2023.12.15 15:10:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 15:11:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/control.scala
+2023.12.15 15:13:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/IMM.scala
+Dec 15, 2023 3:13:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 168
+2023.12.15 15:14:21 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/control.scala
+2023.12.15 15:14:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+Dec 15, 2023 3:14:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 201
+2023.12.15 16:16:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/control.scala
+2023.12.15 16:16:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 16:19:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopModuleTester.scala
+2023.12.15 16:21:09 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 16:23:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 16:23:34 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 16:23:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 16:23:38 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 16:27:07 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:27:34 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/InsMem.scala
+Dec 15, 2023 4:29:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 350
+2023.12.15 16:29:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/InsMem.scala
+2023.12.15 16:29:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/InsMem.scala
+2023.12.15 16:29:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/InsMem.scala
+2023.12.15 16:29:55 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:30:14 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:30:39 ERROR Failed to tokenize input for semantic tokens for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+scala.meta.tokenizers.TokenizeException: <input>:15: error: Invalid literal number
+    val insMem = Module(new InstMem(/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt))
+                                                       ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.12.15 16:30:40 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:30:40 ERROR Failed to tokenize input for semantic tokens for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+scala.meta.tokenizers.TokenizeException: <input>:15: error: Invalid literal number
+    val insMem = Module(new InstMem(/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt))
+                                                       ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-050.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-110.md
+2023.12.15 16:30:46 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-161.md
+2023.12.15 16:30:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-721.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-778.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-879.md
+2023.12.15 16:30:46 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:46 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-46-931.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-47-134.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-47-186.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-47-577.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-47-694.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:47 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-47-882.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-48-018.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-48-159.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-48-555.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-48-676.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:48 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-48-941.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:49 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-49-059.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:51 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-51-132.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-52-395.md
+error while checking new InstMem(null: <notype>)
+error while checking Module(new InstMem(null: <notype>))
+error while checking val insMem = Module(new InstMem(null: <notype>))
+error while checking  extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking class fetch extends Module {
+  val io =
+    IO(
+      new Bundle {
+        val pcsel = Input(Bool())
+        val aluout = Input(SInt(32.W))
+        val instruction = Output(UInt(32.W))
+        val pc_out = Output(UInt(32.W))
+        val pc4_out = Output(UInt(32.W))
+      }
+    )
+  val pc = RegInit(0.U(32.W))
+  val insMem = Module(new InstMem(null: <notype>))
+}
+error while checking package SingleCycle {
+  import chisel3.*
+  import chisel3.util.*
+  class fetch extends Module {
+    val io =
+      IO(
+        new Bundle {
+          val pcsel = Input(Bool())
+          val aluout = Input(SInt(32.W))
+          val instruction = Output(UInt(32.W))
+          val pc_out = Output(UInt(32.W))
+          val pc4_out = Output(UInt(32.W))
+        }
+      )
+    val pc = RegInit(0.U(32.W))
+    val insMem = Module(new InstMem(null: <notype>))
+  }
+}
+Dec 15, 2023 4:30:57 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/saad/Desktop/5stagepipeline/.metals/.reports/metals-full/2023-12-15/r_compiler-error_16-30-57-298.md
+2023.12.15 16:30:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:32:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:32:47 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:32:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:32:50 ERROR Failed to tokenize input for semantic tokens for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+scala.meta.tokenizers.TokenizeException: <input>:19: error: Invalid literal number
+    io.pc4_out:= pc + 4U
+                      ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.12.15 16:32:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:32:50 ERROR Failed to tokenize input for semantic tokens for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+scala.meta.tokenizers.TokenizeException: <input>:19: error: Invalid literal number
+    io.pc4_out:= pc + 4U
+                      ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:864)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.12.15 16:32:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:34:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:34:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.15 16:34:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/InsMem.scala
+Dec 15, 2023 4:35:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 619
+2023.12.15 16:35:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/DataPath.scala
+2023.12.15 16:35:14 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/DataPath.scala
+2023.12.15 16:35:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/DataPath.scala
+2023.12.15 16:35:15 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/DataPath.scala
+2023.12.15 16:35:25 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataPathTester.scala
+2023.12.15 16:35:28 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataPathTester.scala
+2023.12.15 16:35:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataPathTester.scala
+2023.12.15 16:35:29 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataPathTester.scala
+2023.12.15 16:35:37 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/ALUTester.scala
+2023.12.15 16:35:41 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/ALUTester.scala
+2023.12.15 16:35:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/ALUTester.scala
+2023.12.15 16:35:41 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/ALUTester.scala
+2023.12.15 16:35:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/BranchTester.scala
+2023.12.15 16:35:44 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/BranchTester.scala
+2023.12.15 16:35:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/BranchTester.scala
+2023.12.15 16:35:45 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/BranchTester.scala
+2023.12.15 16:35:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/controlTester.scala
+2023.12.15 16:35:47 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/controlTester.scala
+2023.12.15 16:35:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/controlTester.scala
+2023.12.15 16:35:48 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/controlTester.scala
+2023.12.15 16:35:47 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataMemTester.scala
+2023.12.15 16:35:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataMemTester.scala
+2023.12.15 16:35:54 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataMemTester.scala
+2023.12.15 16:35:54 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataMemTester.scala
+2023.12.15 16:35:54 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataMemTester.scala
+Dec 15, 2023 4:35:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 751
+2023.12.15 16:35:54 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataPathTester.scala
+2023.12.15 16:35:56 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/IMMTester.scala
+2023.12.15 16:35:58 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/IMMTester.scala
+2023.12.15 16:35:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/IMMTester.scala
+2023.12.15 16:35:59 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/IMMTester.scala
+2023.12.15 16:35:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/InsMemTester.scala
+2023.12.15 16:36:01 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/InsMemTester.scala
+2023.12.15 16:36:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/InsMemTester.scala
+2023.12.15 16:36:02 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/InsMemTester.scala
+2023.12.15 16:36:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/PcTester.scala
+2023.12.15 16:36:05 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/PcTester.scala
+2023.12.15 16:36:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/PcTester.scala
+2023.12.15 16:36:05 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/PcTester.scala
+2023.12.15 16:36:06 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/RegFileTester.scala
+Dec 15, 2023 4:36:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 828
+2023.12.15 16:36:08 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/RegFileTester.scala
+2023.12.15 16:36:09 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/RegFileTester.scala
+2023.12.15 16:36:09 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/RegFileTester.scala
+2023.12.15 16:39:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+Dec 15, 2023 4:44:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 868
+2023.12.15 16:44:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+Dec 15, 2023 4:44:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 877
+2023.12.15 16:44:33 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Memory.scala
+2023.12.15 16:44:50 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/DataPathTester.scala
+2023.12.15 16:45:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 16:45:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2023.12.15 16:46:00 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Memory.scala
+2023.12.15 17:01:38 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 17:02:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 17:03:38 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 17:07:55 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Memory.scala
+2023.12.15 18:08:42 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:07 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:10:21 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:23 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:27 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:12:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:13:00 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:13:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:13:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+Dec 15, 2023 6:14:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1292
+Dec 15, 2023 6:14:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1299
+2023.12.15 18:15:07 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala
+2023.12.15 18:17:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/control.scala
+2023.12.15 18:18:08 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:22:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2023.12.15 18:22:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Memory.scala
+2023.12.15 18:22:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:23:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:23:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Memory.scala
+2023.12.15 18:24:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:26:35 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:26:43 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:26:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:26:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:26:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:06 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:08 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Write_back.scala
+2023.12.15 18:27:52 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:28:14 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:28:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:29:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:29:52 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:29:54 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:30:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:30:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:30:06 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+Dec 15, 2023 6:30:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1741
+2023.12.15 18:30:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:30:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:30:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+2023.12.15 18:30:44 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:30:47 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:30:51 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:30:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:30:58 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:30:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:31:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:31:04 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:31:08 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:31:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:31:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+2023.12.15 18:33:33 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+Dec 15, 2023 6:33:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2027
+2023.12.15 18:34:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2023.12.15 18:34:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2023.12.15 18:37:17 INFO  Shutting down server
+2023.12.15 18:37:17 INFO  shutting down Metals
+2023.12.15 18:37:18 INFO  Shut down connection with build server.
+2023.12.15 18:37:17 INFO  Exiting server
+2023.12.19 12:21:00 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.1.
+2023.12.19 12:21:04 WARN  Build server is not auto-connectable.
+2023.12.19 12:21:04 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2023.12.19 12:21:36 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.19 12:21:39 INFO  time: code lens generation in 25s
+2023.12.19 12:21:39 INFO  time: code lens generation in 32s
+Dec 19, 2023 12:50:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

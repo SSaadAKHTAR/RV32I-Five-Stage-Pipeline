@@ -58,7 +58,7 @@ class execute extends Module{
     val B_control = Module(new Branch_Control)
     // val reg = Module(new)
     io.pcselout:=io.pcsel
-    io.RegWr_enout:=0.B
+    io.RegWr_enout:=io.RegWr_en
     io.RDout:=io.Rd
     io.RS2out:=io.RS2
      when(io.bform||io.Jalform){

@@ -1,4 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/RegFile.scala:19:12: recursive value Reg needs type[0m
-[0m[[0m[31merror[0m] [0m[0mval Reg =  Reg(Vec(32 , SInt (32. W)))  [0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala:38:14: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m        io.Fa=2.U[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala:41:14: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m        io.Fb=2.U[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

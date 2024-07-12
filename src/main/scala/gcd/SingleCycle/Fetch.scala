@@ -13,7 +13,7 @@ class fetch extends Module{
     })
     val pc =RegInit(0.U(32.W))
     val insMem = Module(new InstMem("//home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt"))
-    io.pc_out:= pc
+    io.pc_out:= pc                       
     insMem.io.addr:= pc
     pc:=Mux(io.pcsel,io.aluout.asUInt(),pc + 4.U)
     io.pc4_out:= pc + 4.U

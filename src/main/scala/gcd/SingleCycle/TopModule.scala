@@ -15,6 +15,7 @@ class TopModule extends Module{
     val execute = Module(new execute)
     val memory = Module(new memory)
     val WriteBack = Module(new Write_back)
+    val forward = Module(new Forwarding)
     io.out:=0.S
 
     //Core b\w fetch and decode
@@ -80,12 +81,30 @@ class TopModule extends Module{
     val ID_Exmem_r_en = Reg(Bool())
     ID_Exmem_r_en:=decode.io.mem_r_en
     execute.io.mem_r_en:=ID_Exmem_r_en
-    val ID_Exrs1 = Reg(SInt(32.W))
-    ID_Exrs1:=decode.io.rs1
-    execute.io.rs1:=ID_Exrs1
-    val ID_Exrs2 = Reg(SInt(32.W))
-    ID_Exrs2:=decode.io.rs2
-    execute.io.rs2:=ID_Exrs2
+    
+    when(forward.io.Fa === 0.U ){
+        val ID_Exrs1 = Reg(SInt(32.W))
+        ID_Exrs1:=decode.io.rs1
+        execute.io.rs1:=ID_Exrs1
+    }
+    .elsewhen(forward.io.Fa === 1.U ){
+        execute.io.rs1:=execute.io.out
+    }
+    .elsewhen(forward.io.Fa === 2.U){
+        execute.io.rs1:=memory.io.alu_out
+    }
+
+    when(forward.io.Fb === 0.U){
+        val ID_Exrs2 = Reg(SInt(32.W))
+        ID_Exrs2:=decode.io.rs2
+        execute.io.rs2:=ID_Exrs2
+    }
+    .elsewhen(forward.io.Fb === 1.U){
+        execute.io.rs2:=execute.io.out
+    }
+    .elsewhen(forward.io.Fb === 2.U){
+        execute.io.rs2:=memory.io.alu_out
+    }
     val ID_Exaluop = Reg(UInt(4.W))
     ID_Exaluop:=decode.io.aluop
     execute.io.aluop:=ID_Exaluop
@@ -98,9 +117,11 @@ class TopModule extends Module{
     val ID_ExRS1 = Reg(UInt(5.W))
     ID_ExRS1:=decode.io.RS1
     execute.io.RS1:=ID_ExRS1
+    forward.io.IDEXrs1:=ID_ExRS1
     val ID_ExRS2 = Reg(UInt(5.W))
     ID_ExRS2:=decode.io.RS2
     execute.io.RS2:= ID_ExRS2
+    forward.io.IDEXrs2:=ID_ExRS2
     val ID_ExRd = Reg(UInt(5.W))
     ID_ExRd := decode.io.Rd
     execute.io.Rd := ID_ExRd
@@ -127,12 +148,14 @@ class TopModule extends Module{
     val ExMemRDout = Reg(UInt(5.W))
     ExMemRDout:=execute.io.RDout
     memory.io.RDout:=ExMemRDout
+    forward.io.ExMemRd:=ExMemRDout
     val ExMemRS2out= Reg(UInt(5.W))
     ExMemRS2out:=execute.io.RS2out
     memory.io.RS2out:=ExMemRS2out
     val ExMemRegWr_enout = Reg(Bool())
     ExMemRegWr_enout:=execute.io.RegWr_enout
     memory.io.RegWr_enout:=ExMemRegWr_enout
+    forward.io.ExMemRegWr_en:=ExMemRegWr_enout
     val ExMempco = Reg(UInt(32.W))
     ExMempco:=execute.io.pco
     memory.io.pco:=ExMempco
@@ -150,12 +173,14 @@ class TopModule extends Module{
     val MemWrbRegWr_enOut = Reg(Bool())
     MemWrbRegWr_enOut:=memory.io.RegWr_enOut
     WriteBack.io.RegWr_enOut:=MemWrbRegWr_enOut
+    forward.io.MemWbRegWr_en:=MemWrbRegWr_enOut
     val MemWrbmemtoreg = Reg(UInt(2.W))
     MemWrbmemtoreg:=memory.io.memtoreg
     WriteBack.io.memtoreg:=MemWrbmemtoreg
     val MemWrbRDsel = Reg(UInt(5.W))
     MemWrbRDsel:=memory.io.RDsel
     WriteBack.io.RDsel:=MemWrbRDsel
+    forward.io.MemWbRd:=MemWrbRDsel
     val MemWrbMemrd = Reg(Bool())
     MemWrbMemrd:=memory.io.Memrd
     WriteBack.io.Memrd:=MemWrbMemrd

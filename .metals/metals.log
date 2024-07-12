@@ -1408,3 +1408,620 @@ WARNING: Unmatched cancel notification for request id 2027
 2023.12.19 12:21:39 INFO  time: code lens generation in 32s
 Dec 19, 2023 12:50:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2023.12.19 14:23:23 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:23 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:23 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/InsMem.scala
+Dec 19, 2023 2:23:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 28
+2023.12.19 14:23:35 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:37 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:51 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:23:54 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 2:23:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 97
+Dec 19, 2023 2:23:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 106
+2023.12.19 14:23:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:24:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:24:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Fetch.scala
+2023.12.19 14:25:01 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Decode.scala
+Dec 19, 2023 2:25:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 136
+2023.12.19 14:25:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:25:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:25:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:25:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:25:52 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:25:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:25:56 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:26:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:26:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:26:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:26:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:40:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala
+Dec 19, 2023 2:44:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 357
+2023.12.19 14:44:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:44:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:07 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:22 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:25 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:26 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:30 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:43 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:45:56 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:46:00 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:46:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 2:46:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.UnsupportedOperationException: tail of empty list
+java.util.concurrent.CompletionException: java.lang.UnsupportedOperationException: tail of empty list
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.UnsupportedOperationException: tail of empty list
+	at scala.collection.immutable.Nil$.tail(List.scala:664)
+	at scala.collection.immutable.Nil$.tail(List.scala:661)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$endPosOfTree$1(CreateCompanionObjectCodeAction.scala:77)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.endPosOfTree(CreateCompanionObjectCodeAction.scala:75)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$5(CreateCompanionObjectCodeAction.scala:61)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$4(CreateCompanionObjectCodeAction.scala:58)
+	at scala.Option$WithFilter.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$2(CreateCompanionObjectCodeAction.scala:56)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$1(CreateCompanionObjectCodeAction.scala:55)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.12.19 14:46:07 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:46:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:46:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 14:46:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:04:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 664
+2023.12.19 15:04:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:23 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:30 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:33 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:40 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:04:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 753
+2023.12.19 15:04:44 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:04:51 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:04 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:06 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:14 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:26 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:05:58 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:06:09 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:06:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:06:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:06:23 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:30 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:33 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:35 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:47 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:07:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:04 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:22 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:33 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:42 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:08:54 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:09:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:11:25 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:11:26 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:11:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:11:30 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:11:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:11:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:14:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:14:51 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:08 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:17:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1313
+2023.12.19 15:17:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:34 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:37 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:17:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:18:01 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:18:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1408
+2023.12.19 15:18:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:18:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:18:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:18:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1441
+2023.12.19 15:18:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:18:23 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:18:25 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:22 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:19:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1555
+2023.12.19 15:19:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:19:37 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:37 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:40 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:22:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1621
+2023.12.19 15:22:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:52 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:55 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:57 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:22:58 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:01 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:35 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:43 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:49 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:23:52 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:24:01 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:24:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:24:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:24:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:24:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:24:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+Dec 19, 2023 3:24:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.UnsupportedOperationException: tail of empty list
+java.util.concurrent.CompletionException: java.lang.UnsupportedOperationException: tail of empty list
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2094)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.UnsupportedOperationException: tail of empty list
+	at scala.collection.immutable.Nil$.tail(List.scala:664)
+	at scala.collection.immutable.Nil$.tail(List.scala:661)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$endPosOfTree$1(CreateCompanionObjectCodeAction.scala:77)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.endPosOfTree(CreateCompanionObjectCodeAction.scala:75)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$5(CreateCompanionObjectCodeAction.scala:61)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$4(CreateCompanionObjectCodeAction.scala:58)
+	at scala.Option$WithFilter.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$2(CreateCompanionObjectCodeAction.scala:56)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.CreateCompanionObjectCodeAction.$anonfun$contribute$1(CreateCompanionObjectCodeAction.scala:55)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.12.19 15:25:00 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:06 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:33 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:37 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:42 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:43 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:25:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:28:54 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:34:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:34:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:34:34 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:34:36 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:34:38 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:36:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:36:19 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:36:22 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:36:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:36:31 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:36:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:38:44 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:38:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:38:51 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:38:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:38:55 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:38:58 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:42 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:53 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:54 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:56 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:39:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:06 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:26 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:30 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:32 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:34 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:35 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.19 15:40:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.20 01:23:02 INFO  Shutting down server
+2023.12.20 01:23:02 INFO  shutting down Metals
+2023.12.20 01:23:02 INFO  Exiting server
+2023.12.20 15:52:58 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.1.
+2023.12.20 15:52:59 WARN  Build server is not auto-connectable.
+2023.12.20 15:52:59 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.20 15:53:07 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.20 15:53:10 INFO  time: code lens generation in 10s
+2023.12.20 15:54:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 15:54:02 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 15:54:10 WARN  Could not find semantic tokens for: file:///home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 15:54:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+Dec 20, 2023 4:20:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 76
+2023.12.20 16:20:07 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:09 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:10 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:12 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:21 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:24 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:28 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:35 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:38 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:40 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:44 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:51 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:20:55 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:01 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:03 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:08 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:13 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:15 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:16 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:18 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:20 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:22 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:25 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:34 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:39 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:41 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:45 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:46 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:50 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:52 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:21:56 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:22:02 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:22:04 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:22:05 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:22:08 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 16:22:11 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.20 17:49:22 INFO  Shutting down server
+2023.12.20 17:49:22 INFO  shutting down Metals
+2023.12.20 17:49:22 INFO  Exiting server
+2023.12.22 16:34:16 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.1.
+2023.12.22 16:34:17 WARN  Build server is not auto-connectable.
+2023.12.22 16:34:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.22 16:34:17 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.22 16:34:23 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.22 16:34:26 INFO  time: code lens generation in 7.78s
+2023.12.22 16:34:29 INFO  Shutting down server
+2023.12.22 16:34:29 INFO  shutting down Metals
+2023.12.22 16:34:29 INFO  Exiting server
+2023.12.22 16:34:29 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2023.12.28 22:51:47 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.1.
+2023.12.28 22:51:48 WARN  Build server is not auto-connectable.
+2023.12.28 22:51:48 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala
+2023.12.28 22:51:53 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.28 22:51:56 INFO  time: code lens generation in 7.32s
+2023.12.28 22:52:29 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.28 23:02:16 INFO  Shutting down server
+2023.12.28 23:02:16 INFO  shutting down Metals
+2023.12.28 23:02:16 INFO  Exiting server
+2023.12.30 21:35:57 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.1.
+2023.12.30 21:36:00 WARN  Build server is not auto-connectable.
+2023.12.30 21:36:00 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2023.12.30 21:36:07 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2023.12.30 21:36:10 INFO  time: code lens generation in 9.74s
+2023.12.30 21:36:20 INFO  Shutting down server
+2023.12.30 21:36:20 INFO  shutting down Metals
+2023.12.30 21:36:20 INFO  Exiting server
+2024.01.02 12:52:40 INFO  Started: Metals version 1.2.0 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.85.1.
+2024.01.02 12:52:42 WARN  Build server is not auto-connectable.
+2024.01.02 12:52:43 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala
+2024.01.02 12:52:43 WARN  no build target for: /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala
+2024.01.02 12:52:55 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/SyncMem.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.02 12:53:01 INFO  time: code lens generation in 17s
+2024.01.02 14:35:50 INFO  Shutting down server
+2024.01.02 14:35:50 INFO  shutting down Metals
+2024.01.02 14:35:50 INFO  Exiting server
+2024.02.21 12:57:55 INFO  Started: Metals version 1.2.2 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.86.2.
+Downloading https://repo1.maven.org/maven2/com/h2database/h2/2.1.214/h2-2.1.214.jar
+2024.02.21 12:57:57 INFO  Upgraded H2 database.
+12:57:57.223 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+12:57:57.224 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+12:57:57.224 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+12:57:57.227 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+12:57:57.227 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+12:57:57.227 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+12:57:57.227 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+12:57:57.227 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+12:57:57.228 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/saad/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+12:57:57.230 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+12:57:57.230 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+12:57:57.230 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+12:57:57.231 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+12:57:57.231 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+12:57:57.231 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+12:57:57.234 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+12:57:57.234 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+12:57:57.235 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+12:57:57.236 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+12:57:57.236 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+12:57:57.312 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/saad/Desktop/5stagepipeline/.metals/metals (H2 2.2)
+12:57:57.312 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+12:57:57.312 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+12:57:57.313 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+12:57:57.313 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+12:57:57.318 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+12:57:57.319 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+12:57:57.320 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+12:57:57.328 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+12:57:57.335 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+12:57:57.344 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+12:57:57.344 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+12:57:57.344 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+12:57:57.344 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+12:57:57.345 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+12:57:57.346 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+12:57:57.346 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+12:57:57.346 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+12:57:57.346 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+12:57:57.346 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+12:57:57.361 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.031s)
+12:57:57.364 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+12:57:57.372 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+12:57:57.378 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+12:57:57.390 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 57 of 102M
+2024.02.21 12:57:57 WARN  Build server is not auto-connectable.
+2024.02.21 12:58:41 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.02.21 12:58:44 INFO  time: code lens generation in 46s
+2024.02.23 11:29:04 INFO  Started: Metals version 1.2.2 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.86.2.
+11:29:09.592 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+11:29:09.595 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+11:29:09.595 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+11:29:09.615 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+11:29:09.615 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+11:29:09.615 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+11:29:09.615 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+11:29:09.615 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+11:29:09.616 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/saad/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+11:29:09.619 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+11:29:09.620 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+11:29:09.620 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+11:29:09.620 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+11:29:09.620 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+11:29:09.620 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+11:29:09.625 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+11:29:09.625 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+11:29:09.626 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+11:29:09.626 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+11:29:09.627 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+11:29:09.741 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/saad/Desktop/5stagepipeline/.metals/metals (H2 2.2)
+11:29:09.741 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+11:29:09.741 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+11:29:09.742 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+11:29:09.743 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+11:29:09.750 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+11:29:09.751 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+11:29:09.751 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+11:29:09.763 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+11:29:09.769 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+11:29:09.785 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+11:29:09.786 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+11:29:09.786 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+11:29:09.786 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+11:29:09.786 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+11:29:09.788 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+11:29:09.788 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+11:29:09.788 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+11:29:09.788 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+11:29:09.788 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+11:29:09.808 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.043s)
+11:29:09.811 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+11:29:09.818 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+11:29:09.823 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+11:29:10.041 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 48 of 102M
+2024.02.23 11:29:10 WARN  Build server is not auto-connectable.
+2024.02.23 11:29:20 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.02.23 11:29:23 INFO  time: code lens generation in 11s
+2024.02.26 13:07:43 INFO  Started: Metals version 1.2.2 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.86.2.
+13:07:48.731 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+13:07:48.734 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+13:07:48.734 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+13:07:48.738 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+13:07:48.738 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+13:07:48.738 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+13:07:48.738 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+13:07:48.738 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+13:07:48.739 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/saad/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+13:07:48.742 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+13:07:48.743 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+13:07:48.743 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+13:07:48.743 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+13:07:48.743 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+13:07:48.743 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+13:07:48.748 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+13:07:48.748 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+13:07:48.750 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+13:07:48.750 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+13:07:48.750 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+13:07:48.851 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/saad/Desktop/5stagepipeline/.metals/metals (H2 2.2)
+13:07:48.851 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+13:07:48.851 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+13:07:48.853 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+13:07:48.853 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+13:07:48.868 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+13:07:48.870 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+13:07:48.870 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+13:07:48.883 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+13:07:48.894 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+13:07:48.908 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+13:07:48.909 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+13:07:48.909 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+13:07:48.909 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+13:07:48.909 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+13:07:48.910 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+13:07:48.910 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+13:07:48.910 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+13:07:48.910 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+13:07:48.910 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+13:07:48.935 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.050s)
+13:07:48.939 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+13:07:48.949 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+13:07:48.957 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+13:07:49.179 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 48 of 123M
+2024.02.26 13:07:49 WARN  Build server is not auto-connectable.
+2024.02.26 13:08:00 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.02.26 13:08:04 INFO  time: code lens generation in 13s
+2024.02.26 18:54:47 INFO  Shutting down server
+2024.02.26 18:54:47 INFO  shutting down Metals
+2024.02.26 18:54:47 INFO  Exiting server
+2024.02.28 08:59:21 INFO  Started: Metals version 1.2.2 in folders '/home/saad/Desktop/5stagepipeline' for client Visual Studio Code 1.86.2.
+08:59:22.069 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+08:59:22.071 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+08:59:22.072 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+08:59:22.074 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+08:59:22.074 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+08:59:22.074 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+08:59:22.074 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+08:59:22.074 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 ...
+08:59:22.075 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/home/saad/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+08:59:22.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+08:59:22.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+08:59:22.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+08:59:22.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+08:59:22.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+08:59:22.077 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+08:59:22.080 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+08:59:22.080 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+08:59:22.081 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+08:59:22.081 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+08:59:22.081 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+08:59:22.169 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:/home/saad/Desktop/5stagepipeline/.metals/metals (H2 2.2)
+08:59:22.170 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+08:59:22.170 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+08:59:22.171 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+08:59:22.171 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+08:59:22.175 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+08:59:22.177 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+08:59:22.177 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+08:59:22.185 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+08:59:22.189 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+08:59:22.198 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+08:59:22.198 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+08:59:22.198 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+08:59:22.199 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+08:59:22.199 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+08:59:22.200 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+08:59:22.200 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+08:59:22.200 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+08:59:22.200 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+08:59:22.200 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+08:59:22.213 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.027s)
+08:59:22.215 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+08:59:22.221 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+08:59:22.226 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+08:59:22.239 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 45 of 102M
+2024.02.28 08:59:22 WARN  Build server is not auto-connectable.
+2024.02.28 08:59:28 INFO  no build target found for /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Execute.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.02.28 08:59:30 INFO  time: code lens generation in 7.42s
+Feb 28, 2024 8:59:34 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.02.28 15:39:07 INFO  Shutting down server
+2024.02.28 15:39:07 INFO  shutting down Metals
+2024.02.28 15:39:07 INFO  Exiting server

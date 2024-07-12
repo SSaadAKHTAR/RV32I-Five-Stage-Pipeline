@@ -1,7 +1,7 @@
 package SingleCycle
-import chisel3. _
-import chisel3. util . _
-import chisel3. util . experimental . loadMemoryFromFile
+import chisel3._
+import chisel3.util._
+import chisel3.util.experimental.loadMemoryFromFile
 import scala . io . Source
 class InstMemIO extends Bundle  {
 val addr = Input ( UInt ( 32 . W ) )

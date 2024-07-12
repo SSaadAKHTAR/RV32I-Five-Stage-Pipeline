@@ -1,13 +1,14 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(9517525e-ae7e-4473-843b-d1f04d4b56ad), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(178f219f-be19-4c49-969b-f4fadffa86eb), Some(CommandSource(console0)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mtopModuletester:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- top tester[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 4 seconds, 145 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 591 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 5 s, completed Dec 19, 2023, 12:49:17 PM[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 16 s, completed Dec 28, 2023, 10:57:15 PM[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
-[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

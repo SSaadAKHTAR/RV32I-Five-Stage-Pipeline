@@ -1,4 +1,7 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SingleCycle.topModuletester, org.scalatest.tools.Framework$$anon$1@597e0052, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(fbfd892f-78b5-4b46-93bf-8de0ccc096de), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mtopModuletester:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- top tester *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[TopModule.scala 15:25] : [module TopModule]  Reference execute is not fully initialized.[0m[0m
@@ -15,3 +18,5 @@
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	SingleCycle.topModuletester[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 14 s, completed Jul 12, 2024, 8:11:30 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

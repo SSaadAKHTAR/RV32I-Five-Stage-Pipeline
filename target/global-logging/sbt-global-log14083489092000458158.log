@@ -1,0 +1,22 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(bae2b86e-eabe-45e5-b157-9f94270ef832), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mtopModuletester:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- top tester *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[TopModule.scala 15:25] : [module TopModule]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rs2 <= mux(_T_3, ID_Exrs2, mux(_T_4, ID_Exrs2_1, mux(_T_5, ID_Exrs2_2, VOID)))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[TopModule.scala 15:25] : [module TopModule]  Reference execute is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rs1 <= mux(_T, ID_Exrs1, mux(_T_1, ID_Exrs1_1, mux(_T_2, ID_Exrs1_2, VOID)))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.PassException: 2 errors detected![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 105 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	SingleCycle.topModuletester[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 4 s, completed Jul 23, 2024, 7:12:36 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

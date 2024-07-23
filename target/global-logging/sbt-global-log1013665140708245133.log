@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(1f5c2c0e-0622-400a-9f71-609d1ee0db18), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(2826199e-f4b1-45bb-9f4c-9c6592811d83), Some(CommandSource(console0)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...[0m
@@ -18,7 +18,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[31mTopModule.execute.alu.io_out	[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31mTopModule.execute.io_out	 @[Execute.scala 84:11][0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 371 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 2 seconds, 601 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
@@ -26,5 +26,5 @@
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	SingleCycle.topModuletester[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
-[0m[[0m[31merror[0m] [0m[0mTotal time: 5 s, completed Jul 12, 2024, 8:08:32 PM[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 5 s, completed Jul 23, 2024, 6:55:24 PM[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

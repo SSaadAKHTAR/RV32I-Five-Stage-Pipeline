@@ -1,17 +1,10 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SingleCycle.topModuletester, org.scalatest.tools.Framework$$anon$1@597e0052, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SingleCycle.topModuletester, org.scalatest.tools.Framework$$anon$1@3351a49b, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mtopModuletester:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- top tester *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[TopModule.scala 15:25] : [module TopModule]  Reference execute is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rs2 <= mux(_T_3, ID_Exrs2, mux(_T_4, execute.io.out, mux(_T_5, memory.io.alu_out, VOID)))[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[TopModule.scala 15:25] : [module TopModule]  Reference execute is not fully initialized.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m   : execute.io.rs1 <= mux(_T, ID_Exrs1, mux(_T_1, execute.io.out, mux(_T_2, memory.io.alu_out, VOID)))[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.PassException: 2 errors detected![0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 3 seconds, 197 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- top tester[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 5 seconds, 266 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 1[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	SingleCycle.topModuletester[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SingleCycle.topModuletester[0m

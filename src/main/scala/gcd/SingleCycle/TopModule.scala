@@ -81,6 +81,9 @@ class TopModule extends Module{
     val ID_Exmem_r_en = Reg(Bool())
     ID_Exmem_r_en:=decode.io.mem_r_en
     execute.io.mem_r_en:=ID_Exmem_r_en
+
+    execute.io.rs1:=0.S
+    execute.io.rs2:=0.S
     
     when(forward.io.Fa === 0.U ){
         val ID_Exrs1 = Reg(SInt(32.W))
@@ -88,10 +91,14 @@ class TopModule extends Module{
         execute.io.rs1:=ID_Exrs1
     }
     .elsewhen(forward.io.Fa === 1.U ){
-        execute.io.rs1:=execute.io.out
+        val ID_Exrs1 = Reg(SInt(32.W))
+        ID_Exrs1:=execute.io.out
+        execute.io.rs1:=ID_Exrs1
     }
     .elsewhen(forward.io.Fa === 2.U){
-        execute.io.rs1:=memory.io.alu_out
+        val ID_Exrs1 = Reg(SInt(32.W))
+        ID_Exrs1 :=memory.io.alu_out
+        execute.io.rs1:=ID_Exrs1 
     }
 
     when(forward.io.Fb === 0.U){
@@ -100,10 +107,14 @@ class TopModule extends Module{
         execute.io.rs2:=ID_Exrs2
     }
     .elsewhen(forward.io.Fb === 1.U){
-        execute.io.rs2:=execute.io.out
+        val ID_Exrs2 = Reg(SInt(32.W))
+        ID_Exrs2:=execute.io.out
+        execute.io.rs2:=ID_Exrs2
     }
     .elsewhen(forward.io.Fb === 2.U){
-        execute.io.rs2:=memory.io.alu_out
+        val ID_Exrs2 = Reg(SInt(32.W))
+        ID_Exrs2:=memory.io.alu_out
+        execute.io.rs2:=ID_Exrs2
     }
     val ID_Exaluop = Reg(UInt(4.W))
     ID_Exaluop:=decode.io.aluop

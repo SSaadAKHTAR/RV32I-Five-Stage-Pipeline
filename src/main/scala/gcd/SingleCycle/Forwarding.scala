@@ -15,30 +15,30 @@ class Forwarding extends Module{
         val MemWbRd = Input(UInt(5.W))
     })
 
-    io.Fa:=0.U
-    io.Fb:=0.U
+    io.Fa:="b00".U
+    io.Fb:="b00".U
 
     when(io.ExMemRegWr_en === 1.B && io.ExMemRd =/= 0.U && (io.ExMemRd===io.IDEXrs1) && (io.ExMemRd===io.IDEXrs2)){
-        io.Fa:=1.U
-        io.Fb:=1.U
+        io.Fa:="b01".U
+        io.Fb:="b01".U
     }
     .elsewhen(io.ExMemRegWr_en === 1.B && io.ExMemRd =/= 0.U && (io.ExMemRd===io.IDEXrs1)){
-        io.Fa:=1.U
+        io.Fa:="b01".U
     }
     .elsewhen(io.ExMemRegWr_en === 1.B && io.ExMemRd =/= 0.U && (io.ExMemRd===io.IDEXrs2)){
-        io.Fb:=1.U
+        io.Fb:="b01".U
     }
 
 
     when(io.MemWbRegWr_en === 1.B && io.MemWbRd=/=0.U && (io.MemWbRd===io.IDEXrs1) && (io.MemWbRd===io.IDEXrs2)){
-        io.Fa:=2.U
-        io.Fb:=2.U
+        io.Fa:="b10".U
+        io.Fb:="b10".U
     }
     .elsewhen(io.MemWbRegWr_en === 1.B && io.MemWbRd=/=0.U && (io.MemWbRd===io.IDEXrs1)){
-        io.Fa:=2.U
+        io.Fa:="b10".U
     }
     .elsewhen(io.MemWbRegWr_en === 1.B && io.MemWbRd=/=0.U && (io.MemWbRd===io.IDEXrs2)){
-        io.Fb:=2.U
+        io.Fb:="b10".U
     }
 
 

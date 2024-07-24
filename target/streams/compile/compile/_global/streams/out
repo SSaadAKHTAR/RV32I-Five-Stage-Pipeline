@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala:38:14: reassignment to val[0m
-[0m[[0m[31merror[0m] [0m[0m        io.Fa=2.U[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala:41:14: reassignment to val[0m
-[0m[[0m[31merror[0m] [0m[0m        io.Fb=2.U[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/Forwarding.scala:33:159: value ex_mem_rdAddr is not a member of chisel3.Bundle{val IDEXrs1: chisel3.UInt; val IDEXrs2: chisel3.UInt; val ExMemRd: chisel3.UInt; val ExMemRegWr_en: chisel3.Bool; val MemWbRegWr_en: chisel3.Bool; val Fa: chisel3.UInt; val Fb: chisel3.UInt; val MemWbRd: chisel3.UInt}[0m
+[0m[[0m[31merror[0m] [0m[0m    when(io.MemWbRegWr_en === 1.B && io.MemWbRd=/=0.U && ~((io.ExMemRegWr_en === "b1".U) && (io.ExMemRd =/= "b00000".U) && (io.ExMemRd === io.IDEXrs1) && (io.ex_mem_rdAddr === io.IDEXrs2)) &&  (io.MemWbRd===io.IDEXrs1) && (io.MemWbRd===io.IDEXrs2)){[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

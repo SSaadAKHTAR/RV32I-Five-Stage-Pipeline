@@ -16,7 +16,53 @@ class TopModule extends Module{
     val memory = Module(new memory)
     val WriteBack = Module(new Write_back)
     val forward = Module(new Forwarding)
+    // val hazard_detection = Module(new HazardDetectionUnit)
     io.out:=0.S
+
+
+    // hazard detection module connections
+    // hazard_detection.io.IF_ID_instr := decode.io.ins
+    // hazard_detection.io.ID_EX_memread := execute.io.mem_r_en
+    // hazard_detection.io.ID_EX_rd := execute.io.Rd
+    // hazard_detection.io.pc_in := decode.io.pc4out
+    // hazard_detection.io.current_pc_in := decode.io.pcout
+
+
+    // when(hazard_detection.io.instr_forward === "b1".U) {
+    // if_id_module.io.instr_in := hazard_detection.io.instr_out
+    // if_id_module.io.pc_in := hazard_detection.io.current_pc_out
+    // }.otherwise {
+    //     if_id_module.io.instr_in := imem_module.io.readdata
+    // }
+
+
+    // when(hazard_detection.io.pc_forward === "b1".U) {
+    // pc_module.io.addr := hazard_detection.io.pc_out
+    // }.otherwise {
+    // when(control_module.io.nextpcsel === "b01".U) {
+    //   when(branchlogic_module.io.output === 1.B && control_module.io.branch === 1.B) {
+    //     pc_module.io.addr := immediate_module.io.sbimmd_se.asUInt
+    //     if_id_module.io.pc_in := 0.U
+    //     if_id_module.io.pc_in4 := 0.U
+    //     if_id_module.io.instr_in := 0.U
+    //   }.otherwise {
+    //     pc_module.io.addr := pc_module.io.pc_out4
+    //   }
+
+    //   }.elsewhen(control_module.io.nextpcsel === "b10".U) {
+    //   pc_module.io.addr := immediate_module.io.ujimmd_se.asUInt
+    //   if_id_module.io.pc_in := 0.U
+    //   if_id_module.io.pc_in4 := 0.U
+    //   if_id_module.io.instr_in := 0.U
+    // } .elsewhen(control_module.io.nextpcsel === "b11".U) {
+    //   pc_module.io.addr := jalr_module.io.out
+    //   if_id_module.io.pc_in := 0.U
+    //   if_id_module.io.pc_in4 := 0.U
+    //   if_id_module.io.instr_in := 0.U
+
+    // }.otherwise {
+    //   pc_module.io.addr := pc_module.io.pc_out4
+    // }}
 
     //Core b\w fetch and decode
     val IF_IDins  = Reg(UInt(32.W))
@@ -92,16 +138,16 @@ class TopModule extends Module{
         val ID_Exrs1 = Reg(SInt(32.W))
         ID_Exrs1:=decode.io.rs1
         execute.io.rs1:=ID_Exrs1
+        // execute.io.rs1:=decode.io.rs1
     }
     .elsewhen(forward.io.Fa === 1.U ){
-        val ID_Exrs1 = Reg(SInt(32.W))
-        ID_Exrs1:=execute.io.out
-        execute.io.rs1:=ID_Exrs1
+        execute.io.rs1:=WriteBack.io.alu_out
+        // execute.io.rs1:=execute.io.out
     }
     .elsewhen(forward.io.Fa === 2.U){
         val ID_Exrs1 = Reg(SInt(32.W))
-        ID_Exrs1 :=memory.io.alu_out
-        execute.io.rs1:=ID_Exrs1 
+        ID_Exrs1:=execute.io.out
+        execute.io.rs1:=ID_Exrs1
     }
     .otherwise{
         val ID_Exrs1 = Reg(SInt(32.W))
@@ -116,15 +162,15 @@ class TopModule extends Module{
         val ID_Exrs2 = Reg(SInt(32.W))
         ID_Exrs2:=decode.io.rs2
         execute.io.rs2:=ID_Exrs2
+        // execute.io.rs2:=decode.io.rs2
     }
     .elsewhen(forward.io.Fb === 1.U){
-        val ID_Exrs2 = Reg(SInt(32.W))
-        ID_Exrs2:=execute.io.out
-        execute.io.rs2:=ID_Exrs2
+        execute.io.rs2:=WriteBack.io.alu_out
+        // execute.io.rs2:=execute.io.out
     }
     .elsewhen(forward.io.Fb === 2.U){
         val ID_Exrs2 = Reg(SInt(32.W))
-        ID_Exrs2:=memory.io.alu_out
+        ID_Exrs2:=execute.io.out
         execute.io.rs2:=ID_Exrs2
     }
     .otherwise{
@@ -192,6 +238,9 @@ class TopModule extends Module{
     val ExMembr_taken = Reg(Bool())
     ExMembr_taken:=execute.io.br_taken
     memory.io.br_taken:=ExMembr_taken
+    val ExMembform = Reg(Bool())
+    ExMembform:=execute.io.b_form
+    memory.io.bform:=ExMembform
     val ExMempcsel = Reg(Bool())
     ExMempcsel:=execute.io.pcselout
     memory.io.pcselout:=ExMempcsel
@@ -223,11 +272,15 @@ class TopModule extends Module{
     val MemWrbbrtaken=Reg(Bool())
     MemWrbbrtaken:=memory.io.brtaken
     WriteBack.io.brtaken:=MemWrbbrtaken
+    val MemWrbbform=Reg(Bool())
+    MemWrbbform:=memory.io.b_form
+    WriteBack.io.bform:=MemWrbbform
     val MemWrbpcsel = Reg(Bool())
     MemWrbpcsel:= memory.io.pcsel
     WriteBack.io.pcsel:=MemWrbpcsel
 
     decode.io.btaken:=WriteBack.io.br_taken
+    decode.io.wrbform:=WriteBack.io.b_form
     decode.io.Wrbrd:=WriteBack.io.RDselout
     decode.io.din:=WriteBack.io.Rd
     fetch.io.aluout:=WriteBack.io.aluout

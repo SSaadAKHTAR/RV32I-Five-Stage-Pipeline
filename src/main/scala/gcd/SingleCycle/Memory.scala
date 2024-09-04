@@ -13,6 +13,7 @@ class memory extends Module {
 
         val out = Input(SInt(32.W))
         val br_taken = Input(Bool())
+        val bform = Input(Bool())
         val Wen = Input(Bool())
         val Fun3 = Input(UInt(3.W))
         val Enable = Input(Bool())
@@ -33,12 +34,14 @@ class memory extends Module {
         val pcout = Output(UInt(32.W))
         val brtaken = Output(Bool())
         val pcsel = Output(Bool())
+        val b_form = Output(Bool())
 
 
     })
     val D_Mem = Module(new Datamem)
     io.pcout:=io.pco
     io.pcsel:=io.pcselout
+    io.b_form:=dontTouch(io.bform)
 
     D_Mem.io.Wen:=io.Wen
     D_Mem.io.addr:=io.out.asUInt()
@@ -54,5 +57,5 @@ class memory extends Module {
     io.Memrd:=io.Enable
     io.alu_out:=io.out
 
-    io.brtaken:=io.br_taken
+    io.brtaken:=dontTouch(io.br_taken)
 }

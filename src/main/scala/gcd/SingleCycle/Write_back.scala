@@ -12,16 +12,19 @@ class Write_back extends Module{
         val alu_out = Input(SInt(32.W))
         val pcout = Input(UInt(32.W))
         val brtaken = Input(Bool())
+        val bform = Input(Bool())
         val pcsel = Input(Bool())
 
         val Rd = Output(SInt(32.W))
         val br_taken = Output(Bool())
+        val b_form = Output(Bool())
         val RDselout = Output(UInt(5.W))
         val aluout = Output (SInt(32.W))
         val pcselout = Output(Bool())
         val RegWr_enout = Output(Bool())
     })
-    io.br_taken:=0.B
+    dontTouch(io.br_taken):=io.brtaken
+    io.b_form:=io.bform
     io.aluout:=io.alu_out
     io.pcselout:=io.pcsel
     io.RegWr_enout:=io.RegWr_enOut

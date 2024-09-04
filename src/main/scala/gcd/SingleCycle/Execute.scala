@@ -52,10 +52,12 @@ class execute extends Module{
         val RegWr_enout = Output(Bool())
         val pco = Output(UInt(32.W))
         val pcselout = Output(Bool())
+        val b_form = Output(Bool())
     })
 
     val alu = Module(new ALUS)
     val B_control = Module(new Branch_Control)
+    io.b_form:=io.bform
     // val reg = Module(new)
     io.pcselout:=io.pcsel
     io.RegWr_enout:=io.RegWr_en
@@ -83,10 +85,10 @@ class execute extends Module{
     alu.io.alu_op:=io.aluop
     io.out:=alu.io.out
 
-    B_control.io.fun3:=io.br_fun3
-    B_control.io.ina:=io.rs1
-    B_control.io.inb:=io.rs2
-    io.br_taken:=B_control.io.br_taken
+    dontTouch(B_control.io.fun3):=io.br_fun3
+    dontTouch(B_control.io.ina):=io.rs1
+    dontTouch(B_control.io.inb):=io.rs2
+    io.br_taken:=dontTouch(B_control.io.br_taken)
 
     io.MemWen:=io.mem_wr_en
     io.MemFun3:=io.load_storefun

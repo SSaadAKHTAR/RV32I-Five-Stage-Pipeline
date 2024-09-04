@@ -39,6 +39,7 @@ class decode extends Module{
         val RegWr_en = Output(Bool())
         val Wrbrd = Input(UInt(5.W))
         val RegWr_enWB = Input (Bool())
+        val wrbform = Input(Bool())
 
 
     })
@@ -58,6 +59,7 @@ class decode extends Module{
 
 
     cu.io.btaken:=io.btaken
+    // cu.io.wrbform:=io.wrbform
 
     io.immBits:= cu.io.immBits
     imm.io.imm:= io.immBits

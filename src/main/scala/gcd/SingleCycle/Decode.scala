@@ -32,6 +32,7 @@ class decode extends Module{
         val aluop = Output(UInt(4.W))
         val pcout = Input(UInt(32.W))
         val pc4out = Input(UInt(32.W))
+        val pc_4out = Output(UInt(32.W))
         val pc_out = Output(UInt(32.W))
         val RS1 = Output(UInt(5.W))
         val RS2 = Output(UInt(5.W)) 
@@ -40,6 +41,8 @@ class decode extends Module{
         val Wrbrd = Input(UInt(5.W))
         val RegWr_enWB = Input (Bool())
         val wrbform = Input(Bool())
+        val opAsel = Output(UInt(2.W))
+        val opBsel = Output(Bool())
 
 
     })
@@ -95,4 +98,8 @@ class decode extends Module{
     io.rs2:=regFile.io.Rs2
 
     io.pc_out:=io.pcout
+    io.pc_4out:=io.pc4out
+
+    io.opAsel:=cu.io.opAsel
+    io.opBsel:=cu.io.opBsel
 }

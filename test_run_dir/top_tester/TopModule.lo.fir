@@ -72,237 +72,254 @@ circuit TopModule :
     input io_btaken : UInt<1>
     output io_lui_jal_jalr_auipc_imm : SInt<32>
     output io_mem_r_en : UInt<1>
+    output io_opAsel : UInt<2>
+    output io_opBsel : UInt<1>
 
-    node _op_T = bits(io_instruction, 6, 0) @[control.scala 52:36]
-    node _f3_T = bits(io_instruction, 14, 12) @[control.scala 53:38]
-    node _f7_T = bits(io_instruction, 31, 25) @[control.scala 54:38]
-    node _Rd_T = bits(io_instruction, 11, 7) @[control.scala 55:38]
-    node _Rs1_T = bits(io_instruction, 19, 15) @[control.scala 56:39]
-    node _Rs2_T = bits(io_instruction, 24, 20) @[control.scala 57:39]
-    node _imm_T = bits(io_instruction, 31, 20) @[control.scala 58:39]
+    node _op_T = bits(io_instruction, 6, 0) @[control.scala 56:36]
+    node _f3_T = bits(io_instruction, 14, 12) @[control.scala 57:38]
+    node _f7_T = bits(io_instruction, 31, 25) @[control.scala 58:38]
+    node _Rd_T = bits(io_instruction, 11, 7) @[control.scala 59:38]
+    node _Rs1_T = bits(io_instruction, 19, 15) @[control.scala 60:39]
+    node _Rs2_T = bits(io_instruction, 24, 20) @[control.scala 61:39]
+    node _imm_T = bits(io_instruction, 31, 20) @[control.scala 62:39]
     node op = _op_T
-    node _T = eq(op, UInt<6>("h33")) @[control.scala 66:13]
+    node _T = eq(op, UInt<6>("h33")) @[control.scala 70:13]
     node f7 = _f7_T
-    node fn3_7_lo = bits(f7, 5, 5) @[control.scala 68:28]
+    node fn3_7_lo = bits(f7, 5, 5) @[control.scala 72:28]
     node f3 = _f3_T
     node fn3_7 = cat(f3, fn3_7_lo) @[Cat.scala 30:58]
-    node _T_1 = eq(op, UInt<5>("h13")) @[control.scala 80:18]
-    node _T_2 = eq(f3, UInt<3>("h5")) @[control.scala 82:16]
-    node _T_3 = eq(f3, UInt<1>("h1")) @[control.scala 82:26]
-    node _T_4 = or(_T_2, _T_3) @[control.scala 82:22]
-    node io_aluop_lo = bits(f7, 5, 5) @[control.scala 83:30]
+    node _T_1 = eq(op, UInt<5>("h13")) @[control.scala 86:18]
+    node _T_2 = eq(f3, UInt<3>("h5")) @[control.scala 88:16]
+    node _T_3 = eq(f3, UInt<1>("h1")) @[control.scala 88:26]
+    node _T_4 = or(_T_2, _T_3) @[control.scala 88:22]
+    node io_aluop_lo = bits(f7, 5, 5) @[control.scala 89:30]
     node _io_aluop_T = cat(f3, io_aluop_lo) @[Cat.scala 30:58]
     node _io_aluop_T_1 = cat(f3, UInt<1>("h0")) @[Cat.scala 30:58]
-    node _GEN_0 = mux(_T_4, _io_aluop_T, _io_aluop_T_1) @[control.scala 82:33 control.scala 83:19 control.scala 86:17]
-    node _io_immBits_T = bits(io_instruction, 31, 20) @[control.scala 95:36]
-    node _T_5 = eq(op, UInt<2>("h3")) @[control.scala 100:18]
-    node _io_immBits_T_1 = bits(io_instruction, 31, 20) @[control.scala 110:35]
-    node _T_6 = eq(op, UInt<6>("h23")) @[control.scala 118:18]
-    node io_immBits_hi = bits(io_instruction, 31, 25) @[control.scala 125:37]
-    node io_immBits_lo = bits(io_instruction, 11, 7) @[control.scala 125:59]
+    node _GEN_0 = mux(_T_4, _io_aluop_T, _io_aluop_T_1) @[control.scala 88:33 control.scala 89:19 control.scala 92:17]
+    node _io_immBits_T = bits(io_instruction, 31, 20) @[control.scala 101:36]
+    node _T_5 = eq(op, UInt<2>("h3")) @[control.scala 108:18]
+    node _io_immBits_T_1 = bits(io_instruction, 31, 20) @[control.scala 118:35]
+    node _T_6 = eq(op, UInt<6>("h23")) @[control.scala 128:18]
+    node io_immBits_hi = bits(io_instruction, 31, 25) @[control.scala 135:37]
+    node io_immBits_lo = bits(io_instruction, 11, 7) @[control.scala 135:59]
     node _io_immBits_T_2 = cat(io_immBits_hi, io_immBits_lo) @[Cat.scala 30:58]
-    node _T_7 = eq(op, UInt<7>("h63")) @[control.scala 134:18]
-    node _io_lui_jal_jalr_auipc_imm_T = bits(io_instruction, 31, 31) @[control.scala 142:62]
+    node _T_7 = eq(op, UInt<7>("h63")) @[control.scala 146:18]
+    node _io_lui_jal_jalr_auipc_imm_T = bits(io_instruction, 31, 31) @[control.scala 154:62]
     node _io_lui_jal_jalr_auipc_imm_T_1 = bits(_io_lui_jal_jalr_auipc_imm_T, 0, 0) @[Bitwise.scala 72:15]
     node io_lui_jal_jalr_auipc_imm_hi_hi_hi = mux(_io_lui_jal_jalr_auipc_imm_T_1, UInt<19>("h7ffff"), UInt<19>("h0")) @[Bitwise.scala 72:12]
-    node io_lui_jal_jalr_auipc_imm_hi_hi_lo = bits(io_instruction, 31, 31) @[control.scala 142:82]
-    node io_lui_jal_jalr_auipc_imm_hi_lo = bits(io_instruction, 7, 7) @[control.scala 142:101]
-    node io_lui_jal_jalr_auipc_imm_lo_hi_hi = bits(io_instruction, 30, 25) @[control.scala 142:119]
-    node io_lui_jal_jalr_auipc_imm_lo_hi_lo = bits(io_instruction, 11, 8) @[control.scala 142:141]
+    node io_lui_jal_jalr_auipc_imm_hi_hi_lo = bits(io_instruction, 31, 31) @[control.scala 154:82]
+    node io_lui_jal_jalr_auipc_imm_hi_lo = bits(io_instruction, 7, 7) @[control.scala 154:101]
+    node io_lui_jal_jalr_auipc_imm_lo_hi_hi = bits(io_instruction, 30, 25) @[control.scala 154:119]
+    node io_lui_jal_jalr_auipc_imm_lo_hi_lo = bits(io_instruction, 11, 8) @[control.scala 154:141]
     node io_lui_jal_jalr_auipc_imm_lo_hi = cat(io_lui_jal_jalr_auipc_imm_lo_hi_hi, io_lui_jal_jalr_auipc_imm_lo_hi_lo) @[Cat.scala 30:58]
     node io_lui_jal_jalr_auipc_imm_lo = cat(io_lui_jal_jalr_auipc_imm_lo_hi, UInt<1>("h0")) @[Cat.scala 30:58]
     node io_lui_jal_jalr_auipc_imm_hi_hi = cat(io_lui_jal_jalr_auipc_imm_hi_hi_hi, io_lui_jal_jalr_auipc_imm_hi_hi_lo) @[Cat.scala 30:58]
     node io_lui_jal_jalr_auipc_imm_hi = cat(io_lui_jal_jalr_auipc_imm_hi_hi, io_lui_jal_jalr_auipc_imm_hi_lo) @[Cat.scala 30:58]
     node _io_lui_jal_jalr_auipc_imm_T_2 = cat(io_lui_jal_jalr_auipc_imm_hi, io_lui_jal_jalr_auipc_imm_lo) @[Cat.scala 30:58]
-    node _io_lui_jal_jalr_auipc_imm_T_3 = asSInt(_io_lui_jal_jalr_auipc_imm_T_2) @[control.scala 142:161]
-    node _io_br_fun3_T = bits(io_instruction, 14, 12) @[control.scala 144:33]
-    node _io_pcsel_T = and(io_btaken, io_bform) @[control.scala 145:31]
-    node _io_pcsel_T_1 = mux(_io_pcsel_T, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 145:20]
-    node _T_8 = eq(op, UInt<6>("h37")) @[control.scala 149:18]
-    node io_lui_jal_jalr_auipc_imm_hi_hi_1 = bits(io_instruction, 31, 12) @[control.scala 152:52]
+    node _io_lui_jal_jalr_auipc_imm_T_3 = asSInt(_io_lui_jal_jalr_auipc_imm_T_2) @[control.scala 154:161]
+    node _io_br_fun3_T = bits(io_instruction, 14, 12) @[control.scala 156:33]
+    node _io_pcsel_T = and(io_btaken, io_bform) @[control.scala 157:31]
+    node _io_pcsel_T_1 = mux(_io_pcsel_T, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 157:20]
+    node _T_8 = eq(op, UInt<6>("h37")) @[control.scala 163:18]
+    node io_lui_jal_jalr_auipc_imm_hi_hi_1 = bits(io_instruction, 31, 12) @[control.scala 166:52]
     node io_lui_jal_jalr_auipc_imm_hi_lo_1 = mux(UInt<1>("h0"), UInt<11>("h7ff"), UInt<11>("h0")) @[Bitwise.scala 72:12]
     node io_lui_jal_jalr_auipc_imm_hi_1 = cat(io_lui_jal_jalr_auipc_imm_hi_hi_1, io_lui_jal_jalr_auipc_imm_hi_lo_1) @[Cat.scala 30:58]
     node _io_lui_jal_jalr_auipc_imm_T_4 = cat(io_lui_jal_jalr_auipc_imm_hi_1, UInt<1>("h0")) @[Cat.scala 30:58]
-    node _io_lui_jal_jalr_auipc_imm_T_5 = asSInt(_io_lui_jal_jalr_auipc_imm_T_4) @[control.scala 152:86]
-    node _T_9 = eq(op, UInt<7>("h6f")) @[control.scala 164:18]
-    node _io_lui_jal_jalr_auipc_imm_T_6 = bits(io_instruction, 31, 31) @[control.scala 166:60]
+    node _io_lui_jal_jalr_auipc_imm_T_5 = asSInt(_io_lui_jal_jalr_auipc_imm_T_4) @[control.scala 166:86]
+    node _T_9 = eq(op, UInt<7>("h6f")) @[control.scala 180:18]
+    node _io_lui_jal_jalr_auipc_imm_T_6 = bits(io_instruction, 31, 31) @[control.scala 182:60]
     node _io_lui_jal_jalr_auipc_imm_T_7 = bits(_io_lui_jal_jalr_auipc_imm_T_6, 0, 0) @[Bitwise.scala 72:15]
     node io_lui_jal_jalr_auipc_imm_hi_hi_hi_1 = mux(_io_lui_jal_jalr_auipc_imm_T_7, UInt<11>("h7ff"), UInt<11>("h0")) @[Bitwise.scala 72:12]
-    node io_lui_jal_jalr_auipc_imm_hi_hi_lo_1 = bits(io_instruction, 31, 31) @[control.scala 166:80]
-    node io_lui_jal_jalr_auipc_imm_hi_lo_2 = bits(io_instruction, 19, 12) @[control.scala 166:99]
-    node io_lui_jal_jalr_auipc_imm_lo_hi_hi_1 = bits(io_instruction, 20, 20) @[control.scala 166:121]
-    node io_lui_jal_jalr_auipc_imm_lo_hi_lo_1 = bits(io_instruction, 30, 21) @[control.scala 166:140]
+    node io_lui_jal_jalr_auipc_imm_hi_hi_lo_1 = bits(io_instruction, 31, 31) @[control.scala 182:80]
+    node io_lui_jal_jalr_auipc_imm_hi_lo_2 = bits(io_instruction, 19, 12) @[control.scala 182:99]
+    node io_lui_jal_jalr_auipc_imm_lo_hi_hi_1 = bits(io_instruction, 20, 20) @[control.scala 182:121]
+    node io_lui_jal_jalr_auipc_imm_lo_hi_lo_1 = bits(io_instruction, 30, 21) @[control.scala 182:140]
     node io_lui_jal_jalr_auipc_imm_lo_hi_1 = cat(io_lui_jal_jalr_auipc_imm_lo_hi_hi_1, io_lui_jal_jalr_auipc_imm_lo_hi_lo_1) @[Cat.scala 30:58]
     node io_lui_jal_jalr_auipc_imm_lo_1 = cat(io_lui_jal_jalr_auipc_imm_lo_hi_1, UInt<1>("h0")) @[Cat.scala 30:58]
     node io_lui_jal_jalr_auipc_imm_hi_hi_2 = cat(io_lui_jal_jalr_auipc_imm_hi_hi_hi_1, io_lui_jal_jalr_auipc_imm_hi_hi_lo_1) @[Cat.scala 30:58]
     node io_lui_jal_jalr_auipc_imm_hi_2 = cat(io_lui_jal_jalr_auipc_imm_hi_hi_2, io_lui_jal_jalr_auipc_imm_hi_lo_2) @[Cat.scala 30:58]
     node _io_lui_jal_jalr_auipc_imm_T_8 = cat(io_lui_jal_jalr_auipc_imm_hi_2, io_lui_jal_jalr_auipc_imm_lo_1) @[Cat.scala 30:58]
-    node _io_lui_jal_jalr_auipc_imm_T_9 = asSInt(_io_lui_jal_jalr_auipc_imm_T_8) @[control.scala 166:159]
-    node _T_10 = eq(op, UInt<7>("h67")) @[control.scala 179:18]
-    node _io_lui_jal_jalr_auipc_imm_T_10 = bits(io_instruction, 31, 31) @[control.scala 180:60]
+    node _io_lui_jal_jalr_auipc_imm_T_9 = asSInt(_io_lui_jal_jalr_auipc_imm_T_8) @[control.scala 182:159]
+    node _T_10 = eq(op, UInt<7>("h67")) @[control.scala 197:18]
+    node _io_lui_jal_jalr_auipc_imm_T_10 = bits(io_instruction, 31, 31) @[control.scala 198:60]
     node _io_lui_jal_jalr_auipc_imm_T_11 = bits(_io_lui_jal_jalr_auipc_imm_T_10, 0, 0) @[Bitwise.scala 72:15]
     node io_lui_jal_jalr_auipc_imm_hi_3 = mux(_io_lui_jal_jalr_auipc_imm_T_11, UInt<11>("h7ff"), UInt<11>("h0")) @[Bitwise.scala 72:12]
-    node io_lui_jal_jalr_auipc_imm_lo_2 = bits(io_instruction, 31, 20) @[control.scala 180:80]
+    node io_lui_jal_jalr_auipc_imm_lo_2 = bits(io_instruction, 31, 20) @[control.scala 198:80]
     node _io_lui_jal_jalr_auipc_imm_T_12 = cat(io_lui_jal_jalr_auipc_imm_hi_3, io_lui_jal_jalr_auipc_imm_lo_2) @[Cat.scala 30:58]
-    node _io_lui_jal_jalr_auipc_imm_T_13 = asSInt(_io_lui_jal_jalr_auipc_imm_T_12) @[control.scala 180:95]
-    node _T_11 = eq(op, UInt<5>("h17")) @[control.scala 193:18]
-    node io_lui_jal_jalr_auipc_imm_hi_hi_3 = bits(io_instruction, 31, 12) @[control.scala 203:52]
+    node _io_lui_jal_jalr_auipc_imm_T_13 = asSInt(_io_lui_jal_jalr_auipc_imm_T_12) @[control.scala 198:95]
+    node _T_11 = eq(op, UInt<5>("h17")) @[control.scala 213:18]
+    node io_lui_jal_jalr_auipc_imm_hi_hi_3 = bits(io_instruction, 31, 12) @[control.scala 223:52]
     node io_lui_jal_jalr_auipc_imm_hi_lo_3 = mux(UInt<1>("h0"), UInt<11>("h7ff"), UInt<11>("h0")) @[Bitwise.scala 72:12]
     node io_lui_jal_jalr_auipc_imm_hi_4 = cat(io_lui_jal_jalr_auipc_imm_hi_hi_3, io_lui_jal_jalr_auipc_imm_hi_lo_3) @[Cat.scala 30:58]
     node _io_lui_jal_jalr_auipc_imm_T_14 = cat(io_lui_jal_jalr_auipc_imm_hi_4, UInt<1>("h0")) @[Cat.scala 30:58]
-    node _io_lui_jal_jalr_auipc_imm_T_15 = asSInt(_io_lui_jal_jalr_auipc_imm_T_14) @[control.scala 203:86]
-    node _GEN_1 = mux(_T_11, UInt<1>("h0"), UInt<1>("h0")) @[control.scala 193:34 control.scala 194:13 control.scala 216:13]
-    node _GEN_2 = mux(_T_11, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 193:34 control.scala 201:15 control.scala 44:13]
-    node _GEN_3 = mux(_T_11, _io_lui_jal_jalr_auipc_imm_T_15, asSInt(UInt<1>("h0"))) @[control.scala 193:34 control.scala 203:32 control.scala 45:30]
-    node _GEN_4 = mux(_T_10, _io_lui_jal_jalr_auipc_imm_T_13, _GEN_3) @[control.scala 179:34 control.scala 180:32]
+    node _io_lui_jal_jalr_auipc_imm_T_15 = asSInt(_io_lui_jal_jalr_auipc_imm_T_14) @[control.scala 223:86]
+    node _GEN_1 = mux(_T_11, UInt<1>("h0"), UInt<1>("h0")) @[control.scala 213:34 control.scala 214:13 control.scala 236:13]
+    node _GEN_2 = mux(_T_11, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 213:34 control.scala 221:15 control.scala 46:13]
+    node _GEN_3 = mux(_T_11, _io_lui_jal_jalr_auipc_imm_T_15, asSInt(UInt<1>("h0"))) @[control.scala 213:34 control.scala 223:32 control.scala 47:30]
+    node _GEN_4 = mux(_T_10, _io_lui_jal_jalr_auipc_imm_T_13, _GEN_3) @[control.scala 197:34 control.scala 198:32]
     node Rs1 = _Rs1_T
-    node _GEN_5 = mux(_T_10, Rs1, _GEN_1) @[control.scala 179:34 control.scala 181:13]
-    node _GEN_6 = mux(_T_10, UInt<1>("h0"), _GEN_1) @[control.scala 179:34 control.scala 182:13]
+    node _GEN_5 = mux(_T_10, Rs1, _GEN_1) @[control.scala 197:34 control.scala 199:13]
+    node _GEN_6 = mux(_T_10, UInt<1>("h0"), _GEN_1) @[control.scala 197:34 control.scala 200:13]
     node Rd = _Rd_T
-    node _GEN_7 = mux(_T_10, Rd, _GEN_1) @[control.scala 179:34 control.scala 183:12]
-    node _GEN_8 = mux(_T_10, UInt<2>("h2"), _GEN_1) @[control.scala 179:34 control.scala 185:17]
-    node _GEN_9 = mux(_T_10, UInt<1>("h1"), _GEN_1) @[control.scala 179:34 control.scala 186:15]
-    node _GEN_10 = mux(_T_10, UInt<1>("h1"), _GEN_2) @[control.scala 179:34 control.scala 187:15]
-    node _GEN_11 = mux(_T_10, UInt<1>("h0"), UInt<1>("h0")) @[control.scala 179:34 control.scala 188:17 control.scala 63:16]
-    node _GEN_12 = mux(_T_10, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 179:34 control.scala 189:18 control.scala 64:17]
-    node _GEN_13 = mux(_T_10, UInt<1>("h0"), _GEN_2) @[control.scala 179:34 control.scala 65:14]
-    node _GEN_14 = mux(_T_9, Rd, _GEN_7) @[control.scala 164:34 control.scala 165:12]
-    node _GEN_15 = mux(_T_9, _io_lui_jal_jalr_auipc_imm_T_9, _GEN_4) @[control.scala 164:34 control.scala 166:32]
-    node _GEN_16 = mux(_T_9, UInt<1>("h1"), _GEN_11) @[control.scala 164:34 control.scala 167:17]
-    node _GEN_17 = mux(_T_9, UInt<1>("h0"), _GEN_6) @[control.scala 164:34 control.scala 168:15]
-    node _GEN_18 = mux(_T_9, UInt<1>("h0"), _GEN_5) @[control.scala 164:34 control.scala 169:13]
-    node _GEN_19 = mux(_T_9, UInt<1>("h1"), _GEN_9) @[control.scala 164:34 control.scala 172:15]
-    node _GEN_20 = mux(_T_9, UInt<1>("h1"), _GEN_10) @[control.scala 164:34 control.scala 173:15]
-    node _GEN_21 = mux(_T_9, UInt<2>("h2"), _GEN_8) @[control.scala 164:34 control.scala 174:17]
-    node _GEN_22 = mux(_T_9, UInt<1>("h0"), _GEN_12) @[control.scala 164:34 control.scala 64:17]
-    node _GEN_23 = mux(_T_9, UInt<1>("h0"), _GEN_13) @[control.scala 164:34 control.scala 65:14]
-    node _GEN_24 = mux(_T_8, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 149:34 control.scala 150:17 control.scala 62:16]
-    node _GEN_25 = mux(_T_8, Rd, _GEN_14) @[control.scala 149:34 control.scala 151:12]
-    node _GEN_26 = mux(_T_8, _io_lui_jal_jalr_auipc_imm_T_5, _GEN_15) @[control.scala 149:34 control.scala 152:32]
-    node _GEN_27 = mux(_T_8, UInt<1>("h0"), _GEN_17) @[control.scala 149:34 control.scala 153:17]
-    node _GEN_28 = mux(_T_8, UInt<1>("h1"), _GEN_19) @[control.scala 149:34 control.scala 155:15]
-    node _GEN_29 = mux(_T_8, UInt<1>("h1"), _GEN_21) @[control.scala 149:34 control.scala 156:17]
-    node _GEN_30 = mux(_T_8, UInt<1>("h0"), _GEN_18) @[control.scala 149:34 control.scala 157:13]
-    node _GEN_31 = mux(_T_8, UInt<1>("h0"), UInt<1>("h0")) @[control.scala 149:34 control.scala 160:17 control.scala 41:16]
-    node _GEN_32 = mux(_T_8, UInt<1>("h0"), _GEN_20) @[control.scala 149:34 control.scala 161:15]
-    node _GEN_33 = mux(_T_8, UInt<1>("h0"), _GEN_16) @[control.scala 149:34 control.scala 63:16]
-    node _GEN_34 = mux(_T_8, UInt<1>("h0"), _GEN_22) @[control.scala 149:34 control.scala 64:17]
-    node _GEN_35 = mux(_T_8, UInt<1>("h0"), _GEN_23) @[control.scala 149:34 control.scala 65:14]
-    node _GEN_36 = mux(_T_7, UInt<1>("h0"), _GEN_28) @[control.scala 134:34 control.scala 135:15]
-    node _GEN_37 = mux(_T_7, UInt<1>("h1"), _GEN_27) @[control.scala 134:34 control.scala 136:15]
-    node _GEN_38 = mux(_T_7, Rs1, _GEN_30) @[control.scala 134:34 control.scala 137:13]
+    node _GEN_7 = mux(_T_10, Rd, _GEN_1) @[control.scala 197:34 control.scala 201:12]
+    node _GEN_8 = mux(_T_10, UInt<2>("h2"), _GEN_1) @[control.scala 197:34 control.scala 203:17]
+    node _GEN_9 = mux(_T_10, UInt<1>("h1"), _GEN_1) @[control.scala 197:34 control.scala 204:15]
+    node _GEN_10 = mux(_T_10, UInt<1>("h1"), _GEN_2) @[control.scala 197:34 control.scala 205:15]
+    node _GEN_11 = mux(_T_10, UInt<1>("h0"), UInt<1>("h0")) @[control.scala 197:34 control.scala 206:17 control.scala 67:16]
+    node _GEN_12 = mux(_T_10, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 197:34 control.scala 207:18 control.scala 68:17]
+    node _GEN_13 = mux(_T_10, UInt<1>("h0"), _GEN_2) @[control.scala 197:34 control.scala 69:14]
+    node _GEN_14 = mux(_T_9, Rd, _GEN_7) @[control.scala 180:34 control.scala 181:12]
+    node _GEN_15 = mux(_T_9, _io_lui_jal_jalr_auipc_imm_T_9, _GEN_4) @[control.scala 180:34 control.scala 182:32]
+    node _GEN_16 = mux(_T_9, UInt<1>("h1"), _GEN_11) @[control.scala 180:34 control.scala 183:17]
+    node _GEN_17 = mux(_T_9, UInt<1>("h0"), _GEN_6) @[control.scala 180:34 control.scala 184:15]
+    node _GEN_18 = mux(_T_9, UInt<1>("h0"), _GEN_5) @[control.scala 180:34 control.scala 185:13]
+    node _GEN_19 = mux(_T_9, UInt<1>("h1"), _GEN_9) @[control.scala 180:34 control.scala 188:15]
+    node _GEN_20 = mux(_T_9, UInt<1>("h1"), _GEN_10) @[control.scala 180:34 control.scala 189:15]
+    node _GEN_21 = mux(_T_9, UInt<2>("h2"), _GEN_8) @[control.scala 180:34 control.scala 190:17]
+    node _GEN_22 = mux(_T_9, UInt<1>("h1"), _GEN_12) @[control.scala 180:34 control.scala 191:18]
+    node _GEN_23 = mux(_T_9, UInt<1>("h0"), _GEN_12) @[control.scala 180:34 control.scala 192:18]
+    node _GEN_24 = mux(_T_9, UInt<1>("h0"), _GEN_13) @[control.scala 180:34 control.scala 69:14]
+    node _GEN_25 = mux(_T_8, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 163:34 control.scala 164:17 control.scala 66:16]
+    node _GEN_26 = mux(_T_8, Rd, _GEN_14) @[control.scala 163:34 control.scala 165:12]
+    node _GEN_27 = mux(_T_8, _io_lui_jal_jalr_auipc_imm_T_5, _GEN_15) @[control.scala 163:34 control.scala 166:32]
+    node _GEN_28 = mux(_T_8, UInt<1>("h0"), _GEN_17) @[control.scala 163:34 control.scala 167:17]
+    node _GEN_29 = mux(_T_8, UInt<1>("h1"), _GEN_19) @[control.scala 163:34 control.scala 169:15]
+    node _GEN_30 = mux(_T_8, UInt<1>("h1"), _GEN_21) @[control.scala 163:34 control.scala 170:17]
+    node _GEN_31 = mux(_T_8, UInt<1>("h0"), _GEN_18) @[control.scala 163:34 control.scala 171:13]
+    node _GEN_32 = mux(_T_8, UInt<1>("h0"), UInt<1>("h0")) @[control.scala 163:34 control.scala 174:17 control.scala 43:16]
+    node _GEN_33 = mux(_T_8, UInt<1>("h0"), _GEN_20) @[control.scala 163:34 control.scala 175:15]
+    node _GEN_34 = mux(_T_8, UInt<2>("h2"), _GEN_22) @[control.scala 163:34 control.scala 176:18]
+    node _GEN_35 = mux(_T_8, UInt<1>("h1"), _GEN_23) @[control.scala 163:34 control.scala 177:18]
+    node _GEN_36 = mux(_T_8, UInt<1>("h0"), _GEN_16) @[control.scala 163:34 control.scala 67:16]
+    node _GEN_37 = mux(_T_8, UInt<1>("h0"), _GEN_23) @[control.scala 163:34 control.scala 68:17]
+    node _GEN_38 = mux(_T_8, UInt<1>("h0"), _GEN_24) @[control.scala 163:34 control.scala 69:14]
+    node _GEN_39 = mux(_T_7, UInt<1>("h0"), _GEN_29) @[control.scala 146:34 control.scala 147:15]
+    node _GEN_40 = mux(_T_7, UInt<1>("h1"), _GEN_28) @[control.scala 146:34 control.scala 148:15]
+    node _GEN_41 = mux(_T_7, Rs1, _GEN_31) @[control.scala 146:34 control.scala 149:13]
     node Rs2 = _Rs2_T
-    node _GEN_39 = mux(_T_7, Rs2, _GEN_27) @[control.scala 134:34 control.scala 138:13]
-    node _GEN_40 = mux(_T_7, UInt<1>("h0"), _GEN_27) @[control.scala 134:34 control.scala 139:15]
-    node _GEN_41 = mux(_T_7, UInt<1>("h0"), _GEN_25) @[control.scala 134:34 control.scala 140:12]
-    node _GEN_42 = mux(_T_7, _io_lui_jal_jalr_auipc_imm_T_3, _GEN_26) @[control.scala 134:34 control.scala 142:32]
-    node _GEN_43 = mux(_T_7, UInt<1>("h0"), _GEN_29) @[control.scala 134:34 control.scala 143:17]
-    node _GEN_44 = mux(_T_7, _io_br_fun3_T, _GEN_27) @[control.scala 134:34 control.scala 144:17]
-    node _GEN_45 = mux(_T_7, _io_pcsel_T_1, _GEN_32) @[control.scala 134:34 control.scala 145:15]
-    node _GEN_46 = mux(_T_7, UInt<1>("h0"), _GEN_24) @[control.scala 134:34 control.scala 62:16]
-    node _GEN_47 = mux(_T_7, UInt<1>("h0"), _GEN_31) @[control.scala 134:34 control.scala 41:16]
-    node _GEN_48 = mux(_T_7, UInt<1>("h0"), _GEN_33) @[control.scala 134:34 control.scala 63:16]
-    node _GEN_49 = mux(_T_7, UInt<1>("h0"), _GEN_34) @[control.scala 134:34 control.scala 64:17]
-    node _GEN_50 = mux(_T_7, UInt<1>("h0"), _GEN_35) @[control.scala 134:34 control.scala 65:14]
-    node _GEN_51 = mux(_T_6, UInt<1>("h0"), _GEN_36) @[control.scala 118:34 control.scala 119:15]
-    node _GEN_52 = mux(_T_6, UInt<1>("h1"), _GEN_40) @[control.scala 118:34 control.scala 120:15]
-    node _GEN_53 = mux(_T_6, Rs1, _GEN_38) @[control.scala 118:34 control.scala 121:13]
-    node _GEN_54 = mux(_T_6, Rs2, _GEN_39) @[control.scala 118:34 control.scala 122:13]
-    node _GEN_55 = mux(_T_6, _io_immBits_T_2, _GEN_47) @[control.scala 118:34 control.scala 125:17]
-    node _GEN_56 = mux(_T_6, UInt<1>("h0"), _GEN_40) @[control.scala 118:34 control.scala 126:15]
-    node _GEN_57 = mux(_T_6, UInt<1>("h0"), _GEN_41) @[control.scala 118:34 control.scala 127:12]
-    node _GEN_58 = mux(_T_6, f3, UInt<1>("h0")) @[control.scala 118:34 control.scala 129:23 control.scala 40:21]
-    node _GEN_59 = mux(_T_6, UInt<1>("h0"), _GEN_45) @[control.scala 118:34 control.scala 130:15]
-    node _GEN_60 = mux(_T_6, UInt<1>("h0"), _GEN_37) @[control.scala 118:34 control.scala 43:14]
-    node _GEN_61 = mux(_T_6, asSInt(UInt<1>("h0")), _GEN_42) @[control.scala 118:34 control.scala 45:30]
-    node _GEN_62 = mux(_T_6, UInt<1>("h0"), _GEN_43) @[control.scala 118:34 control.scala 39:15]
-    node _GEN_63 = mux(_T_6, UInt<1>("h0"), _GEN_44) @[control.scala 118:34 control.scala 46:15]
-    node _GEN_64 = mux(_T_6, UInt<1>("h0"), _GEN_46) @[control.scala 118:34 control.scala 62:16]
-    node _GEN_65 = mux(_T_6, UInt<1>("h0"), _GEN_48) @[control.scala 118:34 control.scala 63:16]
-    node _GEN_66 = mux(_T_6, UInt<1>("h0"), _GEN_49) @[control.scala 118:34 control.scala 64:17]
-    node _GEN_67 = mux(_T_6, UInt<1>("h0"), _GEN_50) @[control.scala 118:34 control.scala 65:14]
-    node _GEN_68 = mux(_T_5, UInt<1>("h1"), _GEN_56) @[control.scala 100:34 control.scala 101:17]
-    node _GEN_69 = mux(_T_5, Rd, _GEN_57) @[control.scala 100:34 control.scala 102:14]
-    node _GEN_70 = mux(_T_5, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 100:34 control.scala 103:17 control.scala 47:13]
-    node _GEN_71 = mux(_T_5, Rs1, _GEN_53) @[control.scala 100:34 control.scala 104:15]
-    node _GEN_72 = mux(_T_5, UInt<1>("h0"), _GEN_56) @[control.scala 100:34 control.scala 105:17]
-    node _GEN_73 = mux(_T_5, UInt<1>("h0"), _GEN_52) @[control.scala 100:34 control.scala 106:21]
-    node _GEN_74 = mux(_T_5, UInt<1>("h0"), _GEN_62) @[control.scala 100:34 control.scala 107:19]
-    node _GEN_75 = mux(_T_5, UInt<1>("h0"), _GEN_54) @[control.scala 100:34 control.scala 108:15]
-    node _GEN_76 = mux(_T_5, _io_immBits_T_1, _GEN_55) @[control.scala 100:34 control.scala 110:19]
-    node _GEN_77 = mux(_T_5, f3, _GEN_58) @[control.scala 100:34 control.scala 111:25]
-    node _GEN_78 = mux(_T_5, UInt<1>("h0"), _GEN_59) @[control.scala 100:34 control.scala 112:17]
-    node _GEN_79 = mux(_T_5, UInt<1>("h1"), _GEN_51) @[control.scala 100:34 control.scala 114:18]
-    node _GEN_80 = mux(_T_5, UInt<1>("h0"), _GEN_60) @[control.scala 100:34 control.scala 43:14]
-    node _GEN_81 = mux(_T_5, asSInt(UInt<1>("h0")), _GEN_61) @[control.scala 100:34 control.scala 45:30]
-    node _GEN_82 = mux(_T_5, UInt<1>("h0"), _GEN_63) @[control.scala 100:34 control.scala 46:15]
-    node _GEN_83 = mux(_T_5, UInt<1>("h0"), _GEN_64) @[control.scala 100:34 control.scala 62:16]
-    node _GEN_84 = mux(_T_5, UInt<1>("h0"), _GEN_65) @[control.scala 100:34 control.scala 63:16]
-    node _GEN_85 = mux(_T_5, UInt<1>("h0"), _GEN_66) @[control.scala 100:34 control.scala 64:17]
-    node _GEN_86 = mux(_T_5, UInt<1>("h0"), _GEN_67) @[control.scala 100:34 control.scala 65:14]
-    node _GEN_87 = mux(_T_1, UInt<1>("h1"), _GEN_68) @[control.scala 80:34 control.scala 81:17]
-    node _GEN_88 = mux(_T_1, _GEN_0, _GEN_72) @[control.scala 80:34]
-    node _GEN_89 = mux(_T_1, UInt<1>("h1"), _GEN_79) @[control.scala 80:34 control.scala 88:17]
-    node _GEN_90 = mux(_T_1, Rd, _GEN_69) @[control.scala 80:34 control.scala 89:15]
-    node _GEN_91 = mux(_T_1, Rs1, _GEN_71) @[control.scala 80:34 control.scala 90:16]
-    node _GEN_92 = mux(_T_1, UInt<1>("h0"), _GEN_73) @[control.scala 80:34 control.scala 91:22]
-    node _GEN_93 = mux(_T_1, UInt<1>("h1"), _GEN_74) @[control.scala 80:34 control.scala 92:20]
-    node _GEN_94 = mux(_T_1, UInt<1>("h0"), _GEN_75) @[control.scala 80:34 control.scala 93:16]
-    node _GEN_95 = mux(_T_1, _io_immBits_T, _GEN_76) @[control.scala 80:34 control.scala 95:20]
-    node _GEN_96 = mux(_T_1, UInt<1>("h0"), _GEN_82) @[control.scala 80:34 control.scala 96:20]
-    node _GEN_97 = mux(_T_1, UInt<1>("h0"), _GEN_78) @[control.scala 80:34 control.scala 97:18]
-    node _GEN_98 = mux(_T_1, UInt<1>("h0"), _GEN_70) @[control.scala 80:34 control.scala 47:13]
-    node _GEN_99 = mux(_T_1, UInt<1>("h0"), _GEN_77) @[control.scala 80:34 control.scala 40:21]
-    node _GEN_100 = mux(_T_1, UInt<1>("h0"), _GEN_80) @[control.scala 80:34 control.scala 43:14]
-    node _GEN_101 = mux(_T_1, asSInt(UInt<1>("h0")), _GEN_81) @[control.scala 80:34 control.scala 45:30]
-    node _GEN_102 = mux(_T_1, UInt<1>("h0"), _GEN_83) @[control.scala 80:34 control.scala 62:16]
-    node _GEN_103 = mux(_T_1, UInt<1>("h0"), _GEN_84) @[control.scala 80:34 control.scala 63:16]
-    node _GEN_104 = mux(_T_1, UInt<1>("h0"), _GEN_85) @[control.scala 80:34 control.scala 64:17]
-    node _GEN_105 = mux(_T_1, UInt<1>("h0"), _GEN_86) @[control.scala 80:34 control.scala 65:14]
-    node _GEN_106 = mux(_T_1, UInt<1>("h0"), _GEN_72) @[control.scala 80:34 control.scala 59:14]
-    node _GEN_107 = mux(_T, UInt<1>("h1"), _GEN_106) @[control.scala 66:29 control.scala 67:15]
-    node _GEN_108 = mux(_T, fn3_7, _GEN_88) @[control.scala 66:29 control.scala 69:15]
-    node _GEN_109 = mux(_T, Rs2, _GEN_94) @[control.scala 66:29 control.scala 70:13]
-    node _GEN_110 = mux(_T, UInt<1>("h1"), _GEN_89) @[control.scala 66:29 control.scala 71:15]
-    node _GEN_111 = mux(_T, Rd, _GEN_90) @[control.scala 66:29 control.scala 72:12]
-    node _GEN_112 = mux(_T, Rs1, _GEN_91) @[control.scala 66:29 control.scala 73:12]
-    node _GEN_113 = mux(_T, UInt<1>("h0"), _GEN_92) @[control.scala 66:29 control.scala 74:18]
-    node _GEN_114 = mux(_T, UInt<1>("h1"), _GEN_93) @[control.scala 66:29 control.scala 75:16]
-    node _GEN_115 = mux(_T, UInt<1>("h0"), _GEN_96) @[control.scala 66:29 control.scala 76:16]
-    node _GEN_116 = mux(_T, UInt<1>("h0"), _GEN_97) @[control.scala 66:29 control.scala 77:14]
-    node _GEN_117 = mux(_T, UInt<1>("h0"), _GEN_87) @[control.scala 66:29 control.scala 60:14]
-    node _GEN_118 = mux(_T, UInt<1>("h0"), _GEN_95) @[control.scala 66:29 control.scala 41:16]
-    node _GEN_119 = mux(_T, UInt<1>("h0"), _GEN_98) @[control.scala 66:29 control.scala 47:13]
-    node _GEN_120 = mux(_T, UInt<1>("h0"), _GEN_99) @[control.scala 66:29 control.scala 40:21]
-    node _GEN_121 = mux(_T, UInt<1>("h0"), _GEN_100) @[control.scala 66:29 control.scala 43:14]
-    node _GEN_122 = mux(_T, asSInt(UInt<1>("h0")), _GEN_101) @[control.scala 66:29 control.scala 45:30]
-    node _GEN_123 = mux(_T, UInt<1>("h0"), _GEN_102) @[control.scala 66:29 control.scala 62:16]
-    node _GEN_124 = mux(_T, UInt<1>("h0"), _GEN_103) @[control.scala 66:29 control.scala 63:16]
-    node _GEN_125 = mux(_T, UInt<1>("h0"), _GEN_104) @[control.scala 66:29 control.scala 64:17]
-    node _GEN_126 = mux(_T, UInt<1>("h0"), _GEN_105) @[control.scala 66:29 control.scala 65:14]
+    node _GEN_42 = mux(_T_7, Rs2, _GEN_28) @[control.scala 146:34 control.scala 150:13]
+    node _GEN_43 = mux(_T_7, UInt<1>("h0"), _GEN_28) @[control.scala 146:34 control.scala 151:15]
+    node _GEN_44 = mux(_T_7, UInt<1>("h0"), _GEN_26) @[control.scala 146:34 control.scala 152:12]
+    node _GEN_45 = mux(_T_7, _io_lui_jal_jalr_auipc_imm_T_3, _GEN_27) @[control.scala 146:34 control.scala 154:32]
+    node _GEN_46 = mux(_T_7, UInt<1>("h0"), _GEN_30) @[control.scala 146:34 control.scala 155:17]
+    node _GEN_47 = mux(_T_7, _io_br_fun3_T, _GEN_28) @[control.scala 146:34 control.scala 156:17]
+    node _GEN_48 = mux(_T_7, _io_pcsel_T_1, _GEN_33) @[control.scala 146:34 control.scala 157:15]
+    node _GEN_49 = mux(_T_7, UInt<1>("h0"), _GEN_34) @[control.scala 146:34 control.scala 158:18]
+    node _GEN_50 = mux(_T_7, UInt<1>("h0"), _GEN_35) @[control.scala 146:34 control.scala 159:18]
+    node _GEN_51 = mux(_T_7, UInt<1>("h0"), _GEN_25) @[control.scala 146:34 control.scala 66:16]
+    node _GEN_52 = mux(_T_7, UInt<1>("h0"), _GEN_32) @[control.scala 146:34 control.scala 43:16]
+    node _GEN_53 = mux(_T_7, UInt<1>("h0"), _GEN_36) @[control.scala 146:34 control.scala 67:16]
+    node _GEN_54 = mux(_T_7, UInt<1>("h0"), _GEN_37) @[control.scala 146:34 control.scala 68:17]
+    node _GEN_55 = mux(_T_7, UInt<1>("h0"), _GEN_38) @[control.scala 146:34 control.scala 69:14]
+    node _GEN_56 = mux(_T_6, UInt<1>("h0"), _GEN_39) @[control.scala 128:34 control.scala 129:15]
+    node _GEN_57 = mux(_T_6, UInt<1>("h1"), _GEN_43) @[control.scala 128:34 control.scala 130:15]
+    node _GEN_58 = mux(_T_6, Rs1, _GEN_41) @[control.scala 128:34 control.scala 131:13]
+    node _GEN_59 = mux(_T_6, Rs2, _GEN_42) @[control.scala 128:34 control.scala 132:13]
+    node _GEN_60 = mux(_T_6, _io_immBits_T_2, _GEN_52) @[control.scala 128:34 control.scala 135:17]
+    node _GEN_61 = mux(_T_6, UInt<1>("h0"), _GEN_43) @[control.scala 128:34 control.scala 136:15]
+    node _GEN_62 = mux(_T_6, UInt<1>("h0"), _GEN_44) @[control.scala 128:34 control.scala 137:12]
+    node _GEN_63 = mux(_T_6, f3, UInt<1>("h0")) @[control.scala 128:34 control.scala 139:23 control.scala 42:21]
+    node _GEN_64 = mux(_T_6, UInt<1>("h0"), _GEN_48) @[control.scala 128:34 control.scala 140:15]
+    node _GEN_65 = mux(_T_6, UInt<1>("h0"), _GEN_49) @[control.scala 128:34 control.scala 141:18]
+    node _GEN_66 = mux(_T_6, UInt<1>("h1"), _GEN_50) @[control.scala 128:34 control.scala 142:18]
+    node _GEN_67 = mux(_T_6, UInt<1>("h0"), _GEN_40) @[control.scala 128:34 control.scala 45:14]
+    node _GEN_68 = mux(_T_6, asSInt(UInt<1>("h0")), _GEN_45) @[control.scala 128:34 control.scala 47:30]
+    node _GEN_69 = mux(_T_6, UInt<1>("h0"), _GEN_46) @[control.scala 128:34 control.scala 41:15]
+    node _GEN_70 = mux(_T_6, UInt<1>("h0"), _GEN_47) @[control.scala 128:34 control.scala 48:15]
+    node _GEN_71 = mux(_T_6, UInt<1>("h0"), _GEN_51) @[control.scala 128:34 control.scala 66:16]
+    node _GEN_72 = mux(_T_6, UInt<1>("h0"), _GEN_53) @[control.scala 128:34 control.scala 67:16]
+    node _GEN_73 = mux(_T_6, UInt<1>("h0"), _GEN_54) @[control.scala 128:34 control.scala 68:17]
+    node _GEN_74 = mux(_T_6, UInt<1>("h0"), _GEN_55) @[control.scala 128:34 control.scala 69:14]
+    node _GEN_75 = mux(_T_5, UInt<1>("h1"), _GEN_61) @[control.scala 108:34 control.scala 109:17]
+    node _GEN_76 = mux(_T_5, Rd, _GEN_62) @[control.scala 108:34 control.scala 110:14]
+    node _GEN_77 = mux(_T_5, UInt<1>("h1"), UInt<1>("h0")) @[control.scala 108:34 control.scala 111:17 control.scala 49:13]
+    node _GEN_78 = mux(_T_5, Rs1, _GEN_58) @[control.scala 108:34 control.scala 112:15]
+    node _GEN_79 = mux(_T_5, UInt<1>("h0"), _GEN_61) @[control.scala 108:34 control.scala 113:17]
+    node _GEN_80 = mux(_T_5, UInt<1>("h0"), _GEN_57) @[control.scala 108:34 control.scala 114:21]
+    node _GEN_81 = mux(_T_5, UInt<1>("h0"), _GEN_69) @[control.scala 108:34 control.scala 115:19]
+    node _GEN_82 = mux(_T_5, UInt<1>("h0"), _GEN_59) @[control.scala 108:34 control.scala 116:15]
+    node _GEN_83 = mux(_T_5, _io_immBits_T_1, _GEN_60) @[control.scala 108:34 control.scala 118:19]
+    node _GEN_84 = mux(_T_5, f3, _GEN_63) @[control.scala 108:34 control.scala 119:25]
+    node _GEN_85 = mux(_T_5, UInt<1>("h0"), _GEN_64) @[control.scala 108:34 control.scala 120:17]
+    node _GEN_86 = mux(_T_5, UInt<1>("h1"), _GEN_56) @[control.scala 108:34 control.scala 122:18]
+    node _GEN_87 = mux(_T_5, UInt<1>("h0"), _GEN_65) @[control.scala 108:34 control.scala 123:20]
+    node _GEN_88 = mux(_T_5, UInt<1>("h1"), _GEN_66) @[control.scala 108:34 control.scala 124:20]
+    node _GEN_89 = mux(_T_5, UInt<1>("h0"), _GEN_67) @[control.scala 108:34 control.scala 45:14]
+    node _GEN_90 = mux(_T_5, asSInt(UInt<1>("h0")), _GEN_68) @[control.scala 108:34 control.scala 47:30]
+    node _GEN_91 = mux(_T_5, UInt<1>("h0"), _GEN_70) @[control.scala 108:34 control.scala 48:15]
+    node _GEN_92 = mux(_T_5, UInt<1>("h0"), _GEN_71) @[control.scala 108:34 control.scala 66:16]
+    node _GEN_93 = mux(_T_5, UInt<1>("h0"), _GEN_72) @[control.scala 108:34 control.scala 67:16]
+    node _GEN_94 = mux(_T_5, UInt<1>("h0"), _GEN_73) @[control.scala 108:34 control.scala 68:17]
+    node _GEN_95 = mux(_T_5, UInt<1>("h0"), _GEN_74) @[control.scala 108:34 control.scala 69:14]
+    node _GEN_96 = mux(_T_1, UInt<1>("h1"), _GEN_75) @[control.scala 86:34 control.scala 87:17]
+    node _GEN_97 = mux(_T_1, _GEN_0, _GEN_79) @[control.scala 86:34]
+    node _GEN_98 = mux(_T_1, UInt<1>("h1"), _GEN_86) @[control.scala 86:34 control.scala 94:17]
+    node _GEN_99 = mux(_T_1, Rd, _GEN_76) @[control.scala 86:34 control.scala 95:15]
+    node _GEN_100 = mux(_T_1, Rs1, _GEN_78) @[control.scala 86:34 control.scala 96:16]
+    node _GEN_101 = mux(_T_1, UInt<1>("h0"), _GEN_80) @[control.scala 86:34 control.scala 97:22]
+    node _GEN_102 = mux(_T_1, UInt<1>("h1"), _GEN_81) @[control.scala 86:34 control.scala 98:20]
+    node _GEN_103 = mux(_T_1, UInt<1>("h0"), _GEN_82) @[control.scala 86:34 control.scala 99:16]
+    node _GEN_104 = mux(_T_1, _io_immBits_T, _GEN_83) @[control.scala 86:34 control.scala 101:20]
+    node _GEN_105 = mux(_T_1, UInt<1>("h0"), _GEN_91) @[control.scala 86:34 control.scala 102:20]
+    node _GEN_106 = mux(_T_1, UInt<1>("h0"), _GEN_85) @[control.scala 86:34 control.scala 103:18]
+    node _GEN_107 = mux(_T_1, UInt<1>("h0"), _GEN_87) @[control.scala 86:34 control.scala 104:21]
+    node _GEN_108 = mux(_T_1, UInt<1>("h1"), _GEN_88) @[control.scala 86:34 control.scala 105:21]
+    node _GEN_109 = mux(_T_1, UInt<1>("h0"), _GEN_77) @[control.scala 86:34 control.scala 49:13]
+    node _GEN_110 = mux(_T_1, UInt<1>("h0"), _GEN_84) @[control.scala 86:34 control.scala 42:21]
+    node _GEN_111 = mux(_T_1, UInt<1>("h0"), _GEN_89) @[control.scala 86:34 control.scala 45:14]
+    node _GEN_112 = mux(_T_1, asSInt(UInt<1>("h0")), _GEN_90) @[control.scala 86:34 control.scala 47:30]
+    node _GEN_113 = mux(_T_1, UInt<1>("h0"), _GEN_92) @[control.scala 86:34 control.scala 66:16]
+    node _GEN_114 = mux(_T_1, UInt<1>("h0"), _GEN_93) @[control.scala 86:34 control.scala 67:16]
+    node _GEN_115 = mux(_T_1, UInt<1>("h0"), _GEN_94) @[control.scala 86:34 control.scala 68:17]
+    node _GEN_116 = mux(_T_1, UInt<1>("h0"), _GEN_95) @[control.scala 86:34 control.scala 69:14]
+    node _GEN_117 = mux(_T_1, UInt<1>("h0"), _GEN_79) @[control.scala 86:34 control.scala 63:14]
+    node _GEN_118 = mux(_T, UInt<1>("h1"), _GEN_117) @[control.scala 70:29 control.scala 71:15]
+    node _GEN_119 = mux(_T, fn3_7, _GEN_97) @[control.scala 70:29 control.scala 73:15]
+    node _GEN_120 = mux(_T, Rs2, _GEN_103) @[control.scala 70:29 control.scala 74:13]
+    node _GEN_121 = mux(_T, UInt<1>("h1"), _GEN_98) @[control.scala 70:29 control.scala 75:15]
+    node _GEN_122 = mux(_T, Rd, _GEN_99) @[control.scala 70:29 control.scala 76:12]
+    node _GEN_123 = mux(_T, Rs1, _GEN_100) @[control.scala 70:29 control.scala 77:13]
+    node _GEN_124 = mux(_T, UInt<1>("h0"), _GEN_101) @[control.scala 70:29 control.scala 78:19]
+    node _GEN_125 = mux(_T, UInt<1>("h1"), _GEN_102) @[control.scala 70:29 control.scala 79:17]
+    node _GEN_126 = mux(_T, UInt<1>("h0"), _GEN_105) @[control.scala 70:29 control.scala 80:17]
+    node _GEN_127 = mux(_T, UInt<1>("h0"), _GEN_106) @[control.scala 70:29 control.scala 81:15]
+    node _GEN_128 = mux(_T, UInt<1>("h0"), _GEN_107) @[control.scala 70:29 control.scala 82:18]
+    node _GEN_129 = mux(_T, UInt<1>("h0"), _GEN_108) @[control.scala 70:29 control.scala 83:18]
+    node _GEN_130 = mux(_T, UInt<1>("h0"), _GEN_96) @[control.scala 70:29 control.scala 64:14]
+    node _GEN_131 = mux(_T, UInt<1>("h0"), _GEN_104) @[control.scala 70:29 control.scala 43:16]
+    node _GEN_132 = mux(_T, UInt<1>("h0"), _GEN_109) @[control.scala 70:29 control.scala 49:13]
+    node _GEN_133 = mux(_T, UInt<1>("h0"), _GEN_110) @[control.scala 70:29 control.scala 42:21]
+    node _GEN_134 = mux(_T, UInt<1>("h0"), _GEN_111) @[control.scala 70:29 control.scala 45:14]
+    node _GEN_135 = mux(_T, asSInt(UInt<1>("h0")), _GEN_112) @[control.scala 70:29 control.scala 47:30]
+    node _GEN_136 = mux(_T, UInt<1>("h0"), _GEN_113) @[control.scala 70:29 control.scala 66:16]
+    node _GEN_137 = mux(_T, UInt<1>("h0"), _GEN_114) @[control.scala 70:29 control.scala 67:16]
+    node _GEN_138 = mux(_T, UInt<1>("h0"), _GEN_115) @[control.scala 70:29 control.scala 68:17]
+    node _GEN_139 = mux(_T, UInt<1>("h0"), _GEN_116) @[control.scala 70:29 control.scala 69:14]
     node imm = _imm_T
-    io_aluop <= _GEN_108
-    io_iform <= _GEN_117
-    io_rform <= _GEN_107
-    io_sform <= _GEN_113
-    io_bform <= _GEN_121
-    io_luiform <= _GEN_123
-    io_Jalform <= _GEN_124
-    io_jalrform <= _GEN_125
-    io_lform <= _GEN_119
-    io_Auipc <= _GEN_126
-    io_rd <= _GEN_111
-    io_rs1 <= _GEN_112
-    io_rs2 <= _GEN_109
-    io_wr_en <= _GEN_110
-    io_mem_wr_en <= _GEN_113
-    io_wr_back <= _GEN_114
-    io_immBits <= _GEN_118
-    io_br_fun3 <= _GEN_115
-    io_load_storefun <= _GEN_120
-    io_pcsel <= _GEN_116
-    io_lui_jal_jalr_auipc_imm <= _GEN_122
-    io_mem_r_en <= _GEN_119
+    io_aluop <= _GEN_119
+    io_iform <= _GEN_130
+    io_rform <= _GEN_118
+    io_sform <= _GEN_124
+    io_bform <= _GEN_134
+    io_luiform <= _GEN_136
+    io_Jalform <= _GEN_137
+    io_jalrform <= _GEN_138
+    io_lform <= _GEN_132
+    io_Auipc <= _GEN_139
+    io_rd <= _GEN_122
+    io_rs1 <= _GEN_123
+    io_rs2 <= _GEN_120
+    io_wr_en <= _GEN_121
+    io_mem_wr_en <= _GEN_124
+    io_wr_back <= _GEN_125
+    io_immBits <= _GEN_131
+    io_br_fun3 <= _GEN_126
+    io_load_storefun <= _GEN_133
+    io_pcsel <= _GEN_127
+    io_lui_jal_jalr_auipc_imm <= _GEN_135
+    io_mem_r_en <= _GEN_132
+    io_opAsel <= _GEN_128
+    io_opBsel <= _GEN_129
 
   module Reg_File :
     input clock : Clock
@@ -592,6 +609,7 @@ circuit TopModule :
     output io_aluop : UInt<4>
     input io_pcout : UInt<32>
     input io_pc4out : UInt<32>
+    output io_pc_4out : UInt<32>
     output io_pc_out : UInt<32>
     output io_RS1 : UInt<5>
     output io_RS2 : UInt<5>
@@ -599,50 +617,56 @@ circuit TopModule :
     output io_RegWr_en : UInt<1>
     input io_Wrbrd : UInt<5>
     input io_RegWr_enWB : UInt<1>
+    input io_wrbform : UInt<1>
+    output io_opAsel : UInt<2>
+    output io_opBsel : UInt<1>
 
-    inst cu of contolUnit @[Decode.scala 45:21]
-    inst regFile of Reg_File @[Decode.scala 46:25]
-    inst imm of ImmdValGen1 @[Decode.scala 47:21]
-    io_imm_out <= imm.io_immd_se @[Decode.scala 64:15]
-    io_iform <= cu.io_iform @[Decode.scala 67:13]
-    io_rform <= cu.io_rform @[Decode.scala 68:13]
-    io_sform <= cu.io_sform @[Decode.scala 70:13]
-    io_bform <= cu.io_bform @[Decode.scala 69:13]
-    io_luiform <= cu.io_luiform @[Decode.scala 71:15]
-    io_Jalform <= cu.io_Jalform @[Decode.scala 72:15]
-    io_jalrform <= cu.io_jalrform @[Decode.scala 73:16]
-    io_lform <= cu.io_lform @[Decode.scala 74:13]
-    io_Auipc <= cu.io_Auipc @[Decode.scala 75:13]
-    io_lui_jal_jalr_auipc_imm <= cu.io_lui_jal_jalr_auipc_imm @[Decode.scala 65:30]
-    io_immBits <= cu.io_immBits @[Decode.scala 62:15]
-    io_mem_wr_en <= cu.io_mem_wr_en @[Decode.scala 77:17]
-    io_wr_back <= cu.io_wr_back @[Decode.scala 78:15]
-    io_br_fun3 <= cu.io_br_fun3 @[Decode.scala 79:15]
-    io_load_storefun <= cu.io_load_storefun @[Decode.scala 80:21]
-    io_pcsel <= cu.io_pcsel @[Decode.scala 81:13]
-    io_mem_r_en <= cu.io_mem_r_en @[Decode.scala 83:16]
-    io_rs1 <= regFile.io_Rs1 @[Decode.scala 92:11]
-    io_rs2 <= regFile.io_Rs2 @[Decode.scala 93:11]
-    io_aluop <= cu.io_aluop @[Decode.scala 84:13]
-    io_pc_out <= io_pcout @[Decode.scala 95:14]
-    io_RS1 <= cu.io_rs1 @[Decode.scala 51:11]
-    io_RS2 <= cu.io_rs2 @[Decode.scala 52:11]
-    io_Rd <= cu.io_rd @[Decode.scala 53:10]
-    io_RegWr_en <= cu.io_wr_en @[Decode.scala 54:16]
+    inst cu of contolUnit @[Decode.scala 49:21]
+    inst regFile of Reg_File @[Decode.scala 50:25]
+    inst imm of ImmdValGen1 @[Decode.scala 51:21]
+    io_imm_out <= imm.io_immd_se @[Decode.scala 69:15]
+    io_iform <= cu.io_iform @[Decode.scala 72:13]
+    io_rform <= cu.io_rform @[Decode.scala 73:13]
+    io_sform <= cu.io_sform @[Decode.scala 75:13]
+    io_bform <= cu.io_bform @[Decode.scala 74:13]
+    io_luiform <= cu.io_luiform @[Decode.scala 76:15]
+    io_Jalform <= cu.io_Jalform @[Decode.scala 77:15]
+    io_jalrform <= cu.io_jalrform @[Decode.scala 78:16]
+    io_lform <= cu.io_lform @[Decode.scala 79:13]
+    io_Auipc <= cu.io_Auipc @[Decode.scala 80:13]
+    io_lui_jal_jalr_auipc_imm <= cu.io_lui_jal_jalr_auipc_imm @[Decode.scala 70:30]
+    io_immBits <= cu.io_immBits @[Decode.scala 67:15]
+    io_mem_wr_en <= cu.io_mem_wr_en @[Decode.scala 82:17]
+    io_wr_back <= cu.io_wr_back @[Decode.scala 83:15]
+    io_br_fun3 <= cu.io_br_fun3 @[Decode.scala 84:15]
+    io_load_storefun <= cu.io_load_storefun @[Decode.scala 85:21]
+    io_pcsel <= cu.io_pcsel @[Decode.scala 86:13]
+    io_mem_r_en <= cu.io_mem_r_en @[Decode.scala 88:16]
+    io_rs1 <= regFile.io_Rs1 @[Decode.scala 97:11]
+    io_rs2 <= regFile.io_Rs2 @[Decode.scala 98:11]
+    io_aluop <= cu.io_aluop @[Decode.scala 89:13]
+    io_pc_4out <= io_pc4out @[Decode.scala 101:15]
+    io_pc_out <= io_pcout @[Decode.scala 100:14]
+    io_RS1 <= cu.io_rs1 @[Decode.scala 55:11]
+    io_RS2 <= cu.io_rs2 @[Decode.scala 56:11]
+    io_Rd <= cu.io_rd @[Decode.scala 57:10]
+    io_RegWr_en <= cu.io_wr_en @[Decode.scala 58:16]
+    io_opAsel <= cu.io_opAsel @[Decode.scala 103:14]
+    io_opBsel <= cu.io_opBsel @[Decode.scala 104:14]
     cu.clock <= clock
     cu.reset <= reset
-    cu.io_instruction <= io_ins @[Decode.scala 49:22]
-    cu.io_btaken <= io_btaken @[Decode.scala 60:17]
+    cu.io_instruction <= io_ins @[Decode.scala 53:22]
+    cu.io_btaken <= io_btaken @[Decode.scala 64:17]
     regFile.clock <= clock
     regFile.reset <= reset
-    regFile.io_rd <= io_Wrbrd @[Decode.scala 86:18]
-    regFile.io_rs1 <= cu.io_rs1 @[Decode.scala 87:19]
-    regFile.io_rs2 <= cu.io_rs2 @[Decode.scala 88:19]
-    regFile.io_wr <= io_RegWr_enWB @[Decode.scala 89:18]
-    regFile.io_Rd <= io_din @[Decode.scala 90:18]
+    regFile.io_rd <= io_Wrbrd @[Decode.scala 91:18]
+    regFile.io_rs1 <= cu.io_rs1 @[Decode.scala 92:19]
+    regFile.io_rs2 <= cu.io_rs2 @[Decode.scala 93:19]
+    regFile.io_wr <= io_RegWr_enWB @[Decode.scala 94:18]
+    regFile.io_Rd <= io_din @[Decode.scala 95:18]
     imm.clock <= clock
     imm.reset <= reset
-    imm.io_imm <= io_immBits @[Decode.scala 63:15]
+    imm.io_imm <= io_immBits @[Decode.scala 68:15]
 
   module ALUS :
     input clock : Clock
@@ -867,11 +891,14 @@ circuit TopModule :
     input io_rs2 : SInt<32>
     input io_aluop : UInt<4>
     input io_pc_out : UInt<32>
+    input io_pc4_out : UInt<32>
     input io_imm_out : UInt<32>
     input io_RS1 : UInt<5>
     input io_RS2 : UInt<5>
     input io_Rd : UInt<5>
     input io_RegWr_en : UInt<1>
+    input io_opA_in : UInt<2>
+    input io_opB_in : UInt<1>
     output io_MemWen : UInt<1>
     output io_MemFun3 : UInt<3>
     output io_MemEnable : UInt<1>
@@ -882,41 +909,43 @@ circuit TopModule :
     output io_RegWr_enout : UInt<1>
     output io_pco : UInt<32>
     output io_pcselout : UInt<1>
+    output io_b_form : UInt<1>
 
-    inst alu of ALUS @[Execute.scala 57:21]
-    inst B_control of Branch_Control @[Execute.scala 58:27]
-    node _T = or(io_bform, io_Jalform) @[Execute.scala 64:19]
-    node _alu_io_in_A_T = asSInt(io_pc_out) @[Execute.scala 65:39]
-    node _GEN_0 = mux(_T, _alu_io_in_A_T, io_rs1) @[Execute.scala 64:32 Execute.scala 65:20 Execute.scala 68:17]
-    node _T_1 = or(io_luiform, io_Jalform) @[Execute.scala 75:24]
-    node _T_2 = or(_T_1, io_jalrform) @[Execute.scala 75:36]
-    node _T_3 = or(_T_2, io_Auipc) @[Execute.scala 75:49]
-    node _T_4 = or(_T_3, io_bform) @[Execute.scala 75:59]
-    node _alu_io_in_B_T = asSInt(io_imm_out) @[Execute.scala 79:39]
-    node _GEN_1 = mux(_T_4, io_lui_jal_jalr_auipc_imm, _alu_io_in_B_T) @[Execute.scala 75:70 Execute.scala 76:24 Execute.scala 79:20]
-    node _GEN_2 = mux(io_rform, io_rs2, _GEN_1) @[Execute.scala 71:19 Execute.scala 72:16]
-    io_out <= alu.io_out @[Execute.scala 84:11]
-    io_br_taken <= B_control.io_br_taken @[Execute.scala 89:16]
-    io_MemWen <= io_mem_wr_en @[Execute.scala 91:14]
-    io_MemFun3 <= io_load_storefun @[Execute.scala 92:15]
-    io_MemEnable <= io_mem_r_en @[Execute.scala 93:17]
-    io_MemDin <= io_rs2 @[Execute.scala 94:14]
-    io_MemToReg <= io_wr_back @[Execute.scala 95:16]
-    io_RDout <= io_Rd @[Execute.scala 62:13]
-    io_RS2out <= io_RS2 @[Execute.scala 63:14]
-    io_RegWr_enout <= io_RegWr_en @[Execute.scala 61:19]
-    io_pco <= io_pc_out @[Execute.scala 96:11]
-    io_pcselout <= io_pcsel @[Execute.scala 60:16]
+    inst alu of ALUS @[Execute.scala 61:21]
+    inst B_control of Branch_Control @[Execute.scala 62:27]
+    node _T = or(io_bform, io_Jalform) @[Execute.scala 69:19]
+    node _alu_io_in_A_T = asSInt(io_pc_out) @[Execute.scala 70:39]
+    node _GEN_0 = mux(_T, _alu_io_in_A_T, io_rs1) @[Execute.scala 69:32 Execute.scala 70:20 Execute.scala 73:17]
+    node _T_1 = or(io_luiform, io_Jalform) @[Execute.scala 80:24]
+    node _T_2 = or(_T_1, io_jalrform) @[Execute.scala 80:36]
+    node _T_3 = or(_T_2, io_Auipc) @[Execute.scala 80:49]
+    node _T_4 = or(_T_3, io_bform) @[Execute.scala 80:59]
+    node _alu_io_in_B_T = asSInt(io_imm_out) @[Execute.scala 84:39]
+    node _GEN_1 = mux(_T_4, io_lui_jal_jalr_auipc_imm, _alu_io_in_B_T) @[Execute.scala 80:70 Execute.scala 81:24 Execute.scala 84:20]
+    node _GEN_2 = mux(io_rform, io_rs2, _GEN_1) @[Execute.scala 76:19 Execute.scala 77:16]
+    io_out <= alu.io_out @[Execute.scala 89:11]
+    io_br_taken <= B_control.io_br_taken @[Execute.scala 94:16]
+    io_MemWen <= io_mem_wr_en @[Execute.scala 96:14]
+    io_MemFun3 <= io_load_storefun @[Execute.scala 97:15]
+    io_MemEnable <= io_mem_r_en @[Execute.scala 98:17]
+    io_MemDin <= io_rs2 @[Execute.scala 99:14]
+    io_MemToReg <= io_wr_back @[Execute.scala 100:16]
+    io_RDout <= io_Rd @[Execute.scala 67:13]
+    io_RS2out <= io_RS2 @[Execute.scala 68:14]
+    io_RegWr_enout <= io_RegWr_en @[Execute.scala 66:19]
+    io_pco <= io_pc_out @[Execute.scala 101:11]
+    io_pcselout <= io_pcsel @[Execute.scala 65:16]
+    io_b_form <= io_bform @[Execute.scala 63:14]
     alu.clock <= clock
     alu.reset <= reset
     alu.io_in_A <= _GEN_0
     alu.io_in_B <= _GEN_2
-    alu.io_alu_op <= io_aluop @[Execute.scala 83:18]
+    alu.io_alu_op <= io_aluop @[Execute.scala 88:18]
     B_control.clock <= clock
     B_control.reset <= reset
-    B_control.io_fun3 <= io_br_fun3 @[Execute.scala 86:22]
-    B_control.io_ina <= io_rs1 @[Execute.scala 87:21]
-    B_control.io_inb <= io_rs2 @[Execute.scala 88:21]
+    B_control.io_fun3 <= io_br_fun3 @[Execute.scala 91:33]
+    B_control.io_ina <= io_rs1 @[Execute.scala 92:32]
+    B_control.io_inb <= io_rs2 @[Execute.scala 93:32]
 
   module Datamem :
     input clock : Clock
@@ -1258,6 +1287,7 @@ circuit TopModule :
     input reset : UInt<1>
     input io_out : SInt<32>
     input io_br_taken : UInt<1>
+    input io_bform : UInt<1>
     input io_Wen : UInt<1>
     input io_Fun3 : UInt<3>
     input io_Enable : UInt<1>
@@ -1277,25 +1307,27 @@ circuit TopModule :
     output io_pcout : UInt<32>
     output io_brtaken : UInt<1>
     output io_pcsel : UInt<1>
+    output io_b_form : UInt<1>
 
-    inst D_Mem of Datamem @[Memory.scala 39:23]
-    node _D_Mem_io_addr_T = asUInt(io_out) @[Memory.scala 44:33]
-    io_RegWr_enOut <= io_RegWr_enout @[Memory.scala 51:19]
-    io_memtoreg <= io_MemToReg @[Memory.scala 52:16]
-    io_RDsel <= io_RDout @[Memory.scala 53:13]
-    io_Memrd <= io_Enable @[Memory.scala 54:13]
-    io_Dout <= D_Mem.io_Dout @[Memory.scala 49:12]
-    io_alu_out <= io_out @[Memory.scala 55:15]
-    io_pcout <= io_pco @[Memory.scala 40:13]
-    io_brtaken <= io_br_taken @[Memory.scala 57:15]
-    io_pcsel <= io_pcselout @[Memory.scala 41:13]
+    inst D_Mem of Datamem @[Memory.scala 41:23]
+    node _D_Mem_io_addr_T = asUInt(io_out) @[Memory.scala 47:33]
+    io_RegWr_enOut <= io_RegWr_enout @[Memory.scala 54:19]
+    io_memtoreg <= io_MemToReg @[Memory.scala 55:16]
+    io_RDsel <= io_RDout @[Memory.scala 56:13]
+    io_Memrd <= io_Enable @[Memory.scala 57:13]
+    io_Dout <= D_Mem.io_Dout @[Memory.scala 52:12]
+    io_alu_out <= io_out @[Memory.scala 58:15]
+    io_pcout <= io_pco @[Memory.scala 42:13]
+    io_brtaken <= io_br_taken @[Memory.scala 60:15]
+    io_pcsel <= io_pcselout @[Memory.scala 43:13]
+    io_b_form <= io_bform @[Memory.scala 44:14]
     D_Mem.clock <= clock
     D_Mem.reset <= reset
-    D_Mem.io_Wen <= io_Wen @[Memory.scala 43:17]
-    D_Mem.io_addr <= _D_Mem_io_addr_T @[Memory.scala 44:18]
-    D_Mem.io_Din <= io_Din @[Memory.scala 45:17]
-    D_Mem.io_fun3 <= io_Fun3 @[Memory.scala 46:18]
-    D_Mem.io_enable <= io_Enable @[Memory.scala 47:20]
+    D_Mem.io_Wen <= io_Wen @[Memory.scala 46:17]
+    D_Mem.io_addr <= _D_Mem_io_addr_T @[Memory.scala 47:18]
+    D_Mem.io_Din <= io_Din @[Memory.scala 48:17]
+    D_Mem.io_fun3 <= io_Fun3 @[Memory.scala 49:18]
+    D_Mem.io_enable <= io_Enable @[Memory.scala 50:20]
 
   module Write_back :
     input clock : Clock
@@ -1308,29 +1340,32 @@ circuit TopModule :
     input io_alu_out : SInt<32>
     input io_pcout : UInt<32>
     input io_brtaken : UInt<1>
+    input io_bform : UInt<1>
     input io_pcsel : UInt<1>
     output io_Rd : SInt<32>
     output io_br_taken : UInt<1>
+    output io_b_form : UInt<1>
     output io_RDselout : UInt<5>
     output io_aluout : SInt<32>
     output io_pcselout : UInt<1>
     output io_RegWr_enout : UInt<1>
 
-    node _T = eq(io_memtoreg, UInt<1>("h0")) @[Write_back.scala 28:21]
-    node _T_1 = eq(io_memtoreg, UInt<1>("h1")) @[Write_back.scala 32:25]
-    node _T_2 = eq(io_memtoreg, UInt<2>("h2")) @[Write_back.scala 35:25]
-    node _io_Rd_T = add(io_pcout, UInt<3>("h4")) @[Write_back.scala 36:22]
-    node _io_Rd_T_1 = tail(_io_Rd_T, 1) @[Write_back.scala 36:22]
-    node _io_Rd_T_2 = asSInt(_io_Rd_T_1) @[Write_back.scala 36:34]
-    node _GEN_0 = mux(_T_2, _io_Rd_T_2, asSInt(UInt<1>("h0"))) @[Write_back.scala 35:32 Write_back.scala 36:10 Write_back.scala 39:10]
-    node _GEN_1 = mux(_T_1, io_alu_out, _GEN_0) @[Write_back.scala 32:32 Write_back.scala 33:10]
-    node _GEN_2 = mux(_T, io_Dout, _GEN_1) @[Write_back.scala 28:28 Write_back.scala 29:10]
+    node _T = eq(io_memtoreg, UInt<1>("h0")) @[Write_back.scala 31:21]
+    node _T_1 = eq(io_memtoreg, UInt<1>("h1")) @[Write_back.scala 35:25]
+    node _T_2 = eq(io_memtoreg, UInt<2>("h2")) @[Write_back.scala 38:25]
+    node _io_Rd_T = add(io_pcout, UInt<3>("h4")) @[Write_back.scala 39:22]
+    node _io_Rd_T_1 = tail(_io_Rd_T, 1) @[Write_back.scala 39:22]
+    node _io_Rd_T_2 = asSInt(_io_Rd_T_1) @[Write_back.scala 39:34]
+    node _GEN_0 = mux(_T_2, _io_Rd_T_2, asSInt(UInt<1>("h0"))) @[Write_back.scala 38:32 Write_back.scala 39:10 Write_back.scala 42:10]
+    node _GEN_1 = mux(_T_1, io_alu_out, _GEN_0) @[Write_back.scala 35:32 Write_back.scala 36:10]
+    node _GEN_2 = mux(_T, io_Dout, _GEN_1) @[Write_back.scala 31:28 Write_back.scala 32:10]
     io_Rd <= _GEN_2
-    io_br_taken <= UInt<1>("h0") @[Write_back.scala 24:16]
-    io_RDselout <= io_RDsel @[Write_back.scala 41:15]
-    io_aluout <= io_alu_out @[Write_back.scala 25:14]
-    io_pcselout <= io_pcsel @[Write_back.scala 26:16]
-    io_RegWr_enout <= io_RegWr_enOut @[Write_back.scala 27:19]
+    io_br_taken <= io_brtaken @[Write_back.scala 26:27]
+    io_b_form <= io_bform @[Write_back.scala 27:14]
+    io_RDselout <= io_RDsel @[Write_back.scala 44:15]
+    io_aluout <= io_alu_out @[Write_back.scala 28:14]
+    io_pcselout <= io_pcsel @[Write_back.scala 29:16]
+    io_RegWr_enout <= io_RegWr_enOut @[Write_back.scala 30:19]
 
   module Forwarding :
     input clock : Clock
@@ -1339,80 +1374,113 @@ circuit TopModule :
     input io_IDEXrs2 : UInt<5>
     input io_ExMemRd : UInt<5>
     input io_ExMemRegWr_en : UInt<1>
+    input io_MemWbRd : UInt<5>
     input io_MemWbRegWr_en : UInt<1>
     output io_Fa : UInt<2>
     output io_Fb : UInt<2>
-    input io_MemWbRd : UInt<5>
 
-    node _T = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 21:27]
-    node _T_1 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 21:49]
-    node _T_2 = and(_T, _T_1) @[Forwarding.scala 21:35]
-    node _T_3 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 21:71]
-    node _T_4 = and(_T_2, _T_3) @[Forwarding.scala 21:57]
-    node _T_5 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 21:100]
-    node _T_6 = and(_T_4, _T_5) @[Forwarding.scala 21:86]
-    node _T_7 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 25:32]
-    node _T_8 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 25:54]
-    node _T_9 = and(_T_7, _T_8) @[Forwarding.scala 25:40]
-    node _T_10 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 25:76]
-    node _T_11 = and(_T_9, _T_10) @[Forwarding.scala 25:62]
-    node _T_12 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 28:32]
-    node _T_13 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 28:54]
-    node _T_14 = and(_T_12, _T_13) @[Forwarding.scala 28:40]
-    node _T_15 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 28:76]
-    node _T_16 = and(_T_14, _T_15) @[Forwarding.scala 28:62]
-    node _GEN_0 = mux(_T_16, UInt<1>("h1"), UInt<1>("h0")) @[Forwarding.scala 28:91 Forwarding.scala 29:14 Forwarding.scala 19:10]
-    node _GEN_1 = mux(_T_11, UInt<1>("h1"), UInt<1>("h0")) @[Forwarding.scala 25:91 Forwarding.scala 26:14 Forwarding.scala 18:10]
-    node _GEN_2 = mux(_T_11, UInt<1>("h0"), _GEN_0) @[Forwarding.scala 25:91 Forwarding.scala 19:10]
-    node _GEN_3 = mux(_T_6, UInt<1>("h1"), _GEN_1) @[Forwarding.scala 21:115 Forwarding.scala 22:14]
-    node _GEN_4 = mux(_T_6, UInt<1>("h1"), _GEN_2) @[Forwarding.scala 21:115 Forwarding.scala 23:14]
-    node _T_17 = eq(io_MemWbRegWr_en, UInt<1>("h1")) @[Forwarding.scala 33:27]
-    node _T_18 = neq(io_MemWbRd, UInt<1>("h0")) @[Forwarding.scala 33:48]
-    node _T_19 = and(_T_17, _T_18) @[Forwarding.scala 33:35]
-    node _T_20 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 33:78]
-    node _T_21 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 33:105]
-    node _T_22 = and(_T_20, _T_21) @[Forwarding.scala 33:90]
-    node _T_23 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 33:136]
-    node _T_24 = and(_T_22, _T_23) @[Forwarding.scala 33:121]
-    node _T_25 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 33:167]
-    node _T_26 = and(_T_24, _T_25) @[Forwarding.scala 33:152]
-    node _T_27 = not(_T_26) @[Forwarding.scala 33:58]
-    node _T_28 = and(_T_19, _T_27) @[Forwarding.scala 33:55]
-    node _T_29 = eq(io_MemWbRd, io_IDEXrs1) @[Forwarding.scala 33:199]
-    node _T_30 = and(_T_28, _T_29) @[Forwarding.scala 33:184]
-    node _T_31 = eq(io_MemWbRd, io_IDEXrs2) @[Forwarding.scala 33:228]
-    node _T_32 = and(_T_30, _T_31) @[Forwarding.scala 33:214]
-    node _T_33 = eq(io_MemWbRegWr_en, UInt<1>("h1")) @[Forwarding.scala 37:32]
-    node _T_34 = neq(io_MemWbRd, UInt<1>("h0")) @[Forwarding.scala 37:53]
-    node _T_35 = and(_T_33, _T_34) @[Forwarding.scala 37:40]
-    node _T_36 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 37:83]
-    node _T_37 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 37:110]
-    node _T_38 = and(_T_36, _T_37) @[Forwarding.scala 37:95]
-    node _T_39 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 37:141]
-    node _T_40 = and(_T_38, _T_39) @[Forwarding.scala 37:126]
-    node _T_41 = not(_T_40) @[Forwarding.scala 37:63]
-    node _T_42 = and(_T_35, _T_41) @[Forwarding.scala 37:60]
-    node _T_43 = eq(io_MemWbRd, io_IDEXrs1) @[Forwarding.scala 37:172]
-    node _T_44 = and(_T_42, _T_43) @[Forwarding.scala 37:158]
-    node _T_45 = eq(io_MemWbRegWr_en, UInt<1>("h1")) @[Forwarding.scala 40:32]
-    node _T_46 = neq(io_MemWbRd, UInt<1>("h0")) @[Forwarding.scala 40:53]
-    node _T_47 = and(_T_45, _T_46) @[Forwarding.scala 40:40]
-    node _T_48 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 40:83]
-    node _T_49 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 40:110]
-    node _T_50 = and(_T_48, _T_49) @[Forwarding.scala 40:95]
-    node _T_51 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 40:141]
-    node _T_52 = and(_T_50, _T_51) @[Forwarding.scala 40:126]
-    node _T_53 = not(_T_52) @[Forwarding.scala 40:63]
-    node _T_54 = and(_T_47, _T_53) @[Forwarding.scala 40:60]
-    node _T_55 = eq(io_MemWbRd, io_IDEXrs2) @[Forwarding.scala 40:172]
-    node _T_56 = and(_T_54, _T_55) @[Forwarding.scala 40:158]
-    node _GEN_5 = mux(_T_56, UInt<2>("h2"), _GEN_4) @[Forwarding.scala 40:187 Forwarding.scala 41:14]
-    node _GEN_6 = mux(_T_44, UInt<2>("h2"), _GEN_3) @[Forwarding.scala 37:187 Forwarding.scala 38:14]
-    node _GEN_7 = mux(_T_44, _GEN_4, _GEN_5) @[Forwarding.scala 37:187]
-    node _GEN_8 = mux(_T_32, UInt<2>("h2"), _GEN_6) @[Forwarding.scala 33:243 Forwarding.scala 34:14]
-    node _GEN_9 = mux(_T_32, UInt<2>("h2"), _GEN_7) @[Forwarding.scala 33:243 Forwarding.scala 35:14]
+    node _T = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 23:23]
+    node _T_1 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 23:48]
+    node _T_2 = and(_T, _T_1) @[Forwarding.scala 23:34]
+    node _T_3 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 24:21]
+    node _T_4 = and(_T_2, _T_3) @[Forwarding.scala 23:63]
+    node _T_5 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 24:59]
+    node _T_6 = and(_T_4, _T_5) @[Forwarding.scala 24:44]
+    node _T_7 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 28:29]
+    node _T_8 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 28:54]
+    node _T_9 = and(_T_7, _T_8) @[Forwarding.scala 28:40]
+    node _T_10 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 29:21]
+    node _T_11 = and(_T_9, _T_10) @[Forwarding.scala 28:69]
+    node _T_12 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 32:29]
+    node _T_13 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 32:54]
+    node _T_14 = and(_T_12, _T_13) @[Forwarding.scala 32:40]
+    node _T_15 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 33:21]
+    node _T_16 = and(_T_14, _T_15) @[Forwarding.scala 32:69]
+    node _GEN_0 = mux(_T_16, UInt<2>("h2"), UInt<1>("h0")) @[Forwarding.scala 33:38 Forwarding.scala 34:11 Forwarding.scala 19:7]
+    node _GEN_1 = mux(_T_11, UInt<2>("h2"), UInt<1>("h0")) @[Forwarding.scala 29:38 Forwarding.scala 30:11 Forwarding.scala 20:7]
+    node _GEN_2 = mux(_T_11, UInt<1>("h0"), _GEN_0) @[Forwarding.scala 29:38 Forwarding.scala 19:7]
+    node _GEN_3 = mux(_T_6, UInt<2>("h2"), _GEN_2) @[Forwarding.scala 24:76 Forwarding.scala 25:11]
+    node _GEN_4 = mux(_T_6, UInt<2>("h2"), _GEN_1) @[Forwarding.scala 24:76 Forwarding.scala 26:11]
+    node _T_17 = eq(io_MemWbRegWr_en, UInt<1>("h1")) @[Forwarding.scala 38:24]
+    node _T_18 = neq(io_MemWbRd, UInt<1>("h0")) @[Forwarding.scala 38:51]
+    node _T_19 = and(_T_17, _T_18) @[Forwarding.scala 38:36]
+    node _T_20 = eq(io_MemWbRd, io_IDEXrs1) @[Forwarding.scala 38:82]
+    node _T_21 = and(_T_19, _T_20) @[Forwarding.scala 38:67]
+    node _T_22 = eq(io_MemWbRd, io_IDEXrs2) @[Forwarding.scala 38:113]
+    node _T_23 = and(_T_21, _T_22) @[Forwarding.scala 38:98]
+    node _T_24 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 39:28]
+    node _T_25 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 39:53]
+    node _T_26 = and(_T_24, _T_25) @[Forwarding.scala 39:39]
+    node _T_27 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 39:83]
+    node _T_28 = and(_T_26, _T_27) @[Forwarding.scala 39:68]
+    node _T_29 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 39:114]
+    node _T_30 = and(_T_28, _T_29) @[Forwarding.scala 39:99]
+    node _T_31 = not(_T_30) @[Forwarding.scala 39:9]
+    node _T_32 = and(_T_23, _T_31) @[Forwarding.scala 38:129]
+    node _T_33 = eq(io_MemWbRegWr_en, UInt<1>("h1")) @[Forwarding.scala 43:30]
+    node _T_34 = neq(io_MemWbRd, UInt<1>("h0")) @[Forwarding.scala 43:57]
+    node _T_35 = and(_T_33, _T_34) @[Forwarding.scala 43:42]
+    node _T_36 = eq(io_MemWbRd, io_IDEXrs2) @[Forwarding.scala 43:88]
+    node _T_37 = and(_T_35, _T_36) @[Forwarding.scala 43:73]
+    node _T_38 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 44:28]
+    node _T_39 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 44:53]
+    node _T_40 = and(_T_38, _T_39) @[Forwarding.scala 44:39]
+    node _T_41 = eq(io_ExMemRd, io_IDEXrs2) @[Forwarding.scala 44:83]
+    node _T_42 = and(_T_40, _T_41) @[Forwarding.scala 44:68]
+    node _T_43 = not(_T_42) @[Forwarding.scala 44:9]
+    node _T_44 = and(_T_37, _T_43) @[Forwarding.scala 43:104]
+    node _T_45 = eq(io_MemWbRegWr_en, UInt<1>("h1")) @[Forwarding.scala 47:30]
+    node _T_46 = neq(io_MemWbRd, UInt<1>("h0")) @[Forwarding.scala 47:57]
+    node _T_47 = and(_T_45, _T_46) @[Forwarding.scala 47:42]
+    node _T_48 = eq(io_MemWbRd, io_IDEXrs1) @[Forwarding.scala 47:88]
+    node _T_49 = and(_T_47, _T_48) @[Forwarding.scala 47:73]
+    node _T_50 = eq(io_ExMemRegWr_en, UInt<1>("h1")) @[Forwarding.scala 48:28]
+    node _T_51 = neq(io_ExMemRd, UInt<1>("h0")) @[Forwarding.scala 48:53]
+    node _T_52 = and(_T_50, _T_51) @[Forwarding.scala 48:39]
+    node _T_53 = eq(io_ExMemRd, io_IDEXrs1) @[Forwarding.scala 48:83]
+    node _T_54 = and(_T_52, _T_53) @[Forwarding.scala 48:68]
+    node _T_55 = not(_T_54) @[Forwarding.scala 48:9]
+    node _T_56 = and(_T_49, _T_55) @[Forwarding.scala 47:104]
+    node _GEN_5 = mux(_T_56, UInt<1>("h1"), _GEN_3) @[Forwarding.scala 48:100 Forwarding.scala 49:11]
+    node _GEN_6 = mux(_T_44, UInt<1>("h1"), _GEN_4) @[Forwarding.scala 44:100 Forwarding.scala 45:11]
+    node _GEN_7 = mux(_T_44, _GEN_3, _GEN_5) @[Forwarding.scala 44:100]
+    node _GEN_8 = mux(_T_32, UInt<1>("h1"), _GEN_7) @[Forwarding.scala 39:132 Forwarding.scala 40:11]
+    node _GEN_9 = mux(_T_32, UInt<1>("h1"), _GEN_6) @[Forwarding.scala 39:132 Forwarding.scala 41:11]
     io_Fa <= _GEN_8
     io_Fb <= _GEN_9
+
+  module HazardDetectionUnit :
+    input clock : Clock
+    input reset : UInt<1>
+    input io_IF_ID_instr : UInt<32>
+    input io_ID_EX_memread : UInt<1>
+    input io_ID_EX_rd : UInt<5>
+    input io_pc_in : UInt<32>
+    input io_current_pc_in : UInt<32>
+    output io_instr_forward : UInt<1>
+    output io_pc_forward : UInt<1>
+    output io_ctrl_forward : UInt<1>
+    output io_instr_out : UInt<32>
+    output io_pc_out : UInt<32>
+    output io_current_pc_out : UInt<32>
+
+    node rs1_sel = bits(io_IF_ID_instr, 19, 15) @[HazardDetectionUnit.scala 23:33]
+    node rs2_sel = bits(io_IF_ID_instr, 24, 20) @[HazardDetectionUnit.scala 24:33]
+    node _T = eq(io_ID_EX_memread, UInt<1>("h1")) @[HazardDetectionUnit.scala 25:27]
+    node _T_1 = eq(io_ID_EX_rd, rs1_sel) @[HazardDetectionUnit.scala 25:52]
+    node _T_2 = eq(io_ID_EX_rd, rs2_sel) @[HazardDetectionUnit.scala 25:81]
+    node _T_3 = or(_T_1, _T_2) @[HazardDetectionUnit.scala 25:65]
+    node _T_4 = and(_T, _T_3) @[HazardDetectionUnit.scala 25:35]
+    node _GEN_0 = mux(_T_4, UInt<1>("h1"), UInt<1>("h0")) @[HazardDetectionUnit.scala 25:96 HazardDetectionUnit.scala 26:26 HazardDetectionUnit.scala 34:26]
+    node _GEN_1 = mux(_T_4, io_IF_ID_instr, io_IF_ID_instr) @[HazardDetectionUnit.scala 25:96 HazardDetectionUnit.scala 29:22 HazardDetectionUnit.scala 37:22]
+    node _GEN_2 = mux(_T_4, io_pc_in, io_pc_in) @[HazardDetectionUnit.scala 25:96 HazardDetectionUnit.scala 30:19 HazardDetectionUnit.scala 38:19]
+    node _GEN_3 = mux(_T_4, io_current_pc_in, io_current_pc_in) @[HazardDetectionUnit.scala 25:96 HazardDetectionUnit.scala 31:27 HazardDetectionUnit.scala 39:27]
+    io_instr_forward <= _GEN_0
+    io_pc_forward <= _GEN_0
+    io_ctrl_forward <= _GEN_0
+    io_instr_out <= _GEN_1
+    io_pc_out <= _GEN_2
+    io_current_pc_out <= _GEN_3
 
   module TopModule :
     input clock : Clock
@@ -1426,258 +1494,281 @@ circuit TopModule :
     inst memory of memory @[TopModule.scala 16:24]
     inst WriteBack of Write_back @[TopModule.scala 17:27]
     inst forward of Forwarding @[TopModule.scala 18:25]
-    reg IF_IDins : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), IF_IDins) @[TopModule.scala 22:24]
-    reg IF_IDpc : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), IF_IDpc) @[TopModule.scala 25:22]
-    reg IF_IDpc4 : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), IF_IDpc4) @[TopModule.scala 28:23]
-    reg ID_Exiform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exiform) @[TopModule.scala 33:25]
-    reg ID_Exrform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrform) @[TopModule.scala 36:24]
-    reg ID_Exsform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exsform) @[TopModule.scala 39:25]
-    reg ID_Exbform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exbform) @[TopModule.scala 42:25]
-    reg ID_Exluiform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exluiform) @[TopModule.scala 45:27]
-    reg ID_Exjalform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exjalform) @[TopModule.scala 48:27]
-    reg ID_Exjalrform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exjalrform) @[TopModule.scala 51:28]
-    reg ID_Exlform : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exlform) @[TopModule.scala 54:25]
-    reg ID_ExAuipc : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_ExAuipc) @[TopModule.scala 57:25]
-    reg ID_Exlui_jal_jalr_auipc_imm : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exlui_jal_jalr_auipc_imm) @[TopModule.scala 60:42]
-    reg ID_EximmBits : UInt<12>, clock with :
-      reset => (UInt<1>("h0"), ID_EximmBits) @[TopModule.scala 63:27]
+    inst hazard_detection of HazardDetectionUnit @[TopModule.scala 19:34]
     reg ID_Exmem_wr_en : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exmem_wr_en) @[TopModule.scala 66:29]
-    reg ID_Exwr_back : UInt<2>, clock with :
-      reset => (UInt<1>("h0"), ID_Exwr_back) @[TopModule.scala 69:27]
-    reg ID_Exbr_fun3 : UInt<3>, clock with :
-      reset => (UInt<1>("h0"), ID_Exbr_fun3) @[TopModule.scala 72:27]
-    reg ID_Exload_storefun : UInt<3>, clock with :
-      reset => (UInt<1>("h0"), ID_Exload_storefun) @[TopModule.scala 75:33]
-    reg ID_Expcsel : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Expcsel) @[TopModule.scala 78:25]
+      reset => (UInt<1>("h0"), ID_Exmem_wr_en) @[TopModule.scala 22:29]
     reg ID_Exmem_r_en : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ID_Exmem_r_en) @[TopModule.scala 81:28]
-    node _T = eq(forward.io_Fa, UInt<1>("h0")) @[TopModule.scala 91:24]
-    reg ID_Exrs1 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs1) @[TopModule.scala 92:27]
-    node _T_1 = eq(forward.io_Fa, UInt<1>("h1")) @[TopModule.scala 96:29]
-    reg ID_Exrs1_1 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs1_1) @[TopModule.scala 97:27]
-    node _T_2 = eq(forward.io_Fa, UInt<2>("h2")) @[TopModule.scala 101:29]
-    reg ID_Exrs1_2 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs1_2) @[TopModule.scala 102:27]
-    reg ID_Exrs1_3 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs1_3) @[TopModule.scala 107:27]
-    node _GEN_0 = mux(_T_2, ID_Exrs1_2, ID_Exrs1_3) @[TopModule.scala 101:37 TopModule.scala 104:23 TopModule.scala 109:23]
-    node _GEN_1 = mux(_T_1, ID_Exrs1_1, _GEN_0) @[TopModule.scala 96:38 TopModule.scala 99:23]
-    node _GEN_2 = mux(_T, ID_Exrs1, _GEN_1) @[TopModule.scala 91:33 TopModule.scala 94:23]
-    node _T_3 = eq(forward.io_Fb, UInt<1>("h0")) @[TopModule.scala 115:24]
-    reg ID_Exrs2 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs2) @[TopModule.scala 116:27]
-    node _T_4 = eq(forward.io_Fb, UInt<1>("h1")) @[TopModule.scala 120:29]
-    reg ID_Exrs2_1 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs2_1) @[TopModule.scala 121:27]
-    node _T_5 = eq(forward.io_Fb, UInt<2>("h2")) @[TopModule.scala 125:29]
-    reg ID_Exrs2_2 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs2_2) @[TopModule.scala 126:27]
-    reg ID_Exrs2_3 : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Exrs2_3) @[TopModule.scala 131:27]
-    node _GEN_3 = mux(_T_5, ID_Exrs2_2, ID_Exrs2_3) @[TopModule.scala 125:37 TopModule.scala 128:23 TopModule.scala 133:23]
-    node _GEN_4 = mux(_T_4, ID_Exrs2_1, _GEN_3) @[TopModule.scala 120:37 TopModule.scala 123:23]
-    node _GEN_5 = mux(_T_3, ID_Exrs2, _GEN_4) @[TopModule.scala 115:32 TopModule.scala 118:23]
+      reset => (UInt<1>("h0"), ID_Exmem_r_en) @[TopModule.scala 23:28]
+    reg ID_Exbform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exbform) @[TopModule.scala 24:25]
+    reg ID_ExRegWr_en : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_ExRegWr_en) @[TopModule.scala 25:28]
+    reg ID_Exwr_back : UInt<2>, clock with :
+      reset => (UInt<1>("h0"), ID_Exwr_back) @[TopModule.scala 26:27]
     reg ID_Exaluop : UInt<4>, clock with :
-      reset => (UInt<1>("h0"), ID_Exaluop) @[TopModule.scala 135:25]
+      reset => (UInt<1>("h0"), ID_Exaluop) @[TopModule.scala 27:25]
+    reg ID_EXopA : UInt<2>, clock with :
+      reset => (UInt<1>("h0"), ID_EXopA) @[TopModule.scala 28:23]
+    reg ID_EXopB : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_EXopB) @[TopModule.scala 29:23]
+    reg ID_Expcsel : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Expcsel) @[TopModule.scala 30:25]
+    reg ID_Exjalform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exjalform) @[TopModule.scala 31:27]
+    reg ID_Exrform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrform) @[TopModule.scala 32:24]
+    reg IF_IDins : UInt<32>, clock with :
+      reset => (UInt<1>("h0"), IF_IDins) @[TopModule.scala 93:24]
+    reg IF_IDpc : UInt<32>, clock with :
+      reset => (UInt<1>("h0"), IF_IDpc) @[TopModule.scala 96:22]
+    reg IF_IDpc4 : UInt<32>, clock with :
+      reset => (UInt<1>("h0"), IF_IDpc4) @[TopModule.scala 99:23]
+    reg ID_Exiform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exiform) @[TopModule.scala 104:25]
+    reg ID_Exsform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exsform) @[TopModule.scala 110:25]
+    reg ID_Exluiform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exluiform) @[TopModule.scala 116:27]
+    reg ID_Exjalrform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exjalrform) @[TopModule.scala 122:28]
+    reg ID_Exlform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_Exlform) @[TopModule.scala 125:25]
+    reg ID_ExAuipc : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ID_ExAuipc) @[TopModule.scala 128:25]
+    reg ID_Exlui_jal_jalr_auipc_imm : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exlui_jal_jalr_auipc_imm) @[TopModule.scala 131:42]
+    reg ID_EximmBits : UInt<12>, clock with :
+      reset => (UInt<1>("h0"), ID_EximmBits) @[TopModule.scala 134:27]
+    reg ID_Exbr_fun3 : UInt<3>, clock with :
+      reset => (UInt<1>("h0"), ID_Exbr_fun3) @[TopModule.scala 143:27]
+    reg ID_Exload_storefun : UInt<3>, clock with :
+      reset => (UInt<1>("h0"), ID_Exload_storefun) @[TopModule.scala 146:33]
+    reg ID_EXpc4_out : UInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_EXpc4_out) @[TopModule.scala 155:27]
+    node _T = eq(forward.io_Fa, UInt<1>("h0")) @[TopModule.scala 166:24]
+    reg ID_Exrs1 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrs1) @[TopModule.scala 167:27]
+    node _T_1 = eq(forward.io_Fa, UInt<1>("h1")) @[TopModule.scala 172:29]
+    node _T_2 = eq(forward.io_Fa, UInt<2>("h2")) @[TopModule.scala 176:29]
+    reg ID_Exrs1_1 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrs1_1) @[TopModule.scala 177:27]
+    reg ID_Exrs1_2 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrs1_2) @[TopModule.scala 182:27]
+    node _GEN_0 = mux(_T_2, ID_Exrs1_1, ID_Exrs1_2) @[TopModule.scala 176:37 TopModule.scala 179:23 TopModule.scala 184:23]
+    node _GEN_1 = mux(_T_1, WriteBack.io_alu_out, _GEN_0) @[TopModule.scala 172:38 TopModule.scala 173:23]
+    node _GEN_2 = mux(_T, ID_Exrs1, _GEN_1) @[TopModule.scala 166:33 TopModule.scala 169:23]
+    node _T_3 = eq(forward.io_Fb, UInt<1>("h0")) @[TopModule.scala 190:24]
+    reg ID_Exrs2 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrs2) @[TopModule.scala 191:27]
+    node _T_4 = eq(forward.io_Fb, UInt<1>("h1")) @[TopModule.scala 196:29]
+    node _T_5 = eq(forward.io_Fb, UInt<2>("h2")) @[TopModule.scala 200:29]
+    reg ID_Exrs2_1 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrs2_1) @[TopModule.scala 201:27]
+    reg ID_Exrs2_2 : SInt<32>, clock with :
+      reset => (UInt<1>("h0"), ID_Exrs2_2) @[TopModule.scala 206:27]
+    node _GEN_3 = mux(_T_5, ID_Exrs2_1, ID_Exrs2_2) @[TopModule.scala 200:37 TopModule.scala 203:23 TopModule.scala 208:23]
+    node _GEN_4 = mux(_T_4, WriteBack.io_alu_out, _GEN_3) @[TopModule.scala 196:37 TopModule.scala 197:23]
+    node _GEN_5 = mux(_T_3, ID_Exrs2, _GEN_4) @[TopModule.scala 190:32 TopModule.scala 193:23]
     reg ID_Expc_out : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Expc_out) @[TopModule.scala 138:26]
+      reset => (UInt<1>("h0"), ID_Expc_out) @[TopModule.scala 213:26]
     reg ID_Eximm_out : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), ID_Eximm_out) @[TopModule.scala 141:27]
+      reset => (UInt<1>("h0"), ID_Eximm_out) @[TopModule.scala 216:27]
     reg ID_ExRS1 : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), ID_ExRS1) @[TopModule.scala 144:23]
+      reset => (UInt<1>("h0"), ID_ExRS1) @[TopModule.scala 219:23]
     reg ID_ExRS2 : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), ID_ExRS2) @[TopModule.scala 148:23]
+      reset => (UInt<1>("h0"), ID_ExRS2) @[TopModule.scala 223:23]
     reg ID_ExRd : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), ID_ExRd) @[TopModule.scala 152:22]
-    reg ID_ExRegWr_en : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), ID_ExRegWr_en) @[TopModule.scala 155:28]
+      reset => (UInt<1>("h0"), ID_ExRd) @[TopModule.scala 227:22]
     reg ExMemMemWen : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ExMemMemWen) @[TopModule.scala 160:25]
+      reset => (UInt<1>("h0"), ExMemMemWen) @[TopModule.scala 257:25]
     reg ExMemFun3 : UInt<3>, clock with :
-      reset => (UInt<1>("h0"), ExMemFun3) @[TopModule.scala 163:24]
+      reset => (UInt<1>("h0"), ExMemFun3) @[TopModule.scala 260:24]
     reg ExMemEnable : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ExMemEnable) @[TopModule.scala 166:26]
+      reset => (UInt<1>("h0"), ExMemEnable) @[TopModule.scala 263:26]
     reg ExMemDin : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ExMemDin) @[TopModule.scala 169:24]
+      reset => (UInt<1>("h0"), ExMemDin) @[TopModule.scala 266:24]
     reg ExMemToReg : UInt<2>, clock with :
-      reset => (UInt<1>("h0"), ExMemToReg) @[TopModule.scala 172:25]
+      reset => (UInt<1>("h0"), ExMemToReg) @[TopModule.scala 269:25]
     reg ExMemRDout : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), ExMemRDout) @[TopModule.scala 175:25]
+      reset => (UInt<1>("h0"), ExMemRDout) @[TopModule.scala 272:25]
     reg ExMemRS2out : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), ExMemRS2out) @[TopModule.scala 179:25]
+      reset => (UInt<1>("h0"), ExMemRS2out) @[TopModule.scala 276:25]
     reg ExMemRegWr_enout : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ExMemRegWr_enout) @[TopModule.scala 182:31]
+      reset => (UInt<1>("h0"), ExMemRegWr_enout) @[TopModule.scala 279:31]
     reg ExMempco : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), ExMempco) @[TopModule.scala 186:23]
+      reset => (UInt<1>("h0"), ExMempco) @[TopModule.scala 283:23]
     reg ExMemout : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), ExMemout) @[TopModule.scala 189:23]
+      reset => (UInt<1>("h0"), ExMemout) @[TopModule.scala 286:23]
     reg ExMembr_taken : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ExMembr_taken) @[TopModule.scala 192:28]
+      reset => (UInt<1>("h0"), ExMembr_taken) @[TopModule.scala 289:28]
+    reg ExMembform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), ExMembform) @[TopModule.scala 292:25]
     reg ExMempcsel : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), ExMempcsel) @[TopModule.scala 195:25]
+      reset => (UInt<1>("h0"), ExMempcsel) @[TopModule.scala 295:25]
     reg MemWrbRegWr_enOut : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), MemWrbRegWr_enOut) @[TopModule.scala 200:32]
+      reset => (UInt<1>("h0"), MemWrbRegWr_enOut) @[TopModule.scala 300:32]
     reg MemWrbmemtoreg : UInt<2>, clock with :
-      reset => (UInt<1>("h0"), MemWrbmemtoreg) @[TopModule.scala 204:29]
+      reset => (UInt<1>("h0"), MemWrbmemtoreg) @[TopModule.scala 304:29]
     reg MemWrbRDsel : UInt<5>, clock with :
-      reset => (UInt<1>("h0"), MemWrbRDsel) @[TopModule.scala 207:26]
+      reset => (UInt<1>("h0"), MemWrbRDsel) @[TopModule.scala 307:26]
     reg MemWrbMemrd : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), MemWrbMemrd) @[TopModule.scala 211:26]
+      reset => (UInt<1>("h0"), MemWrbMemrd) @[TopModule.scala 311:26]
     reg MemWrbDout : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), MemWrbDout) @[TopModule.scala 214:25]
+      reset => (UInt<1>("h0"), MemWrbDout) @[TopModule.scala 314:25]
     reg MemWrbalu_out : SInt<32>, clock with :
-      reset => (UInt<1>("h0"), MemWrbalu_out) @[TopModule.scala 217:28]
+      reset => (UInt<1>("h0"), MemWrbalu_out) @[TopModule.scala 317:28]
     reg MemWrbpcout : UInt<32>, clock with :
-      reset => (UInt<1>("h0"), MemWrbpcout) @[TopModule.scala 220:26]
+      reset => (UInt<1>("h0"), MemWrbpcout) @[TopModule.scala 320:26]
     reg MemWrbbrtaken : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), MemWrbbrtaken) @[TopModule.scala 223:26]
+      reset => (UInt<1>("h0"), MemWrbbrtaken) @[TopModule.scala 323:26]
+    reg MemWrbbform : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), MemWrbbform) @[TopModule.scala 326:24]
     reg MemWrbpcsel : UInt<1>, clock with :
-      reset => (UInt<1>("h0"), MemWrbpcsel) @[TopModule.scala 226:26]
-    io_out <= decode.io_din @[TopModule.scala 239:12]
+      reset => (UInt<1>("h0"), MemWrbpcsel) @[TopModule.scala 329:26]
+    io_out <= decode.io_din @[TopModule.scala 343:12]
     fetch.clock <= clock
     fetch.reset <= reset
-    fetch.io_pcsel <= WriteBack.io_pcselout @[TopModule.scala 234:19]
-    fetch.io_aluout <= WriteBack.io_aluout @[TopModule.scala 233:20]
+    fetch.io_pcsel <= WriteBack.io_pcselout @[TopModule.scala 338:19]
+    fetch.io_aluout <= WriteBack.io_aluout @[TopModule.scala 337:20]
     decode.clock <= clock
     decode.reset <= reset
-    decode.io_ins <= IF_IDins @[TopModule.scala 24:18]
-    decode.io_btaken <= WriteBack.io_br_taken @[TopModule.scala 230:21]
-    decode.io_din <= WriteBack.io_Rd @[TopModule.scala 232:18]
-    decode.io_pcout <= IF_IDpc @[TopModule.scala 27:20]
-    decode.io_pc4out <= IF_IDpc4 @[TopModule.scala 30:21]
-    decode.io_Wrbrd <= WriteBack.io_RDselout @[TopModule.scala 231:20]
-    decode.io_RegWr_enWB <= WriteBack.io_RegWr_enout @[TopModule.scala 235:25]
+    decode.io_ins <= IF_IDins @[TopModule.scala 95:18]
+    decode.io_btaken <= WriteBack.io_br_taken @[TopModule.scala 333:21]
+    decode.io_din <= WriteBack.io_Rd @[TopModule.scala 336:18]
+    decode.io_pcout <= IF_IDpc @[TopModule.scala 98:20]
+    decode.io_pc4out <= IF_IDpc4 @[TopModule.scala 101:21]
+    decode.io_Wrbrd <= WriteBack.io_RDselout @[TopModule.scala 335:20]
+    decode.io_RegWr_enWB <= WriteBack.io_RegWr_enout @[TopModule.scala 339:25]
+    decode.io_wrbform <= WriteBack.io_b_form @[TopModule.scala 334:22]
     execute.clock <= clock
     execute.reset <= reset
-    execute.io_iform <= ID_Exiform @[TopModule.scala 35:21]
-    execute.io_rform <= ID_Exrform @[TopModule.scala 38:21]
-    execute.io_sform <= ID_Exsform @[TopModule.scala 41:21]
-    execute.io_bform <= ID_Exbform @[TopModule.scala 44:21]
-    execute.io_luiform <= ID_Exluiform @[TopModule.scala 47:23]
-    execute.io_Jalform <= ID_Exjalform @[TopModule.scala 50:23]
-    execute.io_jalrform <= ID_Exjalrform @[TopModule.scala 53:24]
-    execute.io_lform <= ID_Exlform @[TopModule.scala 56:21]
-    execute.io_Auipc <= ID_ExAuipc @[TopModule.scala 59:21]
-    execute.io_lui_jal_jalr_auipc_imm <= ID_Exlui_jal_jalr_auipc_imm @[TopModule.scala 62:38]
-    execute.io_immBits <= ID_EximmBits @[TopModule.scala 65:23]
-    execute.io_mem_wr_en <= ID_Exmem_wr_en @[TopModule.scala 68:25]
-    execute.io_wr_back <= ID_Exwr_back @[TopModule.scala 71:23]
-    execute.io_br_fun3 <= ID_Exbr_fun3 @[TopModule.scala 74:23]
-    execute.io_load_storefun <= ID_Exload_storefun @[TopModule.scala 77:29]
-    execute.io_pcsel <= ID_Expcsel @[TopModule.scala 80:21]
-    execute.io_mem_r_en <= ID_Exmem_r_en @[TopModule.scala 83:24]
+    execute.io_iform <= ID_Exiform @[TopModule.scala 106:21]
+    execute.io_rform <= ID_Exrform @[TopModule.scala 109:21]
+    execute.io_sform <= ID_Exsform @[TopModule.scala 112:21]
+    execute.io_bform <= ID_Exbform @[TopModule.scala 115:21]
+    execute.io_luiform <= ID_Exluiform @[TopModule.scala 118:23]
+    execute.io_Jalform <= ID_Exjalform @[TopModule.scala 121:23]
+    execute.io_jalrform <= ID_Exjalrform @[TopModule.scala 124:24]
+    execute.io_lform <= ID_Exlform @[TopModule.scala 127:21]
+    execute.io_Auipc <= ID_ExAuipc @[TopModule.scala 130:21]
+    execute.io_lui_jal_jalr_auipc_imm <= ID_Exlui_jal_jalr_auipc_imm @[TopModule.scala 133:38]
+    execute.io_immBits <= ID_EximmBits @[TopModule.scala 136:23]
+    execute.io_mem_wr_en <= ID_Exmem_wr_en @[TopModule.scala 139:25]
+    execute.io_wr_back <= ID_Exwr_back @[TopModule.scala 142:23]
+    execute.io_br_fun3 <= ID_Exbr_fun3 @[TopModule.scala 145:23]
+    execute.io_load_storefun <= ID_Exload_storefun @[TopModule.scala 148:29]
+    execute.io_pcsel <= ID_Expcsel @[TopModule.scala 151:21]
+    execute.io_mem_r_en <= ID_Exmem_r_en @[TopModule.scala 154:24]
     execute.io_rs1 <= _GEN_2
     execute.io_rs2 <= _GEN_5
-    execute.io_aluop <= ID_Exaluop @[TopModule.scala 137:21]
-    execute.io_pc_out <= ID_Expc_out @[TopModule.scala 140:22]
-    execute.io_imm_out <= ID_Eximm_out @[TopModule.scala 143:23]
-    execute.io_RS1 <= ID_ExRS1 @[TopModule.scala 146:19]
-    execute.io_RS2 <= ID_ExRS2 @[TopModule.scala 150:19]
-    execute.io_Rd <= ID_ExRd @[TopModule.scala 154:19]
-    execute.io_RegWr_en <= bits(ID_ExRegWr_en, 0, 0) @[TopModule.scala 157:24]
+    execute.io_aluop <= ID_Exaluop @[TopModule.scala 212:21]
+    execute.io_pc_out <= ID_Expc_out @[TopModule.scala 215:22]
+    execute.io_pc4_out <= ID_EXpc4_out @[TopModule.scala 157:23]
+    execute.io_imm_out <= ID_Eximm_out @[TopModule.scala 218:23]
+    execute.io_RS1 <= ID_ExRS1 @[TopModule.scala 221:19]
+    execute.io_RS2 <= ID_ExRS2 @[TopModule.scala 225:19]
+    execute.io_Rd <= ID_ExRd @[TopModule.scala 229:19]
+    execute.io_RegWr_en <= ID_ExRegWr_en @[TopModule.scala 232:24]
+    execute.io_opA_in <= ID_EXopA @[TopModule.scala 235:22]
+    execute.io_opB_in <= ID_EXopB @[TopModule.scala 238:22]
     memory.clock <= clock
     memory.reset <= reset
-    memory.io_out <= ExMemout @[TopModule.scala 191:18]
-    memory.io_br_taken <= ExMembr_taken @[TopModule.scala 194:23]
-    memory.io_Wen <= ExMemMemWen @[TopModule.scala 162:18]
-    memory.io_Fun3 <= ExMemFun3 @[TopModule.scala 165:19]
-    memory.io_Enable <= ExMemEnable @[TopModule.scala 168:21]
-    memory.io_Din <= ExMemDin @[TopModule.scala 171:18]
-    memory.io_MemToReg <= ExMemToReg @[TopModule.scala 174:23]
-    memory.io_RDout <= ExMemRDout @[TopModule.scala 177:20]
-    memory.io_RS2out <= ExMemRS2out @[TopModule.scala 181:21]
-    memory.io_RegWr_enout <= ExMemRegWr_enout @[TopModule.scala 184:26]
-    memory.io_pco <= ExMempco @[TopModule.scala 188:18]
-    memory.io_pcselout <= ExMempcsel @[TopModule.scala 197:23]
+    memory.io_out <= ExMemout @[TopModule.scala 288:18]
+    memory.io_br_taken <= ExMembr_taken @[TopModule.scala 291:23]
+    memory.io_bform <= ExMembform @[TopModule.scala 294:20]
+    memory.io_Wen <= ExMemMemWen @[TopModule.scala 259:18]
+    memory.io_Fun3 <= ExMemFun3 @[TopModule.scala 262:19]
+    memory.io_Enable <= ExMemEnable @[TopModule.scala 265:21]
+    memory.io_Din <= ExMemDin @[TopModule.scala 268:18]
+    memory.io_MemToReg <= ExMemToReg @[TopModule.scala 271:23]
+    memory.io_RDout <= ExMemRDout @[TopModule.scala 274:20]
+    memory.io_RS2out <= ExMemRS2out @[TopModule.scala 278:21]
+    memory.io_RegWr_enout <= ExMemRegWr_enout @[TopModule.scala 281:26]
+    memory.io_pco <= ExMempco @[TopModule.scala 285:18]
+    memory.io_pcselout <= ExMempcsel @[TopModule.scala 297:23]
     WriteBack.clock <= clock
     WriteBack.reset <= reset
-    WriteBack.io_RegWr_enOut <= MemWrbRegWr_enOut @[TopModule.scala 202:29]
-    WriteBack.io_memtoreg <= MemWrbmemtoreg @[TopModule.scala 206:26]
-    WriteBack.io_RDsel <= MemWrbRDsel @[TopModule.scala 209:23]
-    WriteBack.io_Memrd <= MemWrbMemrd @[TopModule.scala 213:23]
-    WriteBack.io_Dout <= MemWrbDout @[TopModule.scala 216:22]
-    WriteBack.io_alu_out <= MemWrbalu_out @[TopModule.scala 219:25]
-    WriteBack.io_pcout <= MemWrbpcout @[TopModule.scala 222:23]
-    WriteBack.io_brtaken <= MemWrbbrtaken @[TopModule.scala 225:25]
-    WriteBack.io_pcsel <= MemWrbpcsel @[TopModule.scala 228:23]
+    WriteBack.io_RegWr_enOut <= MemWrbRegWr_enOut @[TopModule.scala 302:29]
+    WriteBack.io_memtoreg <= MemWrbmemtoreg @[TopModule.scala 306:26]
+    WriteBack.io_RDsel <= MemWrbRDsel @[TopModule.scala 309:23]
+    WriteBack.io_Memrd <= MemWrbMemrd @[TopModule.scala 313:23]
+    WriteBack.io_Dout <= MemWrbDout @[TopModule.scala 316:22]
+    WriteBack.io_alu_out <= MemWrbalu_out @[TopModule.scala 319:25]
+    WriteBack.io_pcout <= MemWrbpcout @[TopModule.scala 322:23]
+    WriteBack.io_brtaken <= MemWrbbrtaken @[TopModule.scala 325:25]
+    WriteBack.io_bform <= MemWrbbform @[TopModule.scala 328:23]
+    WriteBack.io_pcsel <= MemWrbpcsel @[TopModule.scala 331:23]
     forward.clock <= clock
     forward.reset <= reset
-    forward.io_IDEXrs1 <= ID_ExRS1 @[TopModule.scala 147:23]
-    forward.io_IDEXrs2 <= ID_ExRS2 @[TopModule.scala 151:23]
-    forward.io_ExMemRd <= ExMemRDout @[TopModule.scala 178:23]
-    forward.io_ExMemRegWr_en <= ExMemRegWr_enout @[TopModule.scala 185:29]
-    forward.io_MemWbRegWr_en <= MemWrbRegWr_enOut @[TopModule.scala 203:29]
-    forward.io_MemWbRd <= MemWrbRDsel @[TopModule.scala 210:23]
-    IF_IDins <= fetch.io_instruction @[TopModule.scala 23:13]
-    IF_IDpc <= fetch.io_pc_out @[TopModule.scala 26:12]
-    IF_IDpc4 <= fetch.io_pc4_out @[TopModule.scala 29:13]
-    ID_Exiform <= decode.io_iform @[TopModule.scala 34:15]
-    ID_Exrform <= decode.io_rform @[TopModule.scala 37:15]
-    ID_Exsform <= decode.io_sform @[TopModule.scala 40:15]
-    ID_Exbform <= decode.io_bform @[TopModule.scala 43:15]
-    ID_Exluiform <= decode.io_luiform @[TopModule.scala 46:17]
-    ID_Exjalform <= decode.io_Jalform @[TopModule.scala 49:17]
-    ID_Exjalrform <= decode.io_jalrform @[TopModule.scala 52:18]
-    ID_Exlform <= decode.io_lform @[TopModule.scala 55:15]
-    ID_ExAuipc <= decode.io_Auipc @[TopModule.scala 58:15]
-    ID_Exlui_jal_jalr_auipc_imm <= decode.io_lui_jal_jalr_auipc_imm @[TopModule.scala 61:32]
-    ID_EximmBits <= decode.io_immBits @[TopModule.scala 64:17]
-    ID_Exmem_wr_en <= decode.io_mem_wr_en @[TopModule.scala 67:19]
-    ID_Exwr_back <= decode.io_wr_back @[TopModule.scala 70:17]
-    ID_Exbr_fun3 <= decode.io_br_fun3 @[TopModule.scala 73:17]
-    ID_Exload_storefun <= decode.io_load_storefun @[TopModule.scala 76:23]
-    ID_Expcsel <= decode.io_pcsel @[TopModule.scala 79:15]
-    ID_Exmem_r_en <= decode.io_mem_r_en @[TopModule.scala 82:18]
-    ID_Exrs1 <= decode.io_rs1 @[TopModule.scala 93:17]
-    ID_Exrs1_1 <= execute.io_out @[TopModule.scala 98:17]
-    ID_Exrs1_2 <= memory.io_alu_out @[TopModule.scala 103:18]
-    ID_Exrs1_3 <= decode.io_rs1 @[TopModule.scala 108:17]
-    ID_Exrs2 <= decode.io_rs2 @[TopModule.scala 117:17]
-    ID_Exrs2_1 <= execute.io_out @[TopModule.scala 122:17]
-    ID_Exrs2_2 <= memory.io_alu_out @[TopModule.scala 127:17]
-    ID_Exrs2_3 <= decode.io_rs2 @[TopModule.scala 132:17]
-    ID_Exaluop <= decode.io_aluop @[TopModule.scala 136:15]
-    ID_Expc_out <= decode.io_pc_out @[TopModule.scala 139:16]
-    ID_Eximm_out <= decode.io_imm_out @[TopModule.scala 142:17]
-    ID_ExRS1 <= decode.io_RS1 @[TopModule.scala 145:13]
-    ID_ExRS2 <= decode.io_RS2 @[TopModule.scala 149:13]
-    ID_ExRd <= decode.io_Rd @[TopModule.scala 153:13]
-    ID_ExRegWr_en <= decode.io_RegWr_en @[TopModule.scala 156:18]
-    ExMemMemWen <= execute.io_MemWen @[TopModule.scala 161:16]
-    ExMemFun3 <= execute.io_MemFun3 @[TopModule.scala 164:14]
-    ExMemEnable <= execute.io_MemEnable @[TopModule.scala 167:16]
-    ExMemDin <= execute.io_MemDin @[TopModule.scala 170:13]
-    ExMemToReg <= execute.io_MemToReg @[TopModule.scala 173:15]
-    ExMemRDout <= execute.io_RDout @[TopModule.scala 176:15]
-    ExMemRS2out <= execute.io_RS2out @[TopModule.scala 180:16]
-    ExMemRegWr_enout <= execute.io_RegWr_enout @[TopModule.scala 183:21]
-    ExMempco <= execute.io_pco @[TopModule.scala 187:13]
-    ExMemout <= execute.io_out @[TopModule.scala 190:13]
-    ExMembr_taken <= execute.io_br_taken @[TopModule.scala 193:18]
-    ExMempcsel <= execute.io_pcselout @[TopModule.scala 196:15]
-    MemWrbRegWr_enOut <= memory.io_RegWr_enOut @[TopModule.scala 201:22]
-    MemWrbmemtoreg <= memory.io_memtoreg @[TopModule.scala 205:19]
-    MemWrbRDsel <= memory.io_RDsel @[TopModule.scala 208:16]
-    MemWrbMemrd <= memory.io_Memrd @[TopModule.scala 212:16]
-    MemWrbDout <= memory.io_Dout @[TopModule.scala 215:15]
-    MemWrbalu_out <= memory.io_alu_out @[TopModule.scala 218:18]
-    MemWrbpcout <= memory.io_pcout @[TopModule.scala 221:16]
-    MemWrbbrtaken <= memory.io_brtaken @[TopModule.scala 224:18]
-    MemWrbpcsel <= memory.io_pcsel @[TopModule.scala 227:16]
+    forward.io_IDEXrs1 <= ID_ExRS1 @[TopModule.scala 222:23]
+    forward.io_IDEXrs2 <= ID_ExRS2 @[TopModule.scala 226:23]
+    forward.io_ExMemRd <= ExMemRDout @[TopModule.scala 275:23]
+    forward.io_ExMemRegWr_en <= ExMemRegWr_enout @[TopModule.scala 282:29]
+    forward.io_MemWbRd <= MemWrbRDsel @[TopModule.scala 310:23]
+    forward.io_MemWbRegWr_en <= MemWrbRegWr_enOut @[TopModule.scala 303:29]
+    hazard_detection.clock <= clock
+    hazard_detection.reset <= reset
+    hazard_detection.io_IF_ID_instr <= decode.io_ins @[TopModule.scala 241:37]
+    hazard_detection.io_ID_EX_memread <= execute.io_mem_r_en @[TopModule.scala 242:39]
+    hazard_detection.io_ID_EX_rd <= execute.io_Rd @[TopModule.scala 243:34]
+    hazard_detection.io_pc_in <= decode.io_pc4out @[TopModule.scala 244:31]
+    hazard_detection.io_current_pc_in <= decode.io_pcout @[TopModule.scala 245:39]
+    ID_Exmem_wr_en <= decode.io_mem_wr_en @[TopModule.scala 138:19]
+    ID_Exmem_r_en <= decode.io_mem_r_en @[TopModule.scala 153:18]
+    ID_Exbform <= decode.io_bform @[TopModule.scala 114:15]
+    ID_ExRegWr_en <= decode.io_RegWr_en @[TopModule.scala 231:18]
+    ID_Exwr_back <= decode.io_wr_back @[TopModule.scala 141:17]
+    ID_Exaluop <= decode.io_aluop @[TopModule.scala 211:15]
+    ID_EXopA <= decode.io_opAsel @[TopModule.scala 234:13]
+    ID_EXopB <= decode.io_opBsel @[TopModule.scala 237:13]
+    ID_Expcsel <= decode.io_pcsel @[TopModule.scala 150:15]
+    ID_Exjalform <= decode.io_Jalform @[TopModule.scala 120:17]
+    ID_Exrform <= decode.io_rform @[TopModule.scala 108:15]
+    IF_IDins <= fetch.io_instruction @[TopModule.scala 94:13]
+    IF_IDpc <= fetch.io_pc_out @[TopModule.scala 97:12]
+    IF_IDpc4 <= fetch.io_pc4_out @[TopModule.scala 100:13]
+    ID_Exiform <= decode.io_iform @[TopModule.scala 105:15]
+    ID_Exsform <= decode.io_sform @[TopModule.scala 111:15]
+    ID_Exluiform <= decode.io_luiform @[TopModule.scala 117:17]
+    ID_Exjalrform <= decode.io_jalrform @[TopModule.scala 123:18]
+    ID_Exlform <= decode.io_lform @[TopModule.scala 126:15]
+    ID_ExAuipc <= decode.io_Auipc @[TopModule.scala 129:15]
+    ID_Exlui_jal_jalr_auipc_imm <= decode.io_lui_jal_jalr_auipc_imm @[TopModule.scala 132:32]
+    ID_EximmBits <= decode.io_immBits @[TopModule.scala 135:17]
+    ID_Exbr_fun3 <= decode.io_br_fun3 @[TopModule.scala 144:17]
+    ID_Exload_storefun <= decode.io_load_storefun @[TopModule.scala 147:23]
+    ID_EXpc4_out <= decode.io_pc_4out @[TopModule.scala 156:17]
+    ID_Exrs1 <= decode.io_rs1 @[TopModule.scala 168:17]
+    ID_Exrs1_1 <= execute.io_out @[TopModule.scala 178:17]
+    ID_Exrs1_2 <= decode.io_rs1 @[TopModule.scala 183:17]
+    ID_Exrs2 <= decode.io_rs2 @[TopModule.scala 192:17]
+    ID_Exrs2_1 <= execute.io_out @[TopModule.scala 202:17]
+    ID_Exrs2_2 <= decode.io_rs2 @[TopModule.scala 207:17]
+    ID_Expc_out <= decode.io_pc_out @[TopModule.scala 214:16]
+    ID_Eximm_out <= decode.io_imm_out @[TopModule.scala 217:17]
+    ID_ExRS1 <= decode.io_RS1 @[TopModule.scala 220:13]
+    ID_ExRS2 <= decode.io_RS2 @[TopModule.scala 224:13]
+    ID_ExRd <= decode.io_Rd @[TopModule.scala 228:13]
+    ExMemMemWen <= execute.io_MemWen @[TopModule.scala 258:16]
+    ExMemFun3 <= execute.io_MemFun3 @[TopModule.scala 261:14]
+    ExMemEnable <= execute.io_MemEnable @[TopModule.scala 264:16]
+    ExMemDin <= execute.io_MemDin @[TopModule.scala 267:13]
+    ExMemToReg <= execute.io_MemToReg @[TopModule.scala 270:15]
+    ExMemRDout <= execute.io_RDout @[TopModule.scala 273:15]
+    ExMemRS2out <= execute.io_RS2out @[TopModule.scala 277:16]
+    ExMemRegWr_enout <= execute.io_RegWr_enout @[TopModule.scala 280:21]
+    ExMempco <= execute.io_pco @[TopModule.scala 284:13]
+    ExMemout <= execute.io_out @[TopModule.scala 287:13]
+    ExMembr_taken <= execute.io_br_taken @[TopModule.scala 290:18]
+    ExMembform <= execute.io_b_form @[TopModule.scala 293:15]
+    ExMempcsel <= execute.io_pcselout @[TopModule.scala 296:15]
+    MemWrbRegWr_enOut <= memory.io_RegWr_enOut @[TopModule.scala 301:22]
+    MemWrbmemtoreg <= memory.io_memtoreg @[TopModule.scala 305:19]
+    MemWrbRDsel <= memory.io_RDsel @[TopModule.scala 308:16]
+    MemWrbMemrd <= memory.io_Memrd @[TopModule.scala 312:16]
+    MemWrbDout <= memory.io_Dout @[TopModule.scala 315:15]
+    MemWrbalu_out <= memory.io_alu_out @[TopModule.scala 318:18]
+    MemWrbpcout <= memory.io_pcout @[TopModule.scala 321:16]
+    MemWrbbrtaken <= memory.io_brtaken @[TopModule.scala 324:18]
+    MemWrbbform <= memory.io_b_form @[TopModule.scala 327:16]
+    MemWrbpcsel <= memory.io_pcsel @[TopModule.scala 330:16]

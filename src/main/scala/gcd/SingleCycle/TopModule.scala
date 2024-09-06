@@ -16,25 +16,51 @@ class TopModule extends Module{
     val memory = Module(new memory)
     val WriteBack = Module(new Write_back)
     val forward = Module(new Forwarding)
-    // val hazard_detection = Module(new HazardDetectionUnit)
+    val hazard_detection = Module(new HazardDetectionUnit)
     io.out:=0.S
 
+    val ID_Exmem_wr_en = Reg(Bool())
+    val ID_Exmem_r_en = Reg(Bool())
+    val ID_Exbform = Reg(Bool())
+    val ID_ExRegWr_en = Reg(Bool())
+    val ID_Exwr_back = Reg(UInt(2.W))
+    val ID_Exaluop = Reg(UInt(4.W))
+    val ID_EXopA = Reg(UInt(2.W))
+    val ID_EXopB = Reg(Bool())
+    val ID_Expcsel = Reg(Bool())
+    val ID_Exjalform = Reg(Bool())
+    val ID_Exrform= Reg(Bool())
 
-    // hazard detection module connections
-    // hazard_detection.io.IF_ID_instr := decode.io.ins
-    // hazard_detection.io.ID_EX_memread := execute.io.mem_r_en
-    // hazard_detection.io.ID_EX_rd := execute.io.Rd
-    // hazard_detection.io.pc_in := decode.io.pc4out
-    // hazard_detection.io.current_pc_in := decode.io.pcout
+    // when(hazard_detection.io.ctrl_forward === "b1".U) {
+    //     ID_Exmem_wr_en := 0.B
+    //     ID_Exmem_r_en := 0.B
+    //     ID_Exbform := 0.B
+    //     ID_ExRegWr_en := 0.B
+    //     ID_Exwr_back := 0.U
+    //     ID_Exaluop := 0.U
+    //     ID_EXopA := 0.U
+    //     ID_EXopB := 0.B
+    //     ID_Expcsel := 0.B
+    //     ID_Exjalform:=1.B
+    //     ID_Exrform:=0.B
 
-
-    // when(hazard_detection.io.instr_forward === "b1".U) {
-    // if_id_module.io.instr_in := hazard_detection.io.instr_out
-    // if_id_module.io.pc_in := hazard_detection.io.current_pc_out
-    // }.otherwise {
-    //     if_id_module.io.instr_in := imem_module.io.readdata
+    // } .otherwise {
+    //     ID_Exmem_wr_en :=decode.io.mem_wr_en
+    //     ID_Exmem_r_en :=decode.io.mem_r_en
+    //     ID_Exbform  :=decode.io.bform
+    //     ID_ExRegWr_en :=decode.io.RegWr_en
+    //     ID_Exwr_back := decode.io.wr_back
+    //     ID_Exaluop := decode.io.aluop
+    //     ID_EXopA := decode.io.opAsel
+    //     ID_EXopB := decode.io.opBsel
+    //     ID_Expcsel := decode.io.pcsel
+    //     ID_Exjalform:=decode.io.Jalform
+    //     ID_Exrform:=decode.io.rform
     // }
 
+    //Core b\w fetch and decode
+    
+    
 
     // when(hazard_detection.io.pc_forward === "b1".U) {
     // pc_module.io.addr := hazard_detection.io.pc_out
@@ -64,7 +90,6 @@ class TopModule extends Module{
     //   pc_module.io.addr := pc_module.io.pc_out4
     // }}
 
-    //Core b\w fetch and decode
     val IF_IDins  = Reg(UInt(32.W))
     IF_IDins:=fetch.io.instruction
     decode.io.ins:=IF_IDins
@@ -79,19 +104,19 @@ class TopModule extends Module{
     val ID_Exiform = Reg(Bool())
     ID_Exiform:=decode.io.iform
     execute.io.iform:=ID_Exiform
-    val ID_Exrform= Reg(Bool())
+    // val ID_Exrform= Reg(Bool())
     ID_Exrform:=decode.io.rform
     execute.io.rform:=ID_Exrform
     val ID_Exsform = Reg(Bool())
     ID_Exsform:=decode.io.sform
     execute.io.sform:=ID_Exsform
-    val ID_Exbform = Reg(Bool())
+    // val ID_Exbform = Reg(Bool())
     ID_Exbform:=decode.io.bform
     execute.io.bform:=ID_Exbform
     val ID_Exluiform = Reg(Bool())
     ID_Exluiform:=decode.io.luiform
     execute.io.luiform:=ID_Exluiform
-    val ID_Exjalform = Reg(Bool())
+    // val ID_Exjalform = Reg(Bool())
     ID_Exjalform:=decode.io.Jalform
     execute.io.Jalform:=ID_Exjalform
     val ID_Exjalrform = Reg(Bool())
@@ -109,10 +134,10 @@ class TopModule extends Module{
     val ID_EximmBits = Reg(UInt(12.W))
     ID_EximmBits:=decode.io.immBits
     execute.io.immBits:=ID_EximmBits
-    val ID_Exmem_wr_en = Reg(Bool())
+    // val ID_Exmem_wr_en = Reg(Bool())
     ID_Exmem_wr_en:=decode.io.mem_wr_en
     execute.io.mem_wr_en:=ID_Exmem_wr_en
-    val ID_Exwr_back = Reg(UInt(2.W))
+    // val ID_Exwr_back = Reg(UInt(2.W))
     ID_Exwr_back:=decode.io.wr_back
     execute.io.wr_back:=ID_Exwr_back
     val ID_Exbr_fun3 = Reg(UInt(3.W))
@@ -121,12 +146,16 @@ class TopModule extends Module{
     val ID_Exload_storefun = Reg(UInt(3.W))
     ID_Exload_storefun:=decode.io.load_storefun
     execute.io.load_storefun:=ID_Exload_storefun
-    val ID_Expcsel = Reg(Bool())
+    // val ID_Expcsel = Reg(Bool())
     ID_Expcsel:= decode.io.pcsel
     execute.io.pcsel:=ID_Expcsel
-    val ID_Exmem_r_en = Reg(Bool())
+    // val ID_Exmem_r_en = Reg(Bool())
     ID_Exmem_r_en:=decode.io.mem_r_en
     execute.io.mem_r_en:=ID_Exmem_r_en
+    val ID_EXpc4_out = Reg(UInt(32.W))
+    ID_EXpc4_out:= decode.io.pc_4out
+    execute.io.pc4_out:=ID_EXpc4_out
+    
 
     // execute.io.rs1:=0.S
     // execute.io.rs2:=0.S
@@ -178,7 +207,7 @@ class TopModule extends Module{
         ID_Exrs2:=decode.io.rs2
         execute.io.rs2:=ID_Exrs2
     }
-    val ID_Exaluop = Reg(UInt(4.W))
+    // val ID_Exaluop = Reg(UInt(4.W))
     ID_Exaluop:=decode.io.aluop
     execute.io.aluop:=ID_Exaluop
     val ID_Expc_out = Reg(UInt(32.W))
@@ -198,9 +227,31 @@ class TopModule extends Module{
     val ID_ExRd = Reg(UInt(5.W))
     ID_ExRd := decode.io.Rd
     execute.io.Rd := ID_ExRd
-    val ID_ExRegWr_en = Reg(UInt(5.W))
+    // val ID_ExRegWr_en = Reg(Bool())
     ID_ExRegWr_en:= decode.io.RegWr_en
     execute.io.RegWr_en:=ID_ExRegWr_en
+    // val ID_EXopA = Reg(UInt(2.W))
+    ID_EXopA:= decode.io.opAsel
+    execute.io.opA_in:=ID_EXopA
+    // val ID_EXopB = Reg(Bool())
+    ID_EXopB:= decode.io.opBsel
+    execute.io.opB_in:=ID_EXopB
+
+    // hazard detection module connections
+    hazard_detection.io.IF_ID_instr := decode.io.ins
+    hazard_detection.io.ID_EX_memread := execute.io.mem_r_en
+    hazard_detection.io.ID_EX_rd := execute.io.Rd
+    hazard_detection.io.pc_in := decode.io.pc4out
+    hazard_detection.io.current_pc_in := decode.io.pcout
+
+    // when(hazard_detection.io.instr_forward === "b1".U) {
+    // IF_IDins := hazard_detection.io.instr_out
+    // IF_IDpc:= hazard_detection.io.current_pc_out
+    // }.otherwise {
+    //     IF_IDins:=fetch.io.instruction
+    // }
+    // decode.io.ins:=IF_IDins
+    // decode.io.pcout:=IF_IDpc
 
     //core b\w execute and memory 
     val ExMemMemWen= Reg(Bool())

@@ -8,6 +8,34 @@
     "emitter":"firrtl.LowFirrtlEmitter"
   },
   {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|Write_back>io_br_taken"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|memory>io_br_taken"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|memory>io_bform"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|Branch_Control>io_br_taken"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|Branch_Control>io_inb"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|Branch_Control>io_ina"
+  },
+  {
+    "class":"firrtl.transforms.DontTouchAnnotation",
+    "target":"~TopModule|Branch_Control>io_fun3"
+  },
+  {
     "class":"firrtl.annotations.LoadMemoryAnnotation",
     "target":"TopModule.InstMem.ime",
     "fileName":"//home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt",

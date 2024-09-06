@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly SingleCycle.topModuletester -- -DwriteVcd=1, Some(12ea67a2-aa6b-4e70-a72f-78e250bc8199), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/TopModule.scala:18:30: not found: type forwarding[0m
+[0m[[0m[31merror[0m] [0m[0m    val forward = Module(new forwarding)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed Sep 6, 2024, 1:56:16 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

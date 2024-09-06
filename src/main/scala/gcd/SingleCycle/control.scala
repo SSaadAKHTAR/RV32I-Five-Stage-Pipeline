@@ -29,6 +29,8 @@ class contolUnit extends Module{
         val btaken = Input(Bool())
         val lui_jal_jalr_auipc_imm = Output(SInt(32.W))
         val mem_r_en = Output(Bool())
+        val opAsel = Output(UInt(2.W))
+        val opBsel = Output(Bool())
 
       })
 
@@ -46,6 +48,8 @@ class contolUnit extends Module{
     io.br_fun3:=0.U
     io.lform:=0.B
     io.mem_r_en:=0.B
+    io.opAsel := 0.U
+    io.opBsel := 0.B
     
     
 
@@ -70,11 +74,13 @@ class contolUnit extends Module{
       io.rs2:=Rs2
       io.wr_en:=1.B
       io.rd:=Rd
-     io.rs1:=Rs1
-     io.mem_wr_en:=0.B
-     io.wr_back:=1.U
-     io.br_fun3:=0.U
-     io.pcsel:=0.B
+      io.rs1:=Rs1
+      io.mem_wr_en:=0.B
+      io.wr_back:=1.U
+      io.br_fun3:=0.U
+      io.pcsel:=0.B
+      io. opAsel := "b00".U
+      io. opBsel := 0.B
 
      }
      .elsewhen(op==="b0010011".U){
@@ -95,6 +101,8 @@ class contolUnit extends Module{
          io.immBits:=io.instruction(31,20)
          io.br_fun3:=0.U
          io.pcsel:=0.B
+         io. opAsel := "b00".U
+         io. opBsel := 1.B
         
      }
      .elsewhen(op==="b0000011".U){ //load
@@ -112,6 +120,8 @@ class contolUnit extends Module{
         io.pcsel:=0.B
         io.mem_r_en:=1.B
         io.wr_en := 1.B
+        io. opAsel := "b00".U
+        io. opBsel := 1.B
         
 
      }
@@ -128,6 +138,8 @@ class contolUnit extends Module{
       io.mem_wr_en:=1.B
       io.load_storefun:=f3
       io.pcsel:=0.B
+      io. opAsel := "b00".U
+      io. opBsel := 1.B
 }
 
      
@@ -143,6 +155,8 @@ class contolUnit extends Module{
       io.wr_back:=0.U
       io.br_fun3:=io.instruction(14,12)
       io.pcsel:=Mux(io.btaken && io.bform,1.B,0.B)
+      io. opAsel := "b00".U
+      io. opBsel := 0.B
 
 
      }
@@ -159,6 +173,8 @@ class contolUnit extends Module{
       io.aluop:=0.U
       io.immBits:=0.U
       io.pcsel:=0.B
+      io. opAsel := "b10".U
+      io. opBsel := 1.B
       
      }
      .elsewhen(op==="b1101111".U){//Jal 
@@ -172,6 +188,8 @@ class contolUnit extends Module{
       io.wr_en:=1.B
       io.pcsel:=1.B
       io.wr_back:=2.U
+      io. opAsel := "b01".U
+      io. opBsel := 0.B
 
 
 
@@ -188,6 +206,8 @@ class contolUnit extends Module{
       io.Jalform:=0.B
       io.jalrform:=1.B
       io.aluop:=0.U
+      io. opAsel := "b01".U
+      io. opBsel := 1.B
 
      }
      .elsewhen(op==="b0010111".U){//Auipc

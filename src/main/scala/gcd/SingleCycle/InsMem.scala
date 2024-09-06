@@ -10,7 +10,7 @@ val inst = Output ( UInt ( 32 . W ) )
 class InstMem ( initFile : String ) extends Module  {
 val io = IO (new InstMemIO )
 // INST_MEM_LEN in Bytes or INST_MEM_LEN / 4 in words
-val ime = SyncReadMem ( 1024 , UInt ( 32 . W ) )
+val ime = Mem ( 1024 , UInt ( 32 . W ) )
 loadMemoryFromFile ( ime , initFile) 
 io.inst := ime( io . addr / 4. U )  
 }

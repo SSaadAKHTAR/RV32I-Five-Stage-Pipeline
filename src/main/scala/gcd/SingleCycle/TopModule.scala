@@ -336,7 +336,7 @@ class TopModule extends Module{
     decode.io.din:=WriteBack.io.Rd
     fetch.io.aluout:=WriteBack.io.aluout
     fetch.io.pcsel:= WriteBack.io.pcselout
-    decode.io.RegWr_enWB:=WriteBack.io.RegWr_enout
+    decode.io.RegWr_enWB:=RegNext(WriteBack.io.RegWr_enout)
 
 
 

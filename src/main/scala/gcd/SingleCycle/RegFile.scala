@@ -24,11 +24,17 @@ Reg2(0) := 0.S
 
 
 when(io.wr && io.rd=/=0.U){
+    when(io.rd===io.rs1 || io.rd === io.rs2){
+        Reg2(io.rd):= io.Rd
+        io.Rs1 := io.Rd
+        io.Rs2 := io.Rd
+    }
+    .otherwise{
+        Reg2(io.rd):= io.Rd
+        io.Rs1 := Reg2(io.rs1)
+        io.Rs2 := Reg2(io.rs2)
 
-Reg2(io.rd):= io.Rd
-io.Rs1 := Reg2(io.rs1)
-io.Rs2 := Reg2(io.rs2)
-
+    }
 }
 .otherwise{
     io.Rs1 := Reg2(io.rs1)

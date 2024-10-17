@@ -1,5 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/InsMemTester.scala:9:10: not enough arguments for constructor InstMem: (initFile: String)SingleCycle.InstMem.[0m
-[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter initFile.[0m
-[0m[[0m[31merror[0m] [0m[0m    test(new InstMem){a =>[0m
-[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopModuleTester.scala:11:19: not found: type TopModule[0m
+[0m[[0m[31merror[0m] [0m[0m        test (new TopModule){ a =>[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

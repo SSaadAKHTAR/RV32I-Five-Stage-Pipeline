@@ -4,3 +4,4 @@
 1721713960169:testOnly SingleCycle.topModuletester -- -DwriteVcd=1
 1721833374172:exit
 1724221631457:testOnly SingleCycle.topModuletester -- -DwriteVcd=1
+1727551833119:testOnly SingleCycle.TOPTest -- -DwriteVcd=1

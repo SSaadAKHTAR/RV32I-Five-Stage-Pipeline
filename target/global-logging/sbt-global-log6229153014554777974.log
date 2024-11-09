@@ -1,0 +1,15 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(runMain SingleCycle.core, Some(df3d1f59-e74f-4e40-a867-0ea90bc8b7d9), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / runMain[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/core.scala:355:18: method execute in object Driver is deprecated (since 3.2.2): Use chisel3.stage.ChiselStage.execute. This will be removed in 3.4.[0m
+[0m[[0m[33mwarn[0m] [0m[0m  chisel3.Driver.execute(args, () => new core())[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/core.scala:355:11: object Driver in package chisel3 is deprecated (since 3.2.4): Please switch to chisel3.stage.ChiselStage[0m
+[0m[[0m[33mwarn[0m] [0m[0m  chisel3.Driver.execute(args, () => new core())[0m
+[0m[[0m[33mwarn[0m] [0m[0m          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 17 s, completed Oct 26, 2024, 4:28:10 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

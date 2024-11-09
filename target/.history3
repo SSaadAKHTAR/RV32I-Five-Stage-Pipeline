@@ -5,3 +5,10 @@
 1721833374172:exit
 1724221631457:testOnly SingleCycle.topModuletester -- -DwriteVcd=1
 1727551833119:testOnly SingleCycle.TOPTest -- -DwriteVcd=1
+1729942072620:runMain SingleCycle.core
+1730286434968:testOnly SingleCycle.TOPTest -- -DwriteVcd=1
+1731059057545:runMain Single.core /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt
+1731059181191:runMain SingleCycle.core /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt
+1731156553634:runMain SingleCycle.TopTop /home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt
+1731156689335:testOnly SingleCycle.TopTop -- -DwriteVcd=1 -DprogramFile=/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt
+1731165009662:testOnly SingleCycle.TopTest -- -DwriteVcd=1 -DprogramFile=/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt

@@ -1,4 +1,17 @@
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopModuleTester.scala:11:19: not found: type TopModule[0m
-[0m[[0m[31merror[0m] [0m[0m        test (new TopModule){ a =>[0m
-[0m[[0m[31merror[0m] [0m[0m                  ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0m'-P:chiselplugin:useBundlePlugin' is now default behavior, you can stop using the scalacOption.[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:5:22: object freespec is not a member of package org.scalatest[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.freespec.AnyFreeSpec[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:10:23: not found: type AnyFreeSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass TopTest extends AnyFreeSpec with ChiselScalatestTester {[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:27:14: value in is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "Top Test" in {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:32:49: value withAnnotations is not a member of TopTest.this.TestBuilder[SingleCycle.TopTop][0m
+[0m[[0m[31merror[0m] [0m[0m        test(new TopTop(programFile, dataFile)).withAnnotations(Seq(VerilatorBackendAnnotation)){ c =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:32:69: not found: value VerilatorBackendAnnotation[0m
+[0m[[0m[31merror[0m] [0m[0m        test(new TopTop(programFile, dataFile)).withAnnotations(Seq(VerilatorBackendAnnotation)){ c =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

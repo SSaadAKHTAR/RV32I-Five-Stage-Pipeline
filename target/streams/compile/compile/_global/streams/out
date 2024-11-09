@@ -1,31 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Decode.scala:49:26: not found: type contolUnit[0m
-[0m[[0m[31merror[0m] [0m[0m    val cu  = Module(new contolUnit)[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Decode.scala:50:30: not found: type Reg_File[0m
-[0m[[0m[31merror[0m] [0m[0m    val regFile = Module(new Reg_File)[0m
-[0m[[0m[31merror[0m] [0m[0m                             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Decode.scala:51:26: not found: type ImmdValGen1[0m
-[0m[[0m[31merror[0m] [0m[0m    val imm = Module(new ImmdValGen1)[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Execute.scala:61:26: not found: type ALUS[0m
-[0m[[0m[31merror[0m] [0m[0m    val alu = Module(new ALUS)[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Execute.scala:62:32: not found: type Branch_Control[0m
-[0m[[0m[31merror[0m] [0m[0m    val B_control = Module(new Branch_Control)[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Fetch.scala:21:32: value inst is not a member of chisel3.Bundle{val addr: chisel3.UInt; val data: chisel3.UInt}[0m
-[0m[[0m[31merror[0m] [0m[0m    io.instruction:= insMem.io.inst[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Memory.scala:46:14: value Wen is not a member of chisel3.Bundle{val mem_write: chisel3.Bool; val addr: chisel3.UInt; val dataIn: chisel3.SInt; val dataOut: chisel3.SInt; val fun3: chisel3.UInt; val mem_read: chisel3.Bool}[0m
-[0m[[0m[31merror[0m] [0m[0m    D_Mem.io.Wen:=io.Wen[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Memory.scala:48:14: value Din is not a member of chisel3.Bundle{val mem_write: chisel3.Bool; val addr: chisel3.UInt; val dataIn: chisel3.SInt; val dataOut: chisel3.SInt; val fun3: chisel3.UInt; val mem_read: chisel3.Bool}[0m
-[0m[[0m[31merror[0m] [0m[0m    D_Mem.io.Din:=io.Din[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Memory.scala:50:14: value enable is not a member of chisel3.Bundle{val mem_write: chisel3.Bool; val addr: chisel3.UInt; val dataIn: chisel3.SInt; val dataOut: chisel3.SInt; val fun3: chisel3.UInt; val mem_read: chisel3.Bool}[0m
-[0m[[0m[31merror[0m] [0m[0m    D_Mem.io.enable:=io.Enable[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/tmp/Memory.scala:52:23: value Dout is not a member of chisel3.Bundle{val mem_write: chisel3.Bool; val addr: chisel3.UInt; val dataIn: chisel3.SInt; val dataOut: chisel3.SInt; val fun3: chisel3.UInt; val mem_read: chisel3.Bool}[0m
-[0m[[0m[31merror[0m] [0m[0m    io.Dout:=D_Mem.io.Dout[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m10 errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0m'-P:chiselplugin:useBundlePlugin' is now default behavior, you can stop using the scalacOption.[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/DecoupledGCD.scala:26:40: type MultiIOModule in package chisel3 is deprecated (since Chisel 3.5): MultiIOModule is now just Module[0m
+[0m[[0m[33mwarn[0m] [0m[0mclass DecoupledGcd(width: Int) extends MultiIOModule {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

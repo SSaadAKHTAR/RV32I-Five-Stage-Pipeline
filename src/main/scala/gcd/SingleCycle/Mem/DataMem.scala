@@ -148,5 +148,8 @@ class Datamem extends Module {
     io.dataOut := Cat(tempread(3), tempread(2), tempread(1), tempread(0)).asSInt()
   }
 }
+when(io.mem_write){
+  printf("%x\n", io.dataIn)
+}
 }
 

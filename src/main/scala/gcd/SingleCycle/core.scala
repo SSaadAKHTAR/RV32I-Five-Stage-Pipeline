@@ -5,6 +5,13 @@ import chisel3.util._
 class core extends Module {
     val io = IO(new Bundle {
         val out = Output (SInt(4.W))
+        val pin = Output(SInt(32.W))
+
+        val dmemReq = Decoupled(new MemRequestIO)
+        val dmemRsp = Flipped(Decoupled(new MemResponseIO))
+
+        val imemReq = Decoupled(new MemRequestIO)
+        val imemRsp = Flipped(Decoupled(new MemResponseIO))
     })
     val IF_ID_ =   Module(new IF_ID)
     val ID_EX_ =   Module(new ID_EX)
@@ -35,6 +42,10 @@ class core extends Module {
     val HazardDetect =   Module(new HazardDetection)
     val Branch_Forward  =   Module(new BranchForward)
     val Structural =   Module(new StructuralHazard)
+
+    when(DataMemory.io.mem_write) {
+        printf(p"Writing to DataMemory: ${DataMemory.io.dataIn}\n")
+    }
 
     val PC_F = Wire(SInt())
     when (HazardDetect.io.pc_forward === 0.U) {
@@ -335,6 +346,8 @@ class core extends Module {
 
     RegFile.io.w_reg                := MEM_WB_M.io.MEMWB_rd_out
     RegFile.io.reg_write            := MEM_WB_M.io.MEMWB_reg_w_out
+
+    io.pin := MEM_WB_M.io.MEMWB_rd_out
     
  
     when (MEM_WB_M.io.MEMWB_memToReg_out === 0.U) {
@@ -348,4 +361,10 @@ class core extends Module {
   
     io.out := 0.S
 
+
 }
+
+// object core extends App{
+//   // generate verilog
+//   chisel3.Driver.execute(args, () => new core("/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt"))
+// }

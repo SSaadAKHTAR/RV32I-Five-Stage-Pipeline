@@ -1,17 +1,20 @@
 [0m[[0m[33mwarn[0m] [0m[0m'-P:chiselplugin:useBundlePlugin' is now default behavior, you can stop using the scalacOption.[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:5:22: object freespec is not a member of package org.scalatest[0m
-[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.freespec.AnyFreeSpec[0m
-[0m[[0m[31merror[0m] [0m[0m                     ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:10:23: not found: type AnyFreeSpec[0m
-[0m[[0m[31merror[0m] [0m[0mclass TopTest extends AnyFreeSpec with ChiselScalatestTester {[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/SingleCycle/coreTester.scala:3:8: object FreeSpec is not a member of package org.scalatest[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.FreeSpec[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/SingleCycle/coreTester.scala:6:23: not found: type FreeSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass TOPTest extends FreeSpec with ChiselScalatestTester{[0m
 [0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:27:14: value in is not a member of String[0m
-[0m[[0m[31merror[0m] [0m[0m  "Top Test" in {[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:32:49: value withAnnotations is not a member of TopTest.this.TestBuilder[SingleCycle.TopTop][0m
-[0m[[0m[31merror[0m] [0m[0m        test(new TopTop(programFile, dataFile)).withAnnotations(Seq(VerilatorBackendAnnotation)){ c =>[0m
-[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/SingleCycle/TopTest.scala:32:69: not found: value VerilatorBackendAnnotation[0m
-[0m[[0m[31merror[0m] [0m[0m        test(new TopTop(programFile, dataFile)).withAnnotations(Seq(VerilatorBackendAnnotation)){ c =>[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                    ^[0m
-[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/SingleCycle/coreTester.scala:7:19: value in is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m   "5-Stage test" in{[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/GCDSpec.scala:7:8: object FreeSpec is not a member of package org.scalatest[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.FreeSpec[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/GCDSpec.scala:21:23: not found: type FreeSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass GCDSpec extends FreeSpec with ChiselScalatestTester {[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/saad/Desktop/5stagepipeline/src/test/scala/gcd/GCDSpec.scala:23:61: value in is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "Gcd should calculate proper greatest common denominator" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m6 errors found[0m

@@ -1,2 +1,3 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/saad/Desktop/5stagepipeline/src/main/resources/sram.v,/home/saad/Desktop/5stagepipeline/target/scala-2.12/classes/sram.v)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/home/saad/Desktop/5stagepipeline/src/main/resources/sram_top.v,/home/saad/Desktop/5stagepipeline/target/scala-2.12/classes/sram_top.v)[0m

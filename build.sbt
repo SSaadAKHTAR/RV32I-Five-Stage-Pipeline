@@ -9,7 +9,7 @@ lazy val root = (project in file("."))
     name := "5stagepipeline",
     libraryDependencies ++= Seq(
       "edu.berkeley.cs" %% "chisel3" % "3.5.5",
-      "edu.berkeley.cs" %% "chiseltest" % "0.3.3" % "test"
+      "edu.berkeley.cs" %% "chiseltest" % "0.5.6" % "test",
       "org.scalatest" %% "scalatest" % "3.2.0" % "test"
     ),
     scalacOptions ++= Seq(

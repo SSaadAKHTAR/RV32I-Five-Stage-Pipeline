@@ -1,0 +1,37 @@
+[info] welcome to sbt 1.9.7 (Ubuntu Java 11.0.25)
+[info] loading project definition from /home/saad/Desktop/5stagepipeline/project
+[info] loading settings for project root from build.sbt ...
+[info] set current project to 5stagepipeline (in build file:/home/saad/Desktop/5stagepipeline/)
+[info] compiling 2 Scala sources to /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes ...
+[info] done compiling
+Elaborating design...
+Done elaborating.
+80000000
+00040000
+fdfffffe
+0003fffe
+aaaaaaac
+80000002
+ffffffef
+e6666665
+2aaaaaaa
+fdffffff
+00000000
+00000009
+0000000c
+00000808
+00000010
+55555576
+0000002f
+0000007b
+00000120
+40000200
+test core Success: 0 tests passed in 202 cycles in 1.174165 seconds 172.04 Hz
+[info] TOPTest:
+[info] - 5-Stage test
+[info] Run completed in 6 seconds, 879 milliseconds.
+[info] Total number of tests run: 1
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 18 s, completed Nov 17, 2024, 12:54:40 AM

@@ -458,6 +458,13 @@ circuit core :
             io.dataOut <= _io_dataOut_T_33 @[DataMem.scala 148:16]
             skip @[DataMem.scala 147:31]
       skip @[DataMem.scala 125:20]
+    when io.mem_write : @[DataMem.scala 151:19]
+      node _T_44 = asUInt(reset) @[DataMem.scala 152:9]
+      node _T_45 = eq(_T_44, UInt<1>("h00")) @[DataMem.scala 152:9]
+      when _T_45 : @[DataMem.scala 152:9]
+        printf(clock, UInt<1>(1), "%x\n", io.dataIn) @[DataMem.scala 152:9]
+        skip @[DataMem.scala 152:9]
+      skip @[DataMem.scala 151:19]
     
   module Control : 
     input clock : Clock

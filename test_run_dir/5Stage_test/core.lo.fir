@@ -565,6 +565,8 @@ circuit core :
     node _GEN_94 = validif(io_mem_read, clock) @[DataMem.scala 125:20 DataMem.scala 126:26]
     node _GEN_95 = mux(io_mem_read, UInt<1>("h1"), UInt<1>("h0")) @[DataMem.scala 125:20 DataMem.scala 126:26 DataMem.scala 14:19]
     node _GEN_100 = mux(io_mem_read, _GEN_92, asSInt(UInt<1>("h0"))) @[DataMem.scala 125:20 DataMem.scala 19:14]
+    node _T_44 = asUInt(reset) @[DataMem.scala 152:9]
+    node _T_45 = eq(_T_44, UInt<1>("h0")) @[DataMem.scala 152:9]
     io_dataOut <= _GEN_100
     memory_0.MPORT_1.addr <= _T_22 @[DataMem.scala 124:26]
     memory_1.MPORT_1.addr <= _T_22 @[DataMem.scala 124:26]
@@ -610,6 +612,7 @@ circuit core :
     memory_1.MPORT.mask <= _GEN_75
     memory_2.MPORT.mask <= _GEN_76
     memory_3.MPORT.mask <= _GEN_77
+    printf(clock, and(and(and(UInt<1>("h1"), io_mem_write), _T_45), UInt<1>("h1")), "%x\n", io_dataIn) @[DataMem.scala 152:9]
 
   module Control :
     input clock : Clock

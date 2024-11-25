@@ -1,7 +1,7 @@
-[debug] Running TaskDef(SingleCycle.TOPTest, org.scalatest.tools.Framework$$anon$1@25675af5, false, [SuiteSelector])
+[debug] Running TaskDef(SingleCycle.TOPTest, org.scalatest.tools.Framework$$anon$1@9b6b7b9, false, [SuiteSelector])
 [info] TOPTest:
 [info] - 5-Stage test
-[info] Run completed in 6 seconds, 879 milliseconds.
+[info] Run completed in 8 seconds, 394 milliseconds.
 [info] Total number of tests run: 1
 [info] Suites: completed 1, aborted 0
 [info] Tests: succeeded 1, failed 0, canceled 0, ignored 0, pending 0

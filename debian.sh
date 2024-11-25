@@ -9,7 +9,7 @@ fi
 test_path="$1"
 
 
-SIGNATURE_FOLDER="/home/saad/Desktop/5stagepipeline/Signature"
+SIGNATURE_FOLDER="$1/dut/"
 FINAL_OUTPUT_FILE="/home/saad/Desktop/5stagepipeline/src/main/scala/gcd/SingleCycle/imem.txt"
 Core="/home/saad/Desktop/5stagepipeline/"
 OUTPUT_LOG="output_log.txt"
@@ -46,7 +46,7 @@ eval "$sbt_command"
 if [[ $? -eq 0 ]]; then
     echo "sbt test completed for $instruction_name."
     # Extract DataMemory values
-    grep -oE '\b[0-9a-fA-F]{8}\b' "$OUTPUT_LOG" > "$SIGNATURE_FOLDER/$instruction_name.signature"
+    grep -oE '\b[0-9a-fA-F]{8}\b' "$OUTPUT_LOG" > "$SIGNATURE_FOLDER/DUT-my_core.signature"
     echo "Data memory extracted and saved in $SIGNATURE_FOLDER/$instruction_name.signature"
 else
     echo "Error: sbt test failed for $instruction_name."

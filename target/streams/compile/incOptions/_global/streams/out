@@ -1,11 +1,2 @@
 [debug] Created transactional ClassFileManager with tempDir = /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes.bak
-[debug] About to delete class files:
-[debug] 	Datamem.class
-[debug] 	Datamem$$anon$1.class
-[debug] We backup class files:
-[debug] 	Datamem.class
-[debug] 	Datamem$$anon$1.class
-[debug] Registering generated classes:
-[debug] 	Datamem$$anon$1.class
-[debug] 	Datamem.class
 [debug] Removing the temporary directory used for backing up class files: /home/saad/Desktop/5stagepipeline/target/scala-2.12/classes.bak
